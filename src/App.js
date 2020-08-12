@@ -11,21 +11,20 @@ class App extends React.Component {
       
       currentProduct:{
         text:'',
-        price:'',
-        key:''
+        price:''
       },
       
-        items:[{key: 1597208784456, text: "abc",price:'8'}],
+        items:[{text: "abc",price:'8'}],
       
         currentItem:{
         text:'',
-        price:'',
-        key:''
+        price:''
       }
     }
     this.addItem = this.addItem.bind(this);
     this.addProduct = this.addProduct.bind(this);
-    this.handleInput = this.handleInput.bind(this);
+    this.handleTextInput = this.handleTextInput.bind(this);
+    this.handlePriceInput = this.handlePriceInput.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
     // this.setUpdate = this.setUpdate.bind(this);
   }
@@ -39,8 +38,7 @@ class App extends React.Component {
       items: items,
       currentItem:{
         text:'',
-        price:'',
-        key:''
+        price:''
       }
     })
     }}
@@ -52,21 +50,30 @@ addProduct(e){
   }))
 }
 
-  handleInput(e){
+  handleTextInput(e){
     this.setState({
       currentItem:{
         text: e.target.value,
-        key: Date.now()
+        price: this.state.currentItem.price
+      }
+    })
+  }
+
+  handlePriceInput(e){
+    this.setState({
+      currentItem:{
+        price: e.target.value,
+        text: this.state.currentItem.text
       }
     })
   }
  
   
 
-  deleteItem(key){
+  deleteItem(text){
    
     const filteredItems= this.state.items.filter(item =>
-      item.key!==key);
+      item.text!==text);
     this.setState({
       items: filteredItems
     })
@@ -93,8 +100,8 @@ addProduct(e){
        
        
         <form id="to-do-form" onSubmit={this.addItem}>
-          <input type="text" name='text' placeholder="Name"  onChange={this.handleInput}></input>
-          <input type="number" name='price' placeholder="Price" value= {this.state.currentItem.price} onChange={this.handleInput}></input>
+          <input type="text" name='text' placeholder="Name"  onChange={this.handleTextInput}></input>
+          <input type="text" name='price' placeholder="Price" onChange={this.handlePriceInput}></input>
           <button type="submit">Add</button>
         </form>
 

@@ -15,7 +15,7 @@ function ListItems(props){
         
         const listProducts = products.map(product =>
             {
-    return <p>{product.text}</p>
+    return <p key={product.text}>{product.text}</p>
             })
     
 
@@ -24,13 +24,13 @@ function ListItems(props){
     const items = props.items;
     const listItems = items.map(item =>
    {
-       return <MDBCol md='4'> <MDBCard className='red'> <div className="list" key={item.key}>
+       return <MDBCol md='4'> <MDBCard className='red'> <div className="list" key={item.text}>
      <p>
    {item.text}
    {item.price}
         <span>
         <MDBIcon className="faicons" onClick={() => {
-            props.deleteItem(item.key)
+            props.deleteItem(item.text)
         }} icon="trash" />
         </span>
 
