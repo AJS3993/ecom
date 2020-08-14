@@ -1,6 +1,7 @@
 import React from 'react';
 import ListItems from './ListItems/ListItems';
-
+import Cart from './Cart/Cart';
+import {MDBCol,MDBRow} from 'mdbreact';
 
 class App extends React.Component {
   constructor(props){
@@ -93,22 +94,33 @@ addProduct(e){
   //     items: items
   //   })
   // }
+
  render(){
   return (
     <div className="App">
       <header>
-       
-       
-        <form id="to-do-form" onSubmit={this.addItem}>
-          <input type="text" name='text' placeholder="Name"  onChange={this.handleTextInput}></input>
-          <input type="text" name='price' placeholder="Price" onChange={this.handlePriceInput}></input>
-          <button type="submit">Add</button>
-        </form>
+        <MDBRow>
+          
+          <MDBCol md='2'> 
+            <form id="to-do-form" onSubmit={this.addItem}>
+              <input type="text" name='text' placeholder="Name"  onChange={this.handleTextInput}></input>
+              <input type="text" name='price' placeholder="Price" onChange={this.handlePriceInput}></input>
+              <button type="submit">Add</button>
+            </form>
+          </MDBCol>
+          
+          <MDBCol md='8'>
+            <MDBRow> 
+              <ListItems products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
+            </MDBRow>
+          </MDBCol>
+   
+          <MDBCol md='2'> 
+            <Cart products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
+          </MDBCol>
+  
+        </MDBRow>
 
-          <ListItems products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
-        
-
-        
       </header>
     </div>
   );

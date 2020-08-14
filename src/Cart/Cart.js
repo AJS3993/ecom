@@ -1,21 +1,33 @@
 import React from 'react';
-import {
-  MDBCard
-} from 'mdbreact';
-import './Product.css';
+import {MDBCol,MDBRow} from 'mdbreact';
+import './Cart.css';
+import {formatPrice} from '../helpers';
 
-class Product
- extends React.Component {
+function Cart(props){
 
-  render() {
-    return (
-      <div id='product'>
+  // Products in the cart
+  var sum = 0
+  const products = props.products;
+  const listProducts = products.map(product =>
+    {
+ 
+      return <div key={product.text}>
+        <span>{product.text}</span>
+        <span key={product.text} className='float-right mr-3'>{formatPrice(product.price)}</span>
+        { sum += parseInt(product.price)}
+      </div>
+     })
       
-      <button>product</button>
-
-    </div>
-    );
-  }
-}
-
-export default Product;
+    return <div>
+      <MDBRow>
+        <MDBCol>{listProducts} 
+          <hr/>
+          <span>total</span>
+          <span className='float-right mr-3'>{sum}</span>
+        </MDBCol>
+     
+      </MDBRow>
+    </div>;
+    }
+  
+    export default Cart;
