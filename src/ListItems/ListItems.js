@@ -3,7 +3,8 @@ import {
     MDBIcon,
     MDBCard,
     MDBCol,
-    MDBRow
+    MDBRow,
+    MDBCardImage
   } from 'mdbreact';
 
 
@@ -11,21 +12,24 @@ import {
 function ListItems(props){
 
    
+// Products in the cart
+
         const products = props.products;
         
         const listProducts = products.map(product =>
             {
-    return <p key={product.text}>{product.text}</p>
+            return <div key={product.text}><span>{product.text}</span><span className='float-right mr-3'>{product.price}</span></div> 
+            
             })
     
 
-
+// Items for sale
 
     const items = props.items;
     const listItems = items.map(item =>
    {
        return <MDBCol md='4'> <MDBCard className='red'> <div className="list" key={item.text}>
-     <p>
+     <h3>
    {item.text}
    {item.price}
         <span>
@@ -40,7 +44,7 @@ function ListItems(props){
         }} icon="plus" />
         </span>
        
-     </p>
+     </h3>
     </div>
     </MDBCard></MDBCol>})
     return <div>
