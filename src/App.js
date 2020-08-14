@@ -43,6 +43,7 @@ class App extends React.Component {
       }
     })
     }}
+    e.target.reset();
   }
 
 addProduct(e){
@@ -104,7 +105,7 @@ addProduct(e){
           <MDBCol md='2'> 
             <form id="to-do-form" onSubmit={this.addItem}>
               <input type="text" name='text' placeholder="Name"  onChange={this.handleTextInput}></input>
-              <input type="text" name='price' placeholder="Price" onChange={this.handlePriceInput}></input>
+              <input type="number" name='price' placeholder="Price" onChange={this.handlePriceInput}></input>
               <button type="submit">Add</button>
             </form>
           </MDBCol>
@@ -115,7 +116,9 @@ addProduct(e){
             </MDBRow>
           </MDBCol>
    
-          <MDBCol md='2'> 
+          <MDBCol md='2' className='border'>
+            <h3>Cart</h3>
+            
             <Cart products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
           </MDBCol>
   
