@@ -1,7 +1,7 @@
 
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import { MDBInput, MDBNavbar, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon, MDBSideNavItem, MDBSideNavCat, MDBSideNavNav, MDBSideNav, MDBContainer } from "mdbreact";
+import { MDBBtn, MDBNavbar, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon, MDBSideNavItem, MDBSideNavCat, MDBSideNavNav, MDBSideNav, MDBContainer } from "mdbreact";
 import App from '../App';
 import './Nav.css'
 
@@ -65,7 +65,7 @@ class DoubleNavigationPage extends React.Component {
           >
              <div className='text-center my-n4 border'>
                  
-                 <MDBIcon className='mt-2 mb-n5 orange-text' size='9x' fab icon="ember" />
+                 <MDBIcon className='mt-2 mb-n5 orange-text logo' size='9x' fab icon="ember" />
        
                  <p id='st' className='white font-weight-bold my-n4'>- SHOE STORE -</p>
 
@@ -152,8 +152,13 @@ class DoubleNavigationPage extends React.Component {
                 </div>
               </MDBNavItem>
               <MDBNavItem id='tn' className="d-none d-md-inline" style={{ paddingTop: 5 }}>
-                We <MDBIcon className='orange-text' icon="heart" /> Shoes
+              <MDBIcon icon="shoe-prints" />
               </MDBNavItem>
+
+              <MDBNavItem className="d-none d-md-inline" style={{ paddingTop: 5 }}>
+ 
+              </MDBNavItem>
+              
             </MDBNavbarNav>
             <MDBNavbarNav right style={specialCaseNavbarStyles}>
               <MDBNavItem active>

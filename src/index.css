@@ -5,13 +5,11 @@ body {
 }
 
 .App{
-    background-color: rgba(189, 150, 81, 0.4);
     padding: 25px;
 }
 
 #midCol{
-    outline: solid  rgb(221, 131, 20) 2px;
-    border: double rgb(28, 44, 63) 8px;
+    border: solid rgb(28, 44, 63) 3px;
     background-color: rgba(240, 248, 255,0.7);
 }
 
@@ -39,4 +37,8 @@ body {
     border-bottom: double rgb(238, 239, 240) 10px;
     border-top: double rgb(238, 239, 240) 10px;
     color: rgb(255, 255, 255);
+}
+
+.newA{
+    font-size: 20px !important;
 }

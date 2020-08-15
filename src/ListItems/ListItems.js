@@ -9,16 +9,20 @@ function ListItems(props){
   const listItems = items.map(item =>
    {
   return <MDBCol md='4' className='m-0 '>
-    <MDBCard cascade key={item.text} className='z-depth-5 cardie m-0'>
-    <span className='text-right'>
-            <MDBBtn color='red' className='px-2 py-0 m-1 rounded' onClick={() => {props.deleteItem(item.text)}}>
+    <MDBCard cascade key={item.text} className='z-depth-5 cardie m-0 pt-4'>
+    <span className='text-left ml-n2 mt-n2 '>
+            <MDBBtn className='w-20 px-2 py-1 mt-n4 xbut z-depth-0' onClick={() => {props.deleteItem(item.text)}}>
             X
             </MDBBtn>
           </span>
-      <h4 className='p-1 mt-n4 ml-1'>{person()}</h4>
+     
+     <span className='d-flex flex-row-reverse mt-1'>
+     <MDBBtn className='w-100 catLabel p-0 mb-3 mt-n5 mdb-color font-weight-bold ml-4 mr-n1'>{person()}</MDBBtn>
+ 
+     </span>
      
       <MDBCardImage src={item.pic} className='w-100'/>
-    
+      
       <MDBBtn
             tag='a'
             className='ml-auto mr-2 mb-1 py-2 px-3 floater z-depth-5'
@@ -42,7 +46,7 @@ function ListItems(props){
             <ul className='list-unstyled list-inline font-small d-flex justify-content-around mb-0 p-1'>
               
               <li className='list-inline-item pr-2'>
-                <a href='#!' className='white-text'>
+                <a href='#!' className='comments'>
                   <MDBIcon far icon='comments' className='mr-1' />
                   12
                 </a>
@@ -51,7 +55,8 @@ function ListItems(props){
          
               
               <li className='list-inline-item pr-2'>
-                <a href='#!' className='white-text'>
+                <a href='#!' className='stars'>
+                  3.6/5
                 <MDBIcon icon="star" />
                 <MDBIcon icon="star" />
                 <MDBIcon icon="star" />

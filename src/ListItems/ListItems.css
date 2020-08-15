@@ -5,9 +5,9 @@ h3{
 }
 
 .cardie{
-  outline: solid  rgba(255, 153, 0,0.5) 3px;
   outline-offset: -2px;
-  border: double rgb(28, 44, 63) 8px;
+  border: solid rgb(28, 44, 63) 4px;
+  opacity: 0.95;
 }
 
 .pric{
@@ -18,9 +18,45 @@ h3{
 
 .floater{
   border: solid rgb(28, 44, 63) 4px;
-  background-color: rgba(237, 145, 33,0.8) !important;
+  background-color: rgba(237, 145, 33,1) !important;
 }
 
 .floater:hover{
-  background-color: rgb(237, 145, 33) !important;
+  background-color: rgb(248, 187, 112) !important;
+}
+
+.catLabel{
+  font-size: 15px;
+    color:rgb(255, 255, 255);
+    background-color: rgba(28, 44, 63,1) !important;
+    border: solid rgba(28, 44, 63,1) 5px !important;
+}
+
+.xbut{
+  font-size: 11px;
+  background-color: rgba(255, 0, 0,0.6) !important;
+  color: rgb(25, 40, 58,1) !important;
+  border: solid rgb(25, 40, 58,1) 2px;
+  border-bottom: solid rgb(25, 40, 58,1) 4px;
+  border-top:none;
+}
+
+.xbut:hover{
+  background-color: rgba(255, 0, 0,1) !important;
+}
+
+.stars {
+  color: rgba(28, 44, 63,1) !important;
+}
+
+.stars:hover {
+  color: rgb(255, 255, 255) !important;
+}
+
+.comments {
+  color: rgba(28, 44, 63,1) !important;
+}
+
+.comments:hover{
+  color: rgb(255, 255, 255) !important;
 }

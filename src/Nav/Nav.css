@@ -30,7 +30,6 @@
 }
 
 .sidey{
-    outline: solid  rgb(255, 153, 0,0.5) 7px;
     background-color: rgb(28, 44, 63);
 }
 
@@ -56,4 +55,8 @@
 
 .accBut:hover{
     background-color: rgb(211, 121, 12) !important;
+}
+
+.logo {
+    text-shadow: 2px 1px #ffffff;
 }

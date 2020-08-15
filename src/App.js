@@ -1,7 +1,7 @@
 import React from 'react';
 import ListItems from './ListItems/ListItems';
 import Cart from './Cart/Cart';
-import {MDBCol,MDBRow,MDBIcon,MDBBtn} from 'mdbreact';
+import {MDBCol,MDBRow,MDBIcon,MDBBtn,MDBContainer} from 'mdbreact';
 
 class App extends React.Component {
   constructor(props){
@@ -102,12 +102,11 @@ addProduct(e){
 
  render(){
   return (
-    <div className="App">
-        <MDBRow className='w-100'>
+    <div className="App w-100 px-0 mx-0">
+      
+        <MDBRow className='w-100 mt-5'>
           
     
-
-
             {/* <form id="to-do-form" onSubmit={this.addItem} className='border p-2 grey'>
             <br/>
               <input type="text" name='text' placeholder="Name"  onChange={this.handleTextInput}/>
@@ -120,13 +119,27 @@ addProduct(e){
 
        
 
-<MDBCol md='3' className='p-0 mx-n3'></MDBCol>
+<MDBCol md='2' className='mr-5'>
+
+</MDBCol>
           
-          <MDBCol id='midCol' md='7' className='d-flex p-3  p-2'> 
+          <MDBCol id='midCol' md='7' className='p-4 mt-n3'> 
+          <div className='d-flex align-content-around flex-wrap mt-n3'>
+
+<div className='w-100 pl-5'><MDBBtn rounded className='catLabel mt-n5 mb-4 py-3 newA'>New Arrivals</MDBBtn>
+</div>
+     
+          
+         
               <ListItems products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
+              </div>
           </MDBCol>
+          
+
+          <MDBCol md='1' className='mx-n5'></MDBCol>
+          
    
-          <MDBCol md='2' className='d-block p-2'>
+          <MDBCol md='2' className='d-block'>
             
             <Cart products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
           <MDBBtn rounded className='addBut pric addBut font-weight-bold p-2 float-right mt-n3'>Check Out <MDBIcon icon="angle-double-right" /></MDBBtn>
