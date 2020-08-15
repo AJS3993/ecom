@@ -1,0 +1,18 @@
+#st{
+    color: rgb(58, 73, 90);
+    font-size: 30px;
+}
+
+#top{
+    border: solid  rgb(58, 73, 90);
+    border-style: double;
+    border-width: 12px;
+    color: rgb(58, 73, 90);
+}
+
+#tn{
+    font-weight: bold;
+    color: rgb(58, 73, 90);
+    font-size: 18px;
+}
+

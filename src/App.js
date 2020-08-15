@@ -1,7 +1,7 @@
 import React from 'react';
 import ListItems from './ListItems/ListItems';
 import Cart from './Cart/Cart';
-import {MDBCol,MDBRow} from 'mdbreact';
+import {MDBCol,MDBRow,MDBIcon,MDBBtn} from 'mdbreact';
 
 class App extends React.Component {
   constructor(props){
@@ -15,7 +15,7 @@ class App extends React.Component {
         price:''
       },
       
-        items:[{text: "abc",price:'8'}],
+        items:[{text: "abc",price:'8',pic: 'https://previews.123rf.com/images/pretoperola/pretoperola1201/pretoperola120100029/11936982-vintage-red-shoes-on-white-background.jpg'}],
       
         currentItem:{
         text:'',
@@ -99,32 +99,34 @@ addProduct(e){
  render(){
   return (
     <div className="App">
-      <header>
         <MDBRow>
           
           <MDBCol md='2'> 
-            <form id="to-do-form" onSubmit={this.addItem}>
-              <input type="text" name='text' placeholder="Name"  onChange={this.handleTextInput}></input>
-              <input type="number" name='price' placeholder="Price" onChange={this.handlePriceInput}></input>
+            <form id="to-do-form" onSubmit={this.addItem} className='border p-2 grey'>
+            <br/>
+              <input type="text" name='text' placeholder="Name"  onChange={this.handleTextInput}/>
+              <br/>  <br/>
+              <input type="number" name='price' placeholder="Price" onChange={this.handlePriceInput}/>
+              <br/>  <br/>
               <button type="submit">Add</button>
             </form>
           </MDBCol>
+
+          <MDBCol md='1'></MDBCol>
           
-          <MDBCol md='8'>
-            <MDBRow> 
+          <MDBCol md='8' className='d-flex border p-3 mdb-color lighten-2 p-2'> 
               <ListItems products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
-            </MDBRow>
           </MDBCol>
    
-          <MDBCol md='2' className='border'>
-            <h3>Cart</h3>
+          <MDBCol md='2' className='d-block'>
             
             <Cart products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
+          <MDBBtn className='green p-2 float-right'>Check Out <MDBIcon icon="angle-double-right" /></MDBBtn>
           </MDBCol>
   
         </MDBRow>
 
-      </header>
+ 
     </div>
   );
  }
