@@ -5,5 +5,38 @@ body {
 }
 
 .App{
+    background-color: rgba(189, 150, 81, 0.4);
     padding: 25px;
+}
+
+#midCol{
+    outline: solid  rgb(221, 131, 20) 2px;
+    border: double rgb(28, 44, 63) 8px;
+    background-color: rgba(240, 248, 255,0.7);
+}
+
+.mrForm{
+    background-color: rgba(240, 255, 255,0.9);
+    border: double rgb(28, 44, 63) 10px;
+    color: rgb(28, 44, 63);
+}
+
+.addBut{
+    background-color: rgb(237, 145, 33) !important;
+    outline-offset: -2px;
+    color: rgb(72, 83, 108) !important;
+    border: solid rgb(28, 44, 63) 4px;
+}
+
+.addBut:hover{
+    background-color: rgb(72, 83, 108) !important;
+    color:orange !important;
+    border: solid rgb(237, 145, 33) 4px;
+}
+
+.addit{
+    background-color: rgba(240, 255, 255,0.9);
+    border-bottom: double rgb(238, 239, 240) 10px;
+    border-top: double rgb(238, 239, 240) 10px;
+    color: rgb(255, 255, 255);
 }

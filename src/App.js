@@ -15,7 +15,11 @@ class App extends React.Component {
         price:''
       },
       
-        items:[{text: "abc",price:'8',pic: 'https://previews.123rf.com/images/pretoperola/pretoperola1201/pretoperola120100029/11936982-vintage-red-shoes-on-white-background.jpg'}],
+        items:[
+          {text: "Nike",price:'4999',pic: 'https://i.imgur.com/umRhB0d.jpg?1'},
+        {text: "Adidas",price:'3999',pic: 'https://i.imgur.com/i7Qmotr.jpg?1'},
+        {text: "Runners",price:'2500',pic: 'https://i.imgur.com/R61ZmFW.jpg?1'},
+      ],
       
         currentItem:{
         text:'',
@@ -99,29 +103,46 @@ addProduct(e){
  render(){
   return (
     <div className="App">
-        <MDBRow>
+        <MDBRow className='w-100'>
           
-          <MDBCol md='2'> 
-            <form id="to-do-form" onSubmit={this.addItem} className='border p-2 grey'>
+    
+
+
+            {/* <form id="to-do-form" onSubmit={this.addItem} className='border p-2 grey'>
             <br/>
               <input type="text" name='text' placeholder="Name"  onChange={this.handleTextInput}/>
               <br/>  <br/>
               <input type="number" name='price' placeholder="Price" onChange={this.handlePriceInput}/>
               <br/>  <br/>
               <button type="submit">Add</button>
-            </form>
-          </MDBCol>
+            </form> */}
 
-          <MDBCol md='1'></MDBCol>
+
+       
+
+<MDBCol md='3' className='p-0 mx-n3'></MDBCol>
           
-          <MDBCol md='8' className='d-flex border p-3 mdb-color lighten-2 p-2'> 
+          <MDBCol id='midCol' md='7' className='d-flex p-3  p-2'> 
               <ListItems products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
           </MDBCol>
    
-          <MDBCol md='2' className='d-block'>
+          <MDBCol md='2' className='d-block p-2'>
             
             <Cart products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
-          <MDBBtn className='green p-2 float-right'>Check Out <MDBIcon icon="angle-double-right" /></MDBBtn>
+          <MDBBtn rounded className='addBut pric addBut font-weight-bold p-2 float-right mt-n3'>Check Out <MDBIcon icon="angle-double-right" /></MDBBtn>
+          <br/> <br/> <br/>
+          <div className='mrForm'>
+            <h4 className='mdb-color white-text font-weight-bold addit py-2 mt-3'>Add Product</h4>
+          <form id="to-do-form" onSubmit={this.addItem}>
+            <br/>
+              <input className='w-75 ml-3' type="text" name='text' placeholder="Name"  onChange={this.handleTextInput}/>
+              <br/>  <br/>
+              <input className='w-75 ml-3' type="number" name='price' placeholder="Price" onChange={this.handlePriceInput}/>
+              <br/>  <br/> 
+              <MDBBtn rounded type="submit" className='pric addBut font-weight-bold p-2 float-right mt-n3'>Add It!</MDBBtn>
+           
+            </form>
+            </div>
           </MDBCol>
   
         </MDBRow>

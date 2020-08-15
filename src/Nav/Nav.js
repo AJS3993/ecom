@@ -55,18 +55,17 @@ class DoubleNavigationPage extends React.Component {
 
     return (
       <Router>
-        <div className="fixed-sn mdb-skin">
+        <div className="fixed-sn navie">
           <MDBSideNav
-          className='border border-double z-depth-3'
+          className='border border-double z-depth-3 sidey'
             triggerOpening={this.state.toggleStateA}
             breakWidth={this.state.breakWidth}
-            bg="https://mdbootstrap.com/img/Photos/Others/sidenav4.jpg"
             mask="strong"
             fixed
           >
              <div className='text-center my-n4 border'>
                  
-                 <MDBIcon className='mt-2 mb-n5' size='9x' fab icon="ember" />
+                 <MDBIcon className='mt-2 mb-n5 orange-text' size='9x' fab icon="ember" />
        
                  <p id='st' className='white font-weight-bold my-n4'>- SHOE STORE -</p>
 
@@ -98,40 +97,46 @@ class DoubleNavigationPage extends React.Component {
               </ul>
             </li>
             
-            <MDBSideNavNav>
+            <MDBSideNavNav >
               <MDBSideNavCat
-                name="Submit blog"
+              className='cats'
+                name="Categories"
                 id="submit-blog-cat"
                 icon="chevron-right"
               >
-                <MDBSideNavItem>Submit listing</MDBSideNavItem>
-                <MDBSideNavItem>Registration form</MDBSideNavItem>
+                <MDBSideNavItem className='subcat'>Mens</MDBSideNavItem>
+                <MDBSideNavItem className='subcat'>Womens</MDBSideNavItem>
+                <MDBSideNavItem className='subcat'>Kids</MDBSideNavItem>
               </MDBSideNavCat>
+              
               <MDBSideNavCat
-                iconRegular
-                name="Instruction"
-                id="instruction-cat"
-                icon="hand-pointer"
+              className='cats'
+                name="Categories"
+                id="submit-blog-cat"
+                icon="chevron-right"
               >
-                <MDBSideNavItem>For bloggers</MDBSideNavItem>
-                <MDBSideNavItem>For authors</MDBSideNavItem>
+                <MDBSideNavItem className='subcat'>Mens</MDBSideNavItem>
+                <MDBSideNavItem className='subcat'>Womens</MDBSideNavItem>
+                <MDBSideNavItem className='subcat'>Kids</MDBSideNavItem>
               </MDBSideNavCat>
-              <MDBSideNavCat name="About" id="about-cat" icon="eye">
-                <MDBSideNavItem>Instruction</MDBSideNavItem>
-                <MDBSideNavItem>Monthly meetings</MDBSideNavItem>
-              </MDBSideNavCat>
+              
               <MDBSideNavCat
-                name="Contact me"
-                id="contact-me-cat"
-                icon="envelope"
+              className='cats'
+                name="Categories"
+                id="submit-blog-cat"
+                icon="chevron-right"
               >
-                <MDBSideNavItem>FAQ</MDBSideNavItem>
-                <MDBSideNavItem>Write a message</MDBSideNavItem>
+                <MDBSideNavItem className='subcat'>Mens</MDBSideNavItem>
+                <MDBSideNavItem className='subcat'>Womens</MDBSideNavItem>
+                <MDBSideNavItem className='subcat'>Kids</MDBSideNavItem>
               </MDBSideNavCat>
+
+              
+              
             </MDBSideNavNav>
           </MDBSideNav>
           
-          <MDBNavbar id='top' className='white' style={navStyle} double expand="md">
+          <MDBNavbar className='mdb-color' id='top' style={navStyle} double expand="md">
             <MDBNavbarNav left>
               <MDBNavItem>
                 <div
@@ -147,17 +152,17 @@ class DoubleNavigationPage extends React.Component {
                 </div>
               </MDBNavItem>
               <MDBNavItem id='tn' className="d-none d-md-inline" style={{ paddingTop: 5 }}>
-                We <MDBIcon icon="heart" /> Shoes
+                We <MDBIcon className='orange-text' icon="heart" /> Shoes
               </MDBNavItem>
             </MDBNavbarNav>
             <MDBNavbarNav right style={specialCaseNavbarStyles}>
               <MDBNavItem active>
-                <MDBNavLink to="#!" id='tn'>
+                <MDBNavLink to="#!" id='tn2'>
                   <div className="d-none d-md-inline">- Contact -</div>
                 </MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink id='tn' to="#!">
+                <MDBNavLink id='tn2' to="#!">
                  
                   <div className="d-none d-md-inline mx-4">- Support -</div>
                 </MDBNavLink>
@@ -167,17 +172,18 @@ class DoubleNavigationPage extends React.Component {
                    </MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBDropdown>
-                  <MDBDropdownToggle id='tn' nav caret>
+                <MDBDropdown className='orange'>
+                  <MDBDropdownToggle id='tn' className='mdb-color border accBut' nav caret>
                   <MDBIcon icon="user" className="d-inline-inline" />{" "}
                   <div className="d-none d-md-inline">Account</div>
                
                   </MDBDropdownToggle>
-                  <MDBDropdownMenu right>
-                    <MDBDropdownItem href="#!">Action</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Another Action</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
+                  <MDBDropdownMenu right className='border border-dark'>
+                    <MDBDropdownItem className='font-weight-bold' href="#!">Orders</MDBDropdownItem>
+                    
+                    <MDBDropdownItem className='font-weight-bold' href="#!">Account Info</MDBDropdownItem>
+                    <hr className='hr-dark'/>
+                    <MDBDropdownItem className='font-weight-bold' href="#!">Sign out</MDBDropdownItem>
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>

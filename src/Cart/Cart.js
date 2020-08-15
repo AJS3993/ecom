@@ -11,24 +11,24 @@ function Cart(props){
   const listProducts = products.map(product =>
     {
  
-      return <div key={product.text}>
-        <hr className='hr-light'/>
-        <span>{product.text}</span>
+      return <div className='my-0 py-1' key={product.text}>
+        
+        <span className='ml-1'>{product.text}</span>
         <span key={product.text} className='float-right mr-3'>{formatPrice(product.price)}</span>
-        <p className='invisible'>{ sum += parseInt(product.price)}</p>
+        <hr className='hr-dark m-0'/>
+        <p className='invisible m-0 p-0'>{ sum += parseInt(product.price)}</p>
       </div>
      })
       
     return <div>
       <MDBRow>
         <MDBCol>
-          <div className='p-2 white-text'>
-          <MDBIcon className='white-text mt-2 text-right w-100 pr-4' size='lg' icon="shopping-cart" />
-            <br/>
+          <div className=' cartie z-depth-4'>
+          <h5 className='p-2 mdb-color w-100 font-weight-bold cartTitle mt-3'>Cart<MDBIcon className='float-right pr-4 mt-1 mdb-color' size='lg' icon="shopping-cart" /></h5>
+          
           {listProducts} 
-          <hr className='hr-light'/>
-          <span className='font-weight-bold white-text'>total:</span>
-          <span className='font-weight-bold float-right mr-3 white-text'>{formatPrice(sum)}</span>
+          <h5 className='p-2 mdb-color w-100 font-weight-bold cartTitle mt-3'><span className='font-weight-bold p-2'>total:</span>
+          <span className='font-weight-bold float-right mr-3'>{formatPrice(sum)}</span></h5>
           </div>
         </MDBCol>
      

@@ -1,0 +1,26 @@
+h3{
+  
+    border-top: double rgb(255, 255, 255) 10px;
+    border-bottom: double rgb(255, 255, 255) 10px;
+}
+
+.cardie{
+  outline: solid  rgba(255, 153, 0,0.5) 3px;
+  outline-offset: -2px;
+  border: double rgb(28, 44, 63) 8px;
+}
+
+.pric{
+    font-size: 18px;
+    color:rgb(28, 44, 63);
+    text-shadow: 2px 1px #ffffff;
+}
+
+.floater{
+  border: solid rgb(28, 44, 63) 4px;
+  background-color: rgba(237, 145, 33,0.8) !important;
+}
+
+.floater:hover{
+  background-color: rgb(237, 145, 33) !important;
+}

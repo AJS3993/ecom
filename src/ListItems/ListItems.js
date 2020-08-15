@@ -1,44 +1,45 @@
 import React from 'react';
-import {MDBIcon,MDBCard,MDBCol,MDBCardTitle,MDBCardBody,MDBCardFooter, MDBCardImage,MDBBtn} from 'mdbreact';
-import {formatPrice} from '../helpers';
+import {MDBIcon,MDBCard,MDBCol,MDBCardText,MDBCardBody,MDBCardFooter, MDBCardImage,MDBBtn} from 'mdbreact';
+import {formatPrice,getFunName,person} from '../helpers';
+import './ListItems.css'
 
 function ListItems(props){
   // Items for sale
   const items = props.items;
   const listItems = items.map(item =>
    {
-  return <MDBCol md='4' className='m-0'>
-    <MDBCard cascade key={item.text} className='mdb-color lighten-5 z-depth-5'>
-      
-      <MDBCardImage src={item.pic} className='w-100'/>
-      <MDBBtn
-            floating
-            tag='a'
-            className='ml-auto mr-4 lighten-3 mdb-coalor'
-            action
-          >
-            <MDBIcon icon='chevron-right' className="mdb-color lighten-3"/>
-          </MDBBtn>
-          <MDBCardBody cascade>
-          <MDBCardTitle> {item.text}</MDBCardTitle>
-         
-        
-
-      
-          
-          <span>
-            <MDBIcon className="faicons" onClick={() => {props.deleteItem(item.text)}} icon="trash" /> 
-            
+  return <MDBCol md='4' className='m-0 '>
+    <MDBCard cascade key={item.text} className='z-depth-5 cardie m-0'>
+    <span className='text-right'>
+            <MDBBtn color='red' className='px-2 py-0 m-1 rounded' onClick={() => {props.deleteItem(item.text)}}>
+            X
+            </MDBBtn>
           </span>
+      <h4 className='p-1 mt-n4 ml-1'>{person()}</h4>
+     
+      <MDBCardImage src={item.pic} className='w-100'/>
+    
+      <MDBBtn
+            tag='a'
+            className='ml-auto mr-2 mb-1 py-2 px-3 floater z-depth-5'
+            action
+            rounded
+            onClick={() => {props.addProduct(item)}}
+          >
+             <span className='pric font-weight-bold'><MDBIcon icon='cart-plus'></MDBIcon> {formatPrice(item.price)}</span>
+          </MDBBtn>
+          <MDBCardBody cascade className='p-0'>
+          <h3 className='mdb-color white-text'> {item.text}</h3>
+   <MDBCardText className='p-2'>{getFunName()}</MDBCardText>
           
-          <span className='float-right font-weight-bold'>
-            <span className='mr-3'>{formatPrice(item.price)}</span>
-            <MDBBtn onClick={() => {props.addProduct(item)}} className='px-3 py-2 green m-0'><MDBIcon className="faicons"  icon="cart-plus" /></MDBBtn>
-            </span>
+         
+          
+         
+          
             </MDBCardBody>
 
-            <div className='rounded-bottom mdb-color lighten-3 text-center pt-3'>
-            <ul className='list-unstyled list-inline font-small d-flex justify-content-around'>
+            <div className='rounded-bottom mdb-color lighten-3 text-center pt-1 border'>
+            <ul className='list-unstyled list-inline font-small d-flex justify-content-around mb-0 p-1'>
               
               <li className='list-inline-item pr-2'>
                 <a href='#!' className='white-text'>

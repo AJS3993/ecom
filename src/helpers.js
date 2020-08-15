@@ -26,7 +26,6 @@ export function formatPrice(cents) {
       "adorable",
       "beautiful",
       "clean",
-      "drab",
       "elegant",
       "fancy",
       "glamorous",
@@ -36,63 +35,26 @@ export function formatPrice(cents) {
       "old-fashioned",
       "plain",
       "quaint",
-      "sparkling",
-      "ugliest",
-      "unsightly",
-      "angry",
-      "bewildered",
-      "clumsy",
-      "defeated",
-      "embarrassed",
-      "fierce",
-      "grumpy",
-      "helpless",
-      "itchy",
-      "jealous",
-      "lazy",
-      "mysterious",
-      "nervous",
-      "obnoxious",
-      "panicky",
-      "repulsive",
-      "scary",
-      "thoughtless",
-      "uptight",
-      "worried"
+      "sparkling"
     ];
   
     const nouns = [
-      "women",
-      "men",
-      "children",
-      "teeth",
-      "feet",
-      "people",
-      "leaves",
-      "mice",
-      "geese",
-      "halves",
-      "knives",
-      "wives",
-      "lives",
-      "elves",
-      "loaves",
-      "potatoes",
-      "tomatoes",
-      "cacti",
-      "foci",
-      "fungi",
-      "nuclei",
-      "syllabuses",
-      "analyses",
-      "diagnoses",
-      "oases",
-      "theses",
-      "crises",
-      "phenomena",
-      "criteria",
-      "data"
+      "sports shoes",
+      "loafers",
+      "boots",
+      "tennis shoes",
+      "dress shoes"
     ];
   
-    return `${rando(adjectives)}-${rando(adjectives)}-${rando(nouns)}`;
+    return `${rando(adjectives)} ${rando(nouns)}`;
   }
+
+  export function person() {
+
+    const people = [
+      "Womens",
+      "Mens",
+      "Kids"]
+
+      return `${rando(people)}`
+      }
