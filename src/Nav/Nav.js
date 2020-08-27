@@ -76,22 +76,22 @@ class DoubleNavigationPage extends React.Component {
               <ul className="social">
                 <li>
                   <a href="#!">
-                    <MDBIcon fab icon="facebook-f" />
+                    <MDBIcon fab icon="facebook-f soc" />
                   </a>
                 </li>
                 <li>
                   <a href="#!">
-                    <MDBIcon fab icon="pinterest" />
+                    <MDBIcon fab icon="pinterest soc" />
                   </a>
                 </li>
                 <li>
                   <a href="#!">
-                    <MDBIcon fab icon="google-plus-g" />
+                    <MDBIcon fab icon="google-plus-g soc" />
                   </a>
                 </li>
                 <li>
                   <a href="#!">
-                    <MDBIcon fab icon="twitter" />
+                    <MDBIcon fab icon="twitter soc" />
                   </a>
                 </li>
               </ul>
@@ -100,7 +100,7 @@ class DoubleNavigationPage extends React.Component {
             <MDBSideNavNav >
               <MDBSideNavCat
               className='cats'
-                name="Categories"
+                name="Departments"
                 id="submit-blog-cat"
                 icon="chevron-right"
               >
@@ -111,7 +111,7 @@ class DoubleNavigationPage extends React.Component {
               
               <MDBSideNavCat
               className='cats'
-                name="Categories"
+                name="Collections"
                 id="submit-blog-cat"
                 icon="chevron-right"
               >
@@ -122,7 +122,7 @@ class DoubleNavigationPage extends React.Component {
               
               <MDBSideNavCat
               className='cats'
-                name="Categories"
+                name="Specials"
                 id="submit-blog-cat"
                 icon="chevron-right"
               >

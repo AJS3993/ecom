@@ -19,6 +19,9 @@ class App extends React.Component {
           {text: "Nike",price:'4999',pic: 'https://i.imgur.com/umRhB0d.jpg?1'},
         {text: "Adidas",price:'3999',pic: 'https://i.imgur.com/i7Qmotr.jpg?1'},
         {text: "Runners",price:'2500',pic: 'https://i.imgur.com/R61ZmFW.jpg?1'},
+        {text: "Sneakers",price:'2900',pic: 'https://i.imgur.com/aMlSAVq.jpg?1'},
+        {text: "Sketchers",price:'4900',pic: 'https://i.imgur.com/q7CzVUK.jpg?1'},
+        {text: "Slippers",price:'3599',pic: 'https://i.imgur.com/V97G2Rs.jpg?1'},
       ],
       
         currentItem:{
@@ -126,7 +129,7 @@ addProduct(e){
           <MDBCol id='midCol' md='7' className='p-4 mt-n3'> 
           <div className='d-flex align-content-around flex-wrap mt-n3'>
 
-<div className='w-100 pl-5'><MDBBtn rounded className='catLabel mt-n5 mb-4 py-3 newA'>New Arrivals</MDBBtn>
+<div className='w-100 pl-5'><MDBBtn rounded color='white' className='mdb-color darken-2 white-text mt-n5 mb-4 py-3 newA'>New Arrivals</MDBBtn>
 </div>
      
           

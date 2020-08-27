@@ -1,7 +1,9 @@
 
 body {
+    background-color: rgb(89, 108, 131);
     background-image: url('https://i.imgur.com/6ow1bpB.jpg');
-    background-size: cover;
+    background-size: 100vw;
+    background-repeat: no-repeat;
 }
 
 .App{
@@ -10,7 +12,7 @@ body {
 
 #midCol{
     border: solid rgb(28, 44, 63) 3px;
-    background-color: rgba(240, 248, 255,0.7);
+    background-color: rgba(240, 248, 255,0.5);
 }
 
 .mrForm{
@@ -41,4 +43,5 @@ body {
 
 .newA{
     font-size: 20px !important;
+    border: solid rgb(255, 255, 255) 5px !important;
 }

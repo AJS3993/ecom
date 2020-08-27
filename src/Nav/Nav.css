@@ -60,3 +60,7 @@
 .logo {
     text-shadow: 2px 1px #ffffff;
 }
+
+.soc:hover{
+    color:orange !important;
+}

@@ -23,27 +23,17 @@ export function formatPrice(cents) {
   
   export function getFunName() {
     const adjectives = [
-      "adorable",
-      "beautiful",
-      "clean",
-      "elegant",
-      "fancy",
-      "glamorous",
-      "handsome",
-      "long",
-      "magnificent",
-      "old-fashioned",
-      "plain",
-      "quaint",
-      "sparkling"
+      "All-Star",
+      "Iconic",
+      "Elegant",
+      "Magnificent",
+      "One of a Kind"
     ];
   
     const nouns = [
-      "sports shoes",
-      "loafers",
-      "boots",
-      "tennis shoes",
-      "dress shoes"
+      "Sports Shoes",
+      "Sneakers",
+      "Tennis Shoes"
     ];
   
     return `${rando(adjectives)} ${rando(nouns)}`;

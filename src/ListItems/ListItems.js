@@ -9,9 +9,9 @@ function ListItems(props){
   const listItems = items.map(item =>
    {
   return <MDBCol md='4' className='m-0 '>
-    <MDBCard cascade key={item.text} className='z-depth-5 cardie m-0 pt-4'>
+    <MDBCard cascade key={item.text} className='z-depth-5 cardie mb-3 pt-4'>
     <span className='text-left ml-n2 mt-n2 '>
-            <MDBBtn className='w-20 px-2 py-1 mt-n4 xbut z-depth-0' onClick={() => {props.deleteItem(item.text)}}>
+            <MDBBtn className='w-20 px-2 py-1 mt-n4 xbut z-depth-0 font-weight-bold' onClick={() => {props.deleteItem(item.text)}}>
             X
             </MDBBtn>
           </span>
@@ -34,7 +34,7 @@ function ListItems(props){
           </MDBBtn>
           <MDBCardBody cascade className='p-0'>
           <h3 className='mdb-color white-text'> {item.text}</h3>
-   <MDBCardText className='p-2'>{getFunName()}</MDBCardText>
+   <MDBCardText className='p-2 font-weight-bold black-text'>{getFunName()}</MDBCardText>
           
          
           
@@ -48,16 +48,15 @@ function ListItems(props){
               <li className='list-inline-item pr-2'>
                 <a href='#!' className='comments'>
                   <MDBIcon far icon='comments' className='mr-1' />
-                  12
+                  0
                 </a>
               </li>
 
          
               
-              <li className='list-inline-item pr-2'>
+              <li className='list-inline-item mr-n2'>
                 <a href='#!' className='stars'>
-                  3.6/5
-                <MDBIcon icon="star" />
+                  3.6/5 <MDBIcon icon="star" />
                 <MDBIcon icon="star" />
                 <MDBIcon icon="star" />
                 <MDBIcon icon="star-half-alt" />

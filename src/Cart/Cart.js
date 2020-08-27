@@ -13,8 +13,8 @@ function Cart(props){
  
       return <div className='my-0 py-1' key={product.text}>
         
-        <span className='ml-1'>{product.text}</span>
-        <span key={product.text} className='float-right mr-3'>{formatPrice(product.price)}</span>
+        <span className='ml-1 font-weight-bold'>{product.text}</span>
+        <span key={product.text} className='float-right mr-3 font-weight-bold'>{formatPrice(product.price)}</span>
         <hr className='hr-dark m-0'/>
         <p className='invisible m-0 p-0'>{ sum += parseInt(product.price)}</p>
       </div>
