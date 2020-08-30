@@ -4,14 +4,15 @@
 
 .cartie{
     background-color: rgba(240, 255, 255,0.9);
-    border: double rgb(28, 44, 63) 10px;
-    outline-offset: -7px;
+    border: double rgb(28, 44, 63) 5px;
     color: rgb(28, 44, 63);
 }
 
 .cartTitle{
     background-color: rgba(240, 255, 255,0.9);
-    border-bottom: double rgb(238, 239, 240) 10px;
-    border-top: double rgb(238, 239, 240) 10px;
     color: rgb(255, 255, 255);
+}
+
+.total{
+    font-size: 16px;
 }

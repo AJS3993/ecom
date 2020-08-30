@@ -1,16 +1,18 @@
 #st{
-    color: rgb(28, 44, 63);
+    color: rgb(25, 40, 58);
     font-size: 30px;
-    outline: solid  rgb(255, 255, 255) 3px;
-    border-top: solid  rgb(28, 44, 63) 3px;
-    border-bottom: solid  rgb(28, 44, 63) 3px;
+    border-bottom: double rgb(25, 40, 58) 12px;
+    border-top: double rgb(25, 40, 58) 12px;
+    text-shadow: none;
+}
+
+#st2{
+    color: rgb(165, 112, 27) !important;
+    outline-offset: 4px;
 }
 
 #top{
-    background-color: azure;
-    outline: solid  rgb(255, 255, 255) 4px;
-    border: double rgb(72, 83, 108) 10px;
-    outline-offset: -11px;
+    border-bottom: solid rgb(255, 255, 255) 1px;
 }
 
 #tn{
@@ -29,20 +31,8 @@
     color: orange !important;
 }
 
-.sidey{
-    background-color: rgb(28, 44, 63);
-}
 
-.cats{
-    font-size: 20px !important;
-    border-bottom: solid  rgb(255, 255, 255) 2px;
-    color: white;
-}
 
-.cats:hover{
-    color:orange !important;
-    border-bottom: solid  rgb(255, 153, 0) 2px;
-}
 
 .active{
     color:orange !important;
@@ -57,10 +47,64 @@
     background-color: rgb(211, 121, 12) !important;
 }
 
-.logo {
-    text-shadow: 2px 1px #ffffff;
+.logo{
+    font-size: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+    text-shadow: 0px 0px 10px #FF0000;
 }
+
+.clogo{
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+    text-shadow: 0px 0px 10px #FF0000;
+}
+
+.ctop{
+    border-radius: 15px 15px 0px 0px; 
+}
+
 
 .soc:hover{
     color:orange !important;
 }
+
+#topLink{
+    color: rgb(255, 255, 255) !important;
+    font-size: 20px !important;
+}
+
+#topLink:hover{
+    color: orange!important;
+    text-shadow: 0px 0px 1px #FF0000;
+}
+
+.fire{
+    color: orange!important;
+    text-shadow: 0px 0px 10px #FF0000;
+}
+
+.logofire{
+    text-shadow: 0px 0px 10px #FF0000;
+    font-size: 60px !important;
+}
+
+.accBut{
+ font-size: 15px !important;
+}
+
+.cartButt{
+    font-size: 15px !important; 
+}
+
+#home .view {
+    background: url("https://i.imgur.com/6ow1bpB.jpg") no-repeat center center;
+    background-size: cover;
+    height: 40vh;
+  }
+
+.memberCard{
+    border: solid rgb(255, 255, 255) 4px;
+    border-radius: 20px;
+}  

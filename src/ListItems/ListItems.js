@@ -8,16 +8,14 @@ function ListItems(props){
   const items = props.items;
   const listItems = items.map(item =>
    {
-  return <MDBCol md='4' className='m-0 '>
+  return <MDBCol md='3' className='m-0 '>
     <MDBCard cascade key={item.text} className='z-depth-5 cardie mb-3 pt-4'>
-    <span className='text-left ml-n2 mt-n2 '>
-            <MDBBtn className='w-20 px-2 py-1 mt-n4 xbut z-depth-0 font-weight-bold' onClick={() => {props.deleteItem(item.text)}}>
-            X
-            </MDBBtn>
-          </span>
+   
+
+
      
-     <span className='d-flex flex-row-reverse mt-1'>
-     <MDBBtn className='w-100 catLabel p-0 mb-3 mt-n5 mdb-color font-weight-bold ml-4 mr-n1'>{person()}</MDBBtn>
+     <span className='d-flex flex-row-reverse'>
+     <MDBBtn disabled className='w-50 catLabel p-0 mt-n4 mdb-color font-weight-bold ml-4 mr-n1'>{person()}</MDBBtn>
  
      </span>
      
@@ -42,7 +40,7 @@ function ListItems(props){
           
             </MDBCardBody>
 
-            <div className='rounded-bottom mdb-color lighten-3 text-center pt-1 border'>
+            <div className=' mdb-color lighten-3 text-center pt-1'>
             <ul className='list-unstyled list-inline font-small d-flex justify-content-around mb-0 p-1'>
               
               <li className='list-inline-item pr-2'>

@@ -1,7 +1,7 @@
 import React from 'react';
 import ListItems from './ListItems/ListItems';
 import Cart from './Cart/Cart';
-import {MDBCol,MDBRow,MDBIcon,MDBBtn,MDBContainer} from 'mdbreact';
+import {MDBCol,MDBRow,MDBIcon,MDBBtn} from 'mdbreact';
 
 class App extends React.Component {
   constructor(props){
@@ -145,7 +145,7 @@ addProduct(e){
           <MDBCol md='2' className='d-block'>
             
             <Cart products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
-          <MDBBtn rounded className='addBut pric addBut font-weight-bold p-2 float-right mt-n3'>Check Out <MDBIcon icon="angle-double-right" /></MDBBtn>
+          <MDBBtn rounded className='addBut pric addBut font-weight-bold p-1 float-right'>Check Out <MDBIcon icon="angle-double-right" /></MDBBtn>
           <br/> <br/> <br/>
           <div className='mrForm'>
             <h4 className='mdb-color white-text font-weight-bold addit py-2 mt-3'>Add Product</h4>
