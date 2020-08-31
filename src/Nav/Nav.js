@@ -220,17 +220,17 @@ addProduct(e){
  
           <section id='home'>
           <MDBView>
-            <MDBMask
+          <MDBMask
               className='d-flex justify-content-center align-items-center'
               overlay='black-light'
             >
               <MDBContainer className='h-100 d-flex justify-content-center align-items-center'>
-                <MDBRow>
-                  <MDBCol md='12' className='mt-0 mx-auto text-center'>
+                  <MDBRow>
+                  <MDBCol md='12' className='text-center'>
                  
                  <span className='orange-text font-weight-bold logo p-1 px-3'>
                    
-                 <MDBIcon icon='fire' size='sm' className='orange-text logofire px-2'/>
+                 <MDBIcon icon='fire' size='sm' className='orange-text logofire px-2 mb-5'/>
                     Ember </span>
                    {/* <p>
                    <span id='st' className='white font-weight-bold py-1'>&nbsp;&nbsp;- SHOE </span>
@@ -242,7 +242,9 @@ addProduct(e){
                     <span id='st' className='font-weight-bold white py-1'> STORE -&nbsp;&nbsp;</span>
                    
                    </p> */}
-               
+                  
+                  
+
                   </MDBCol>
                 </MDBRow>
               </MDBContainer>
@@ -250,9 +252,11 @@ addProduct(e){
           </MDBView>
         </section>
 
+     
 
-
-          <section id='main'>    
+          <section id='main'>
+            
+          
             <div className="App w-100 px-0 mx-0">
               <MDBRow className='w-100'>
              
@@ -268,19 +272,19 @@ addProduct(e){
         
         <MDBRow className=''>
 
-        <MDBCol md='6' className='m-0 p-0'>
+        <MDBCol md='6' className='m-0 p-0 z-depth-5'>
         
         <MDBCard
         
           className='card-image'
           style={{
             backgroundImage:
-              "url('https://i.imgur.com/6ow1bpB.jpg')"
+              "url('https://i.imgur.com/mK8jYFO.jpg')"
           }}
         >
-          <div className='text-white text-center d-flex align-items-center rgba-blue-light py-5'>
+          <div className='text-white text-center d-flex align-items-center rgba-pink-light py-5'>
             <div className='w-100 text-left'>
-              <MDBCardTitle tag='h3' className='pt-2 pink darken-4 mb-5 px-4'>
+              <MDBCardTitle tag='h3' className='pt-2 pink darken-4 mb-5 px-4 z-depth-5'>
                 <strong>For Her</strong>
               </MDBCardTitle>
              
@@ -297,7 +301,7 @@ addProduct(e){
           className='card-image'
           style={{
             backgroundImage:
-              "url('https://i.imgur.com/6ow1bpB.jpg')"
+              "url('https://i.imgur.com/WBVXvg2.jpg')"
           }}
         >
           <div className='text-white text-center d-flex align-items-center rgba-blue-light py-5'>
@@ -315,16 +319,16 @@ addProduct(e){
 
         <MDBRow>
 
-<MDBCol md='12' className='m-0 p-0'>
+<MDBCol md='12' className='m-0 p-0 my-n1'>
 
         <MDBCard
           className='card-image'
           style={{
             backgroundImage:
-              "url('https://i.imgur.com/6ow1bpB.jpg')"
+              "url('https://i.imgur.com/lk7Oq6M.jpg')"
           }}
         >
-          <div className='text-white text-center d-flex align-items-center rgba-blue-light pt-5'>
+          <div className='text-white text-center d-flex align-items-center rgba-orange-light pt-5 py-5'>
             <div className='w-100'>
               <MDBCardTitle tag='h3' className='pt-2 orange darken-4 mt-5'>
                 <strong>For Them</strong>
@@ -338,9 +342,10 @@ addProduct(e){
         </div>
       </MDBCol>
 
-      <MDBCol md='4' className='p-5'>
-      
-      <div className='text-center memberCard'>
+      <MDBCol md='4' className='p-5 mt-n2'>
+      <div className='p-3 mt-n5'>
+       {/* <MDBBtn rounded className=' font-weight-bold emb mt-n5 py-4 px-5 mx-n5'>Become an Ember Member </MDBBtn>  */}
+      <div className='text-center memberCard mt-5 z-depth-5'>
 
           <p className='orange darken-3 font-weight-bold ctop'>Official Membership Card</p>
 
@@ -353,7 +358,7 @@ addProduct(e){
                  <br/>
 
             </div>
-
+            </div>
       </MDBCol>
 
 

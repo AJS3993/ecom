@@ -1,6 +1,6 @@
 #st{
     color: rgb(25, 40, 58);
-    font-size: 30px;
+    font-size: 18px;
     border-bottom: double rgb(25, 40, 58) 12px;
     border-top: double rgb(25, 40, 58) 12px;
     text-shadow: none;
@@ -107,4 +107,8 @@
 .memberCard{
     border: solid rgb(255, 255, 255) 4px;
     border-radius: 20px;
-}  
+} 
+
+
+
+

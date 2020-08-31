@@ -1,6 +1,6 @@
 
 body {
-    background-color: rgb(89, 108, 131);
+    background-color: rgb(28, 44, 63);
     background-size: 100vw;
     background-repeat: no-repeat;
 }
@@ -10,7 +10,6 @@ body {
 }
 
 #midCol{
-    border: solid rgb(255, 255, 255) 3px;
     background-color: rgb(28, 44, 63);
 }
 
@@ -56,4 +55,22 @@ h3{
   opacity: 0.8;
     border-top: double rgb(255, 255, 255) 10px;
     border-bottom: double rgb(255, 255, 255) 10px;
+}
+
+.bar{
+    border-top: double rgb(72, 83, 108) 8px;
+    border-bottom: double rgb(72, 83, 108) 8px;
+    background-color: rgba(252, 134, 44, 1) !important;
+    color:rgb(255, 255, 255);
+    text-shadow: 1px 1px rgb(72, 83, 108);
+}
+
+.barB{
+    background-color: rgba(252, 134, 44, 1) !important;
+    box-shadow: none;
+}
+
+.barB:hover{
+    box-shadow: none; 
+    text-shadow: 0px 0px 10px rgb(142, 137, 137);
 }
