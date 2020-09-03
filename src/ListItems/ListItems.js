@@ -8,8 +8,8 @@ function ListItems(props){
   const items = props.items;
   const listItems = items.map(item =>
    {
-  return <MDBCol md='3' className='m-0 '>
-    <MDBCard cascade key={item.text} className='z-depth-5 cardie mb-3 pt-4'>
+  return <MDBCol md='4' className='m-0 '>
+    <MDBCard cascade key={item.text} className='z-depth-5 cardie mt-4 mb-3 pt-4'>
    
 
 
@@ -23,7 +23,7 @@ function ListItems(props){
       
       <MDBBtn
             tag='a'
-            className='ml-auto mr-2 mb-1 py-2 px-3 floater z-depth-5'
+            className='ml-auto mr-2 mb-1 py-1 px-2 floater z-depth-5'
             action
             rounded
             onClick={() => {props.addProduct(item)}}

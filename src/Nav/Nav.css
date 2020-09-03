@@ -55,7 +55,7 @@
 }
 
 .clogo{
-    font-size: 50px;
+    font-size: 40px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: oblique;
     text-shadow: 0px 0px 10px #FF0000;
@@ -92,6 +92,7 @@
 
 .accBut{
  font-size: 15px !important;
+ background-color: rgba(255, 255, 255,0) !important;
 }
 
 .cartButt{
@@ -101,13 +102,17 @@
 #home .view {
     background: url("https://i.imgur.com/6ow1bpB.jpg") no-repeat center center;
     background-size: cover;
-    height: 40vh;
+    height: 22vh;
   }
 
 .memberCard{
     border: solid rgb(255, 255, 255) 4px;
     border-radius: 20px;
 } 
+
+#main{
+    border-top: solid rgb(255, 255, 255) 4px;
+}
 
 
 

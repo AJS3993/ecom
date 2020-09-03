@@ -128,56 +128,29 @@ addProduct(e){
 
     return (
       <Router>
-        <div className="fixed-sn navie">
+        <div className="fixed-sn mdb-color">
           
 
           <section id='topNav'>
        
-
-
-          <MDBNavbar className='mdb-color darken-4 w-100 py-0' id='top'>
+          <MDBNavbar dark expand='md' fixed='top' scrolling transparent className='z-depth-0'>
            
             <MDBNavbarNav left>
           
-
-            <h5 className='white-text'>Free Shipping for Ember Members</h5>
+            <MDBIcon icon='fire' size='lg' className='orange-text'/>
            
             
             </MDBNavbarNav>
             
-            <MDBNavbarNav left id='st2' style={specialCaseNavbarStyles}>
-              
-
-              
-              <MDBNavItem active>
-              <MDBNavLink className='font-weight-bold' to="#!">
-                    <div id='topLink' className="d-none d-md-inline py-2 px-4 ml-5">Mens</div>
-                </MDBNavLink>
-              </MDBNavItem>
-              
-              <MDBNavItem>
-                <MDBNavLink className='font-weight-bold' to="#!">
-                  <div id='topLink' className="d-none d-md-inline py-2 px-4 ml-5">Womens</div>
-                </MDBNavLink>
-              </MDBNavItem>
-            
-              <MDBNavItem>
-                <MDBNavLink className='font-weight-bold' to="#!">
-                  <div id='topLink' className="d-none d-md-inline py-2 px-4 ml-5">Kids</div>
-                </MDBNavLink>
-              </MDBNavItem>
-             
-
-             </MDBNavbarNav>
-              
+          
             
 
             <MDBNavbarNav right style={specialCaseNavbarStyles}>
             
 
               <MDBNavItem>
-                <MDBDropdown className='orange'>
-                  <MDBDropdownToggle id='tn' className='mdb-color accBut p-1' nav caret>
+                <MDBDropdown className='p-2'>
+                  <MDBDropdownToggle id='tn' className='accBut p-1 border' nav caret>
                   <MDBIcon icon="user" className="d-inline-inline" />{" "}
                   <div className="d-none d-md-inline accButt">Account</div>
                
@@ -193,7 +166,7 @@ addProduct(e){
               </MDBNavItem>
 
               <MDBNavItem>
-                <MDBDropdown className='ml-4'>
+                <MDBDropdown className='ml-3 p-2'>
                   <MDBDropdownToggle id='tn' className='mdb-color border accBut p-1' nav caret>
                   <MDBIcon icon="shopping-cart" className="d-inline-inline" />{" "}
                   <div className="d-none d-md-inline cartButt">Cart</div>
@@ -231,7 +204,7 @@ addProduct(e){
                  <span className='orange-text font-weight-bold logo p-1 px-3'>
                    
                  <MDBIcon icon='fire' size='sm' className='orange-text logofire px-2 mb-5'/>
-                    Ember </span>
+                    Ember</span>
                    {/* <p>
                    <span id='st' className='white font-weight-bold py-1'>&nbsp;&nbsp;- SHOE </span>
                    
@@ -257,20 +230,38 @@ addProduct(e){
           <section id='main'>
             
           
-            <div className="App w-100 px-0 mx-0">
-              <MDBRow className='w-100'>
              
-                <MDBCol id='midCol' md='12' className='p-3 mx-3 mt-n4'> 
-                  <div className='d-flex align-content-around flex-wrap'>
-                   
-                    
-                    <MDBRow className='mt-n3 w-100'>
       
-      <MDBCol md='8' className='m-0 px-0'>
+                   
 
-        <div className='px-3 forBox m-0'>
+
+       
+   
+{/* 
+      <MDBCol md='5' className=''>
+      <div className='p-3 mt-n5'> */}
+       {/* <MDBBtn rounded className=' font-weight-bold emb mt-n5 py-4 px-5 mx-n5'>Become an Ember Member </MDBBtn>  */}
+      
+    
+            {/* </div>
+      </MDBCol> */}
+
+      
+
+               
+                     
+                    {/* <ListItems products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
+                 */}
+               
+           
+          </section>
+
+<section id='app'>
+  <MDBRow>
+  <MDBCol md='1' className='mx-n3 px-0'></MDBCol>
+<MDBCol md='4' className='mx-0 p-0'> <div className='px-3 forBox m-0'>
         
-        <MDBRow className=''>
+        <MDBRow className='mt-4'>
 
         <MDBCol md='6' className='m-0 p-0 z-depth-5'>
         
@@ -340,40 +331,32 @@ addProduct(e){
         </MDBCol>
         </MDBRow>
         </div>
-      </MDBCol>
 
-      <MDBCol md='4' className='p-5 mt-n2'>
-      <div className='p-3 mt-n5'>
-       {/* <MDBBtn rounded className=' font-weight-bold emb mt-n5 py-4 px-5 mx-n5'>Become an Ember Member </MDBBtn>  */}
-      <div className='text-center memberCard mt-5 z-depth-5'>
+        <div className='px-5'>
+        
+        <div className='text-center memberCard mt-5 z-depth-5 mdb-color darken-3 mx-3'>
 
-          <p className='orange darken-3 font-weight-bold ctop'>Official Membership Card</p>
+<p className='orange darken-3 font-weight-bold ctop'>Official Membership Card</p>
 
-      <span className='orange-text font-weight-bold clogo'>
-   
-                   <MDBIcon icon='fire' size='sm' className='orange-text logofire px-2'/>
-                      Ember </span>
-                      <br/><br/>
-                 <p id='st' className='white font-weight-bold my-n3'>- Member -</p>
-                 <br/>
+<span className='orange-text font-weight-bold clogo'>
 
-            </div>
-            </div>
-      </MDBCol>
+         <MDBIcon icon='fire' size='sm' className='orange-text logofire px-2'/>
+            Ember </span>
+            <br/><br/>
+       <p id='st' className='white font-weight-bold my-n3'>- Member -</p>
+       <br/>
 
+  </div>
+        
+  </div>
+        
+        </MDBCol>
+        <MDBCol md='1' className='mx-n3 px-0'></MDBCol>
+<MDBCol md='6' className='mx-0'>  <App/></MDBCol>
 
-    </MDBRow> 
-                    
-                    
-                    {/* <ListItems products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/> */}
-                  </div>
-                </MDBCol>
-                
-              </MDBRow>
-            </div>
-          </section>
-{/* 
-<section id='app'><App/></section> */}
+  </MDBRow>
+  
+  </section>
 
         </div>
       </Router>

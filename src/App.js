@@ -105,9 +105,9 @@ addProduct(e){
 
  render(){
   return (
-    <div className="App w-100 px-0 mx-0">
+    <div className="App w-100">
       
-        <MDBRow className='w-100 mt-5'>
+        <MDBRow className='w-100 mt-4'>
           
     
             {/* <form id="to-do-form" onSubmit={this.addItem} className='border p-2 grey'>
@@ -122,14 +122,12 @@ addProduct(e){
 
        
 
-<MDBCol md='2' className='mr-5'>
 
-</MDBCol>
           
-          <MDBCol id='midCol' md='7' className='p-4 mt-n3'> 
+          <MDBCol id='midCol' md='12' className='p-0'> 
           <div className='d-flex align-content-around flex-wrap mt-n3'>
 
-<div className='w-100 pl-5'><MDBBtn rounded color='white' className='mdb-color darken-2 white-text mt-n5 mb-4 py-3 newA'>New Arrivals</MDBBtn>
+<div className='w-100 pl-5'><MDBBtn rounded className=' darken-2 mdb-color-text font-weight-bold mt-n2 newA mb-n3'>On Sale!</MDBBtn>
 </div>
      
           
@@ -139,7 +137,7 @@ addProduct(e){
           </MDBCol>
           
 
-          <MDBCol md='1' className='mx-n5'></MDBCol>
+          {/* <MDBCol md='1' className='mx-n5'></MDBCol>
           
    
           <MDBCol md='2' className='d-block'>
@@ -159,7 +157,7 @@ addProduct(e){
            
             </form>
             </div>
-          </MDBCol>
+          </MDBCol> */}
   
         </MDBRow>
 
