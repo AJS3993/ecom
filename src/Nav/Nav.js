@@ -1,8 +1,7 @@
 
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import { MDBBtn,MDBNavbar, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon, MDBView, MDBMask, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardTitle } from "mdbreact";
-import ListItems from '../ListItems/ListItems';
+import { MDBBtn,MDBNavbar, MDBNavbarNav, MDBNavItem, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon, MDBView, MDBMask, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardTitle } from "mdbreact";
 import Cart from '../Cart/Cart';
 import App from '../App';
 import './Nav.css'
@@ -116,10 +115,7 @@ addProduct(e){
   };
 
   render() {
-    const navStyle = {
-      paddingLeft:
-        this.state.windowWidth > this.state.breakWidth ? "210px" : "16px"
-    };
+    
 
     const specialCaseNavbarStyles = {
       WebkitBoxOrient: "horizontal",
@@ -130,236 +126,84 @@ addProduct(e){
       <Router>
         <div className="fixed-sn mdb-color">
           
-
           <section id='topNav'>
-       
-          <MDBNavbar dark expand='md' fixed='top' scrolling transparent className='z-depth-0'>
-           
-            <MDBNavbarNav left>
-          
-            <MDBIcon icon='fire' size='lg' className='orange-text'/>
-           
-            
-            </MDBNavbarNav>
-            
-          
-            
+            <MDBNavbar dark expand='md' fixed='top' className='rgba-black-strong py-0 navie'>
+              <MDBNavbarNav left>
+                
+                <h5 className='orange-text'><MDBIcon icon='fire' size='lg' className='orange-text'/>&nbsp;&nbsp;Bring power to your steps</h5>
+              </MDBNavbarNav>
+              <MDBNavbarNav right style={specialCaseNavbarStyles}>
+                <MDBNavItem>
+                  <MDBDropdown className='p-2'>
+                    <MDBDropdownToggle id='tn' className='accBut p-1 border' nav caret>
+                      <MDBIcon icon="user" className="d-inline-inline" />{" "}
+                      <div className="d-none d-md-inline accButt">Account</div>
+                     </MDBDropdownToggle>
+                    <MDBDropdownMenu right className='border border-dark'>
+                      <MDBDropdownItem className='font-weight-bold' href="#!">Orders</MDBDropdownItem>
+                      <MDBDropdownItem className='font-weight-bold' href="#!">Account Info</MDBDropdownItem>
+                      <hr className='hr-dark'/>
+                      <MDBDropdownItem className='font-weight-bold' href="#!">Sign out</MDBDropdownItem>
+                    </MDBDropdownMenu>
+                  </MDBDropdown>
+                </MDBNavItem>
 
-            <MDBNavbarNav right style={specialCaseNavbarStyles}>
-            
-
-              <MDBNavItem>
-                <MDBDropdown className='p-2'>
-                  <MDBDropdownToggle id='tn' className='accBut p-1 border' nav caret>
-                  <MDBIcon icon="user" className="d-inline-inline" />{" "}
-                  <div className="d-none d-md-inline accButt">Account</div>
-               
-                  </MDBDropdownToggle>
-                  <MDBDropdownMenu right className='border border-dark'>
-                    <MDBDropdownItem className='font-weight-bold' href="#!">Orders</MDBDropdownItem>
-                    
-                    <MDBDropdownItem className='font-weight-bold' href="#!">Account Info</MDBDropdownItem>
-                    <hr className='hr-dark'/>
-                    <MDBDropdownItem className='font-weight-bold' href="#!">Sign out</MDBDropdownItem>
-                  </MDBDropdownMenu>
-                </MDBDropdown>
-              </MDBNavItem>
-
-              <MDBNavItem>
-                <MDBDropdown className='ml-3 p-2'>
-                  <MDBDropdownToggle id='tn' className='mdb-color border accBut p-1' nav caret>
-                  <MDBIcon icon="shopping-cart" className="d-inline-inline" />{" "}
-                  <div className="d-none d-md-inline cartButt">Cart</div>
-               
-                  </MDBDropdownToggle>
-                  <MDBDropdownMenu right className='border border-dark p-0'>
-                    <MDBDropdownItem className='font-weight-bold p-0' href="#!">
-                    <Cart products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
-                    </MDBDropdownItem>
-                    <MDBDropdownItem className='p-0'>
-                    <MDBBtn className='checkout w-100 addBut font-weight-bold m-0'>Check Out <MDBIcon icon="angle-double-right" /></MDBBtn>
-                    </MDBDropdownItem>
-                    
-                  </MDBDropdownMenu>
-                </MDBDropdown>
-              </MDBNavItem>
-
-
-            </MDBNavbarNav>
-          
-          </MDBNavbar>
-     
+                <MDBNavItem>
+                  <MDBDropdown className='ml-3 p-2'>
+                    <MDBDropdownToggle id='tn' className='mdb-color border accBut p-1' nav caret>
+                      <MDBIcon icon="shopping-cart" className="d-inline-inline" />{" "}
+                      <div className="d-none d-md-inline cartButt">Cart</div>
+                    </MDBDropdownToggle>
+                    <MDBDropdownMenu right className='border border-dark p-0'>
+                      <MDBDropdownItem className='font-weight-bold p-0' href="#!">
+                        <Cart products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
+                      </MDBDropdownItem>
+                      <MDBDropdownItem className='p-0'>
+                        <MDBBtn className='checkout w-100 addBut font-weight-bold m-0'>Check Out <MDBIcon icon="angle-double-right" /></MDBBtn>
+                      </MDBDropdownItem>
+                    </MDBDropdownMenu>
+                  </MDBDropdown>
+                </MDBNavItem>
+              </MDBNavbarNav>
+            </MDBNavbar>
           </section>
  
           <section id='home'>
-          <MDBView>
-          <MDBMask
+            <MDBView>
+              <MDBMask
               className='d-flex justify-content-center align-items-center'
-              overlay='black-light'
-            >
-              <MDBContainer className='h-100 d-flex justify-content-center align-items-center'>
-                  <MDBRow>
-                  <MDBCol md='12' className='text-center'>
-                 
-                 <span className='orange-text font-weight-bold logo p-1 px-3'>
-                   
-                 <MDBIcon icon='fire' size='sm' className='orange-text logofire px-2 mb-5'/>
-                    Ember</span>
-                   {/* <p>
-                   <span id='st' className='white font-weight-bold py-1'>&nbsp;&nbsp;- SHOE </span>
-                   
-                   <span id='st' className='font-weight-bold white py-1'> 
-                   <MDBIcon icon='fire' size='sm' className=' white px-2'/>
-                   </span>
-                  
-                    <span id='st' className='font-weight-bold white py-1'> STORE -&nbsp;&nbsp;</span>
-                   
-                   </p> */}
-                  
-                  
-
-                  </MDBCol>
-                </MDBRow>
-              </MDBContainer>
-            </MDBMask>
-          </MDBView>
-        </section>
-
-     
-
-          <section id='main'>
-            
-          
-             
-      
-                   
-
-
-       
-   
-{/* 
-      <MDBCol md='5' className=''>
-      <div className='p-3 mt-n5'> */}
-       {/* <MDBBtn rounded className=' font-weight-bold emb mt-n5 py-4 px-5 mx-n5'>Become an Ember Member </MDBBtn>  */}
-      
-    
-            {/* </div>
-      </MDBCol> */}
-
-      
-
-               
-                     
-                    {/* <ListItems products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
-                 */}
-               
-           
+              overlay='black-light'>
+                <MDBContainer className='w-100 d-flex justify-content-center align-items-center'>
+                  <MDBRow >
+                    <MDBCol md='12' className='w-100'>
+                      
+                      <span className='orange-text font-weight-bold logo p-1 px-3 text-center w-75 d-flex justify-content-center align-items-center mb-n3 mt-4'> 
+                      <MDBIcon icon='fire' className='orange-text mdb-color darken-3 logofire px-2 py-1 mb-2 mx-2'/>
+                  Ember</span>
+                      
+                      <span className='font-weight-bold logo2 d-flex flex-row-reverse mb-n3 mt-2 mdb-color darken-2 w-75'>
+                        Footwear & More &nbsp;</span>
+                        </MDBCol>
+                  </MDBRow>
+                </MDBContainer>
+              </MDBMask>
+            </MDBView>
           </section>
 
-<section id='app'>
-  <MDBRow>
-  <MDBCol md='1' className='mx-n3 px-0'></MDBCol>
-<MDBCol md='4' className='mx-0 p-0'> <div className='px-3 forBox m-0'>
-        
-        <MDBRow className='mt-4'>
+          <section id='bottomNav'>
+            <div className='w-100 text-center rgba-black-strong'>
+              <div id='st' className='rounded font-weight-bold py-1 text-center'>
+                <MDBBtn className='py-2 px-4 mx-3 z-depth-0 navBut' outline color='' >MEN</MDBBtn>
+                <MDBBtn className='py-2 px-4 mx-3 z-depth-0 navBut' outline color='' >WOMEN</MDBBtn>
+                <MDBBtn className='py-2 px-4 mx-3 z-depth-0 navBut' outline color='' >KIDS</MDBBtn>
+              </div>
+            </div> 
+          </section>
 
-        <MDBCol md='6' className='m-0 p-0 z-depth-5'>
-        
-        <MDBCard
-        
-          className='card-image'
-          style={{
-            backgroundImage:
-              "url('https://i.imgur.com/mK8jYFO.jpg')"
-          }}
-        >
-          <div className='text-white text-center d-flex align-items-center rgba-pink-light py-5'>
-            <div className='w-100 text-left'>
-              <MDBCardTitle tag='h3' className='pt-2 pink darken-4 mb-5 px-4 z-depth-5'>
-                <strong>For Her</strong>
-              </MDBCardTitle>
-             
-            </div>
-          </div>
-        </MDBCard>
-
-        </MDBCol>
-
-
-        <MDBCol md='6' className='m-0 p-0'>
-   
-      <MDBCard
-          className='card-image'
-          style={{
-            backgroundImage:
-              "url('https://i.imgur.com/WBVXvg2.jpg')"
-          }}
-        >
-          <div className='text-white text-center d-flex align-items-center rgba-blue-light py-5'>
-            <div className='w-100 text-right'>
-              <MDBCardTitle tag='h3' className='pt-2 blue darken-4 mb-5 px-4'>
-                <strong>For Him</strong>
-              </MDBCardTitle>
-             
-            </div>
-          </div>
-        </MDBCard>
-
-</MDBCol>
-        </MDBRow>
-
-        <MDBRow>
-
-<MDBCol md='12' className='m-0 p-0 my-n1'>
-
-        <MDBCard
-          className='card-image'
-          style={{
-            backgroundImage:
-              "url('https://i.imgur.com/lk7Oq6M.jpg')"
-          }}
-        >
-          <div className='text-white text-center d-flex align-items-center rgba-orange-light pt-5 py-5'>
-            <div className='w-100'>
-              <MDBCardTitle tag='h3' className='pt-2 orange darken-4 mt-5'>
-                <strong>For Them</strong>
-              </MDBCardTitle>
-             
-            </div>
-          </div>
-        </MDBCard>
-        </MDBCol>
-        </MDBRow>
-        </div>
-
-        <div className='px-5'>
-        
-        <div className='text-center memberCard mt-5 z-depth-5 mdb-color darken-3 mx-3'>
-
-<p className='orange darken-3 font-weight-bold ctop'>Official Membership Card</p>
-
-<span className='orange-text font-weight-bold clogo'>
-
-         <MDBIcon icon='fire' size='sm' className='orange-text logofire px-2'/>
-            Ember </span>
-            <br/><br/>
-       <p id='st' className='white font-weight-bold my-n3'>- Member -</p>
-       <br/>
-
-  </div>
-        
-  </div>
-        
-        </MDBCol>
-        <MDBCol md='1' className='mx-n3 px-0'></MDBCol>
-<MDBCol md='6' className='mx-0'>  <App/></MDBCol>
-
-  </MDBRow>
-  
-  </section>
-
-        </div>
-      </Router>
+          <section><App/></section>
+ 
+ </div>
+</Router>
     );
   }
 }

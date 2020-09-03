@@ -1,14 +1,29 @@
+.navie{
+    border-bottom: solid rgb(255, 132, 0) 2px; 
+}
+
 #st{
-    color: rgb(25, 40, 58);
+    color: rgb(255, 255, 255) !important;
     font-size: 18px;
-    border-bottom: double rgb(25, 40, 58) 12px;
-    border-top: double rgb(25, 40, 58) 12px;
     text-shadow: none;
+    border-bottom: double rgb(255, 255, 255) 7px;
+    border-top: solid rgb(255, 132, 0) 2px; 
+}
+
+.navBut{
+    background-color: rgba(255, 255, 255, 0.2) !important; 
+}
+
+.navBut:hover{
+    background-color: rgba(255, 255, 255, 1) !important; 
+    color:orange !important;
 }
 
 #st2{
-    color: rgb(165, 112, 27) !important;
+    color: rgb(72, 83, 108) !important;
     outline-offset: 4px;
+    border-bottom: double rgb(72, 83, 108) 7px;
+    border-top: double rgb(72, 83, 108) 7px;
 }
 
 #top{
@@ -48,10 +63,23 @@
 }
 
 .logo{
-    font-size: 60px;
+    font-size: 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: oblique;
-    text-shadow: 0px 0px 10px #FF0000;
+    text-shadow: 0px 0px 3px #bc9d9d;
+}
+
+.logo2{
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+    color:rgba(255, 255, 255, 0.9) !important;
+    border-left: double rgb(47, 55, 73) 4px;
+    border-top: double rgba(255, 255, 255, 0.8) 4px;
+    border-bottom: double rgba(255, 255, 255, 0.8) 4px;
+    border-right: solid rgb(47, 55, 73) 4px;
+    outline: solid rgb(73, 63, 47) 2px;
+    box-shadow: 0px 0px 5px #ffffff;
 }
 
 .clogo{
@@ -86,8 +114,9 @@
 }
 
 .logofire{
-    text-shadow: 0px 0px 10px #FF0000;
-    font-size: 60px !important;
+    box-shadow: 0px 0px 5px #ffffff;
+    font-size: 50px !important;
+    border: solid rgb(255, 255, 255) 1px;
 }
 
 .accBut{
@@ -102,17 +131,13 @@
 #home .view {
     background: url("https://i.imgur.com/6ow1bpB.jpg") no-repeat center center;
     background-size: cover;
-    height: 22vh;
+    height: 25vh;
   }
 
 .memberCard{
     border: solid rgb(255, 255, 255) 4px;
     border-radius: 20px;
 } 
-
-#main{
-    border-top: solid rgb(255, 255, 255) 4px;
-}
 
 
 

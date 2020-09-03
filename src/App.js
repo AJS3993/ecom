@@ -1,7 +1,7 @@
 import React from 'react';
 import ListItems from './ListItems/ListItems';
 import Cart from './Cart/Cart';
-import {MDBCol,MDBRow,MDBIcon,MDBBtn} from 'mdbreact';
+import { MDBBtn,MDBNavbar, MDBNavbarNav, MDBNavItem, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon, MDBView, MDBMask, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardTitle } from "mdbreact";
 
 class App extends React.Component {
   constructor(props){
@@ -89,79 +89,112 @@ addProduct(e){
 
   }
 
-  // setUpdate(text,key){
-  //   console.log("items:"+this.state.items);
-  //   const items = this.state.items;
-  //   items.map(item=>{      
-  //     if(item.key===key){
-  //       console.log(item.key +"    "+key)
-  //       item.text= text;
-  //     }
-  //   })
-  //   this.setState({
-  //     items: items
-  //   })
-  // }
 
  render(){
   return (
     <div className="App w-100">
       
-        <MDBRow className='w-100 mt-4'>
-          
-    
-            {/* <form id="to-do-form" onSubmit={this.addItem} className='border p-2 grey'>
-            <br/>
-              <input type="text" name='text' placeholder="Name"  onChange={this.handleTextInput}/>
-              <br/>  <br/>
-              <input type="number" name='price' placeholder="Price" onChange={this.handlePriceInput}/>
-              <br/>  <br/>
-              <button type="submit">Add</button>
-            </form> */}
-
-
+     <MDBRow className='mx-2 mt-4'>
        
+              <MDBCol md='5' className='px-1'> 
+              <MDBBtn className=' ml-5 p-0 font-weight-bold dLabel mb-n4'>Find The Perfect Gift!</MDBBtn>
+                <div className='px-4 pb-3 mx-0 z-depth-5 forBox mt-0 pt-1'>
+                  <MDBRow className='mt-3 mr-0'>
+                    <MDBCol md='6' className='px-2'>
+                      <MDBCard className='card-image forBoxHer m-1' style={{backgroundImage:"url('https://i.imgur.com/mK8jYFO.jpg')"}}>
+                        <div className='text-white text-center d-flex align-items-center rgba-pink-light py-5'>
+                          <div className='w-100 text-left'>
+                            <MDBCardTitle className='mt-n5 py-3'>
+                            <MDBBtn className=' pink darken-4 mb-3 mt-2 z-depth-5 w-50 forBut p-1'>For Her</MDBBtn>
+                            </MDBCardTitle>
+                          </div>
+                        </div>
+                      </MDBCard>
+                    </MDBCol>
+                    <MDBCol md='6' className='px-2'>
+                      <MDBCard className='card-image forBoxHim mb-n1 ml-2 mt-1' style={{backgroundImage:"url('https://i.imgur.com/WBVXvg2.jpg')"}}>
+                        <div className='text-white text-center d-flex align-items-center rgba-blue-light py-5'>
+                          <div className='w-100 text-right'>
+                            <MDBCardTitle className='mb-n5 py-0'>
+                              <MDBBtn className='blue darken-4 mt-5 mb-n4 w-50 float-right forBut p-1'>For Him</MDBBtn>
+                            </MDBCardTitle>
+                          </div>
+                        </div>
+                      </MDBCard>
+                    </MDBCol>
+                  </MDBRow>
+                <MDBRow>
+              <MDBCol md='12' className='pl-4 pr-5 mt-2'>
+                <MDBCard className='card-image forBoxThem m-2' style={{backgroundImage:"url('https://i.imgur.com/lk7Oq6M.jpg')"}}>
+                  <div className='text-white text-center d-flex align-items-center rgba-orange-light pt-5 py-5'>
+                    <div className='w-100'>
+                    <MDBCardTitle className='mb-n5 py-0 mx-5'>
+                              <MDBBtn className='orange darken-4 mt-5 mb-3 w-75 forBut p-1 mx-5'>For Them</MDBBtn>
+                            </MDBCardTitle>
+                    </div>
+                  </div>
+                </MDBCard>
+              </MDBCol>
+            </MDBRow>
+          </div>
+        
+
+       <div className='px-5 pt-5'>
+       
+        <MDBBtn disabled className='font-weight-bold mt-1 newB mb-n5 px-0 py-3 w-100 pb-4'>
 
 
-          
-          <MDBCol id='midCol' md='12' className='p-0'> 
-          <div className='d-flex align-content-around flex-wrap mt-n3'>
+            <MDBBtn className='float-left mx-n5 py-1 px-3 mdb-color darken-4 catLabelL font-weight-bold my-n4'>
+            <MDBBtn className='float-left py-2 px-3  mdb-color darken-2 catLabelL font-weight-bold  z-depth-3 mt-n3'>
+            <MDBBtn className='float-left py-3 px-3 ml-n2  mdb-color catLabelL font-weight-bold z-depth-5 mt-n3'>
+            <MDBIcon icon='fire' size='2x' className='p-2 pt-3'/>
+            </MDBBtn>
+            </MDBBtn>
+            </MDBBtn>
+        
+            <span className='memBanner px-5 py-3 mdb-color'>Become A Member</span> 
+    
+            <MDBBtn className='float-right mx-n5 py-1 px-3 mdb-color darken-4 catLabelR font-weight-bold my-n4'>
+            <MDBBtn className='float-right py-2 px-3  mdb-color darken-2 catLabelR font-weight-bold  z-depth-3 mt-n3'>
+            <MDBBtn className='float-right py-3 px-3 mr-n2  mdb-color catLabelR font-weight-bold z-depth-5 mt-n3'>
+            <MDBIcon icon='fire' size='2x' className='p-2 pt-3'/>
+            </MDBBtn>
+            </MDBBtn>
+            </MDBBtn>
 
-<div className='w-100 pl-5'><MDBBtn rounded className=' darken-2 mdb-color-text font-weight-bold mt-n2 newA mb-n3'>On Sale!</MDBBtn>
-</div>
-     
-          
-         
-              <ListItems products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
-              </div>
-          </MDBCol>
-          
 
-          {/* <MDBCol md='1' className='mx-n5'></MDBCol>
-          
-   
-          <MDBCol md='2' className='d-block'>
+            <div className='py-n5 px-5'>
+          <div className='text-center memberCard mt-5 z-depth-5 mdb-color darken-3 mx-3'>
+            <p className='orange darken-3 font-weight-bold ctop'>Official Membership Card</p>
+            <span className='orange-text font-weight-bold clogo'>
+              <MDBIcon icon='fire' size='md' className='orange-text px-2'/>
+              Ember </span>
             
-            <Cart products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
-          <MDBBtn rounded className='addBut pric addBut font-weight-bold p-1 float-right'>Check Out <MDBIcon icon="angle-double-right" /></MDBBtn>
-          <br/> <br/> <br/>
-          <div className='mrForm'>
-            <h4 className='mdb-color white-text font-weight-bold addit py-2 mt-3'>Add Product</h4>
-          <form id="to-do-form" onSubmit={this.addItem}>
+            <p id='st2' className='white font-weight-bold mb-1'>- Member -</p>
             <br/>
-              <input className='w-75 ml-3' type="text" name='text' placeholder="Name"  onChange={this.handleTextInput}/>
-              <br/>  <br/>
-              <input className='w-75 ml-3' type="number" name='price' placeholder="Price" onChange={this.handlePriceInput}/>
-              <br/>  <br/> 
-              <MDBBtn rounded type="submit" className='pric addBut font-weight-bold p-2 float-right mt-n3'>Add It!</MDBBtn>
-           
-            </form>
-            </div>
-          </MDBCol> */}
+          </div>
+        </div>
+            
+            
+            </MDBBtn>
   
-        </MDBRow>
+  
+            </div>
+          
 
- 
+      </MDBCol>
+      <MDBCol md='7'>
+        <MDBCol id='midCol' md='12' className='p-0 saleBox mt-1'> 
+          <div className='d-flex align-content-around flex-wrap mt-n2'>
+            <div className='w-100 pl-5 mb-2'>
+              <MDBBtn disabled className='font-weight-bold mt-n4 newA mb-n2 px-3 py-0'>Hot Sales! <MDBBtn className='pt-2 px-3 my-n2 mr-n3 catLabel font-weight-bold'><MDBIcon icon='fire' size='2x' className='orange-text'/></MDBBtn></MDBBtn>
+            </div>
+            <ListItems products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
+          </div>
+        </MDBCol>
+        </MDBCol>
+    
+      </MDBRow>
     </div>
   );
  }

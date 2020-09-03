@@ -9,32 +9,28 @@ function ListItems(props){
   const listItems = items.map(item =>
    {
   return <MDBCol md='4' className='m-0 '>
-    <MDBCard cascade key={item.text} className='z-depth-5 cardie mt-4 mb-3 pt-4'>
+    <MDBCard cascade key={item.text} className='z-depth-5 cardie mt-4 mb-3 mx-n1'>
    
-
-
+     <span className='d-flex flex-row-reverse orange darken-1 cardieTop'>
      
-     <span className='d-flex flex-row-reverse'>
-     <MDBBtn disabled className='w-50 catLabel p-0 mt-n4 mdb-color font-weight-bold ml-4 mr-n1'>{person()}</MDBBtn>
- 
+     <MDBBtn className='py-0 px-1 catLabel my-0 font-weight-bold mr-0'>&nbsp;&nbsp;{person()}</MDBBtn>
+     <h5 className='mx-auto font-weight-bold mb-0'>{item.text}</h5>
      </span>
      
       <MDBCardImage src={item.pic} className='w-100'/>
-      
       <MDBBtn
             tag='a'
-            className='ml-auto mr-2 mb-1 py-1 px-2 floater z-depth-5'
+            className='ml-auto mr-2 mb-3 mt-n5 py-1 px-2 floater z-depth-5'
             action
             rounded
             onClick={() => {props.addProduct(item)}}
           >
-             <span className='pric font-weight-bold'><MDBIcon icon='cart-plus'></MDBIcon> {formatPrice(item.price)}</span>
+             <span className='pric font-weight-bold'> {formatPrice(item.price)}</span>
           </MDBBtn>
-          <MDBCardBody cascade className='p-0'>
-          <h3 className='mdb-color white-text'> {item.text}</h3>
-   <MDBCardText className='p-2 font-weight-bold black-text'>{getFunName()}</MDBCardText>
-          
          
+          <MDBCardBody cascade className='p-0'>
+           
+         <MDBCardText className='p-2 font-weight-bold black-text mdb-color lighten-5 mt-n2 cardieText'>{getFunName()} {getFunName()} {getFunName()}</MDBCardText>
           
          
           

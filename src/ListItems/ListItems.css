@@ -1,9 +1,16 @@
 
 
 .cardie{
-  outline-offset: -2px;
-  border: solid rgb(28, 44, 63) 4px;
-  opacity: 0.95;
+  border: solid rgba(28, 44, 63,0.85) 2px;
+}
+
+.cardieTop{
+  border-bottom: solid rgba(28, 44, 63,0.25) 2px;
+}
+
+.cardieText{
+  border-top: solid rgba(28, 44, 63,0.25) 2px;
+  border-bottom: solid rgba(28, 44, 63,0.5) 2px;
 }
 
 .pric{
@@ -14,7 +21,7 @@
 
 .floater{
   border: solid rgb(28, 44, 63) 3px;
-  background-color: rgba(237, 145, 33,1) !important;
+  background-color: rgba(237, 145, 33,0.9) !important;
 }
 
 .floater:hover{
@@ -22,11 +29,25 @@
 }
 
 .catLabel{
-  font-size: 15px;
+  font-size: 14px;
     color:rgb(255, 255, 255);
     background-color: rgba(28, 44, 63,1) !important;
-    border: solid rgba(28, 44, 63,1) 5px;
-    border-bottom-left-radius: 80px 80px;
+    border: solid rgba(28, 44, 63,1) 2px;
+    border-bottom-left-radius: 50px 50px;
+}
+
+.catLabelR{
+  font-size: 14px;
+    color:rgb(255, 255, 255);
+    border: solid rgba(28, 44, 63,1) 2px;
+    border-bottom-left-radius: 50px 50px;
+}
+
+.catLabelL{
+  font-size: 14px;
+    color:rgb(255, 255, 255);
+    border: solid rgba(28, 44, 63,1) 2px;
+    border-bottom-right-radius: 50px 50px;
 }
 
 .xbut{
