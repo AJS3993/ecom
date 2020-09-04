@@ -1,6 +1,6 @@
 
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { MDBBtn,MDBNavbar, MDBNavbarNav, MDBNavItem, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon, MDBView, MDBMask, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardTitle } from "mdbreact";
 import Cart from '../Cart/Cart';
 import App from '../App';
@@ -84,7 +84,6 @@ addProduct(e){
     })
   }
  
-
   deleteItem(text){
    
     const filteredItems= this.state.items.filter(item =>
@@ -125,15 +124,22 @@ addProduct(e){
 
     return (
       <Router>
+
         <div className="fixed-sn mdb-color">
           
+          
+          {/* Navbar Start */}
           <section id='topNav'>
+            
+            {/* Top Left */}
             <MDBNavbar dark expand='md' fixed='top' className='rgba-black-strong py-0 navie'>
               <MDBNavbarNav left>
-                
-                <h5 className='orange-text'><MDBIcon icon='fire' size='lg' className='orange-text'/>&nbsp;&nbsp;Bring power to your steps</h5>
-              </MDBNavbarNav>
+               <Link to='/'><h5 className='orange-text'><MDBIcon icon='fire' size='lg' className='orange-text'/>&nbsp;&nbsp;Bring power to your steps</h5>
+             </Link>  </MDBNavbarNav>
+              
               <MDBNavbarNav right style={specialCaseNavbarStyles}>
+                
+                {/* Account Button */}
                 <MDBNavItem>
                   <MDBDropdown className='p-2'>
                     <MDBDropdownToggle id='tn' className='accBut p-1 border' nav caret>
@@ -149,6 +155,8 @@ addProduct(e){
                   </MDBDropdown>
                 </MDBNavItem>
 
+
+               {/* Cart Button */}
                 <MDBNavItem>
                   <MDBDropdown className='ml-3 p-2'>
                     <MDBDropdownToggle id='tn' className='mdb-color border accBut p-1' nav caret>
@@ -165,10 +173,14 @@ addProduct(e){
                     </MDBDropdownMenu>
                   </MDBDropdown>
                 </MDBNavItem>
+
+
               </MDBNavbarNav>
             </MDBNavbar>
           </section>
  
+          
+          {/* Image with Logo */}
           <section id='home'>
             <MDBView>
               <MDBMask
@@ -177,35 +189,43 @@ addProduct(e){
                 <MDBContainer className='w-100 d-flex justify-content-center align-items-center'>
                   <MDBRow >
                     <MDBCol md='12' className='w-100'>
-                      
                       <span className='orange-text font-weight-bold logo p-1 px-3 text-center w-75 d-flex justify-content-center align-items-center mb-n3 mt-4'> 
-                      <MDBIcon icon='fire' className='orange-text mdb-color darken-3 logofire px-2 py-1 mb-2 mx-2'/>
-                  Ember</span>
-                      
+                        <MDBIcon icon='fire' className='orange-text mdb-color darken-3 logofire px-2 py-1 mb-2 mx-2'/>
+                        Ember
+                      </span>
                       <span className='font-weight-bold logo2 d-flex flex-row-reverse mb-n3 mt-2 mdb-color darken-2 w-75'>
-                        Footwear & More &nbsp;</span>
-                        </MDBCol>
+                        Footwear & More &nbsp;
+                      </span>
+                    </MDBCol>
                   </MDBRow>
                 </MDBContainer>
               </MDBMask>
             </MDBView>
           </section>
 
+
+
           <section id='bottomNav'>
             <div className='w-100 text-center rgba-black-strong'>
               <div id='st' className='rounded font-weight-bold py-1 text-center'>
-                <MDBBtn className='py-2 px-4 mx-3 z-depth-0 navBut' outline color='' >MEN</MDBBtn>
+                <Link to='/store'><MDBBtn className='py-2 px-4 mx-3 z-depth-0 navBut' outline color='' >MEN</MDBBtn></Link>
                 <MDBBtn className='py-2 px-4 mx-3 z-depth-0 navBut' outline color='' >WOMEN</MDBBtn>
                 <MDBBtn className='py-2 px-4 mx-3 z-depth-0 navBut' outline color='' >KIDS</MDBBtn>
               </div>
             </div> 
           </section>
 
-          <section><App/></section>
+<section>
+          <Switch>
 
-          <section><StorePage/></section>
+<Route path='/store' component={StorePage} />
+<Route path='/' component={App} />         
+ </Switch>
+
+ </section>
  
  </div>
+
 </Router>
     );
   }
