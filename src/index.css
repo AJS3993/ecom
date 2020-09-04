@@ -47,11 +47,11 @@ body {
 
 .newB{
     box-shadow: 0px 0px 10px rgb(255, 255, 255);
-    border: solid rgb(255, 162, 0)10px;
-    outline: double rgb(28, 44, 63) 10px;
+    border: double rgb(255, 162, 0)10px;
+    outline: solid rgb(28, 44, 63) 5px;
     background-color: rgba(255, 255, 255, 0.8) !important;
   color:rgb(28, 44, 63);
-  outline-offset: -10px;
+  outline-offset: -7px;
   opacity: 1 !important;
 }
 
@@ -116,12 +116,25 @@ h3{
 }
 
 .memBanner{
-    border: solid rgb(26, 41, 57) 5px;
-  background-color: rgb(72, 83, 108) !important;
-    font-size: 20px !important;
-    border-bottom: solid rgb(28, 44, 63) 5px;
+    border: solid rgb(32, 51, 73) 5px;
+    border-bottom: solid rgba(237, 145, 33,1) 5px;
+  background-color: rgb(255, 140, 0) !important;
+    font-size: 25px !important;
   color:rgb(255, 255, 255);
-  text-shadow: 2px 1px #9e5803;
+  text-shadow: 2px 2px rgb(26, 41, 57);
+  border-radius: 15px 15px 0px 0px; 
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.memBannerBottom{
+    border: solid rgb(32, 51, 73) 5px;
+    border-top: solid rgba(237, 145, 33,1) 5px;
+  background-color: rgb(255, 140, 0) !important;
+    font-size: 25px !important;
+  color:rgb(255, 255, 255);
+  text-shadow: 2px 2px rgb(26, 41, 57);
+  border-radius: 0px 0px 15px 15px; 
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
 }
 
 

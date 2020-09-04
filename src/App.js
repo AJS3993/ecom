@@ -1,7 +1,6 @@
 import React from 'react';
 import ListItems from './ListItems/ListItems';
-import Cart from './Cart/Cart';
-import { MDBBtn,MDBNavbar, MDBNavbarNav, MDBNavItem, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon, MDBView, MDBMask, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardTitle } from "mdbreact";
+import { MDBBtn, MDBIcon, MDBRow, MDBCol, MDBCard, MDBCardTitle } from "mdbreact";
 
 class App extends React.Component {
   constructor(props){
@@ -139,25 +138,25 @@ addProduct(e){
           </div>
         
 
-       <div className='px-5 pt-5'>
-       
-        <MDBBtn disabled className='font-weight-bold mt-1 newB mb-n5 px-0 py-3 w-100 pb-4'>
+       <div className='px-5 pt-3 mt-2'>
+       <span className='memBanner px-3 py-1 mdb-color mx-3 font-weight-bold'>Become A Member</span> 
+    
+        <MDBBtn disabled className='font-weight-bold mt-1 newB px-0 py-2 w-100 pb-3'>
 
 
-            <MDBBtn className='float-left mx-n5 py-1 px-3 mdb-color darken-4 catLabelL font-weight-bold my-n4'>
+            <MDBBtn className='float-left mx-n5 py-1 px-3 mdb-color darken-4 catLabelL font-weight-bold mt-n3'>
             <MDBBtn className='float-left py-2 px-3  mdb-color darken-2 catLabelL font-weight-bold  z-depth-3 mt-n3'>
             <MDBBtn className='float-left py-3 px-3 ml-n2  mdb-color catLabelL font-weight-bold z-depth-5 mt-n3'>
-            <MDBIcon icon='fire' size='2x' className='p-2 pt-3'/>
+            <MDBIcon icon='fire' size='2x' className='p-2 pt-3 orange-text'/>
             </MDBBtn>
             </MDBBtn>
             </MDBBtn>
         
-            <span className='memBanner px-5 py-3 mdb-color'>Become A Member</span> 
-    
-            <MDBBtn className='float-right mx-n5 py-1 px-3 mdb-color darken-4 catLabelR font-weight-bold my-n4'>
+           
+            <MDBBtn className='float-right mr-n5 py-1 px-3 mdb-color darken-4 catLabelR font-weight-bold mt-n3'>
             <MDBBtn className='float-right py-2 px-3  mdb-color darken-2 catLabelR font-weight-bold  z-depth-3 mt-n3'>
             <MDBBtn className='float-right py-3 px-3 mr-n2  mdb-color catLabelR font-weight-bold z-depth-5 mt-n3'>
-            <MDBIcon icon='fire' size='2x' className='p-2 pt-3'/>
+            <MDBIcon icon='fire' size='2x' className='p-2 pt-3 orange-text'/>
             </MDBBtn>
             </MDBBtn>
             </MDBBtn>
@@ -177,6 +176,9 @@ addProduct(e){
             
             
             </MDBBtn>
+
+            <span className='memBannerBottom float-right px-3 py-1 mdb-color mx-3 font-weight-bold mt-n3'>Get The Card!</span> 
+    
   
   
             </div>

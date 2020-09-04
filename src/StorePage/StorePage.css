@@ -1,0 +1,16 @@
+.catLabelLB{
+    font-size: 14px;
+      color:rgb(255, 255, 255);
+      border: solid rgb(255, 255, 255) 2px;
+     
+  }
+
+  .newC{
+    font-size: 26px !important;
+    border: solid rgb(28, 44, 63) 5px;
+    outline: double rgb(255, 255, 255) 7px;
+    background-color: rgb(124, 153, 187) !important;
+  color:rgb(255, 255, 255);
+  outline-offset: -7px;
+  opacity: 1 !important;
+}

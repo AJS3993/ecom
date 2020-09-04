@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { MDBBtn,MDBNavbar, MDBNavbarNav, MDBNavItem, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon, MDBView, MDBMask, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardTitle } from "mdbreact";
 import Cart from '../Cart/Cart';
 import App from '../App';
+import StorePage from '../StorePage/StorePage';
 import './Nav.css'
 
 class DoubleNavigationPage extends React.Component {
@@ -201,6 +202,8 @@ addProduct(e){
           </section>
 
           <section><App/></section>
+
+          <section><StorePage/></section>
  
  </div>
 </Router>
