@@ -43,24 +43,23 @@ li{
     background-color: rgba(255, 255, 255, 0.8);
 }
 
+
 .DeptLabel{
   font-size: 28px;
     color:rgb(38, 34, 7);
     border-bottom-left-radius: 50px 50px;
-    border-left: solid rgb(255, 153, 0) 0px;
-    border-bottom: solid rgb(255, 89, 0) 5px;
-    border-top: solid rgb(255, 89, 0) 2px;
-    border-right: solid rgb(255, 89, 0) 1px;
+    border-left: groove rgb(255, 89, 0) 1px;
+    border-bottom: groove rgb(255, 89, 0) 5px;
+    border-top: groove rgb(255, 89, 0) 2px;
+    border-right: groove rgb(255, 89, 0) 2px;
    opacity:1 !important;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
 
-
-
 .titleM2{
-  border-top: solid rgb(255, 89, 0) 4px;
+  border-top: groove rgb(255, 89, 0) 4px;
   font-size: 20px !important;
   border-top-left-radius: 100px 5px;
 }

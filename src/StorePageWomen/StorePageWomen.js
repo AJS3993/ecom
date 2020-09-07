@@ -1,5 +1,5 @@
 import React from "react";
-import './StorePage.css';
+import './StorePageWomen.css';
 import { MDBIcon, MDBCol, MDBSideNavCat, MDBSideNavNav, MDBSideNav, MDBSideNavLink, MDBContainer, MDBRow, MDBBtn,MDBInput } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
 import StoreListItems from '../StoreListItems/StoreListItems';
@@ -22,14 +22,12 @@ class StorePage extends React.Component {
       },
       
         items:[
-          {text: "Zero-G",company:"Nike",price:'4999',pic: 'https://i.imgur.com/umRhB0d.jpg?1',type:'Athletic'},
-        {text: "Jumpers",company:"Adidas",price:'3999',pic: 'https://i.imgur.com/i7Qmotr.jpg?1',type:'Athletic'},
-        {text: "Loafers",company:"Adidas",price:'2999',pic: 'https://i.imgur.com/OdHbxd7.jpg?1',type:'Casual'},
-        {text: "Runners",company:"Nike",price:'2500',pic: 'https://i.imgur.com/R61ZmFW.jpg?1',type:'Athletic'},
-        {text: "Sneakers",company:"Adidas",price:'2900',pic: 'https://i.imgur.com/aMlSAVq.jpg?1',type:'Athletic'},
-        {text: "GoodFit",company:"Nike",price:'4900',pic: 'https://i.imgur.com/cVaT6Fz.jpg?1',type:'Casual'},
-        {text: "Slippers",company:"Nike",price:'3599',pic: 'https://i.imgur.com/V97G2Rs.jpg?1',type:'Casual'},
-        {text: "Ultra",company:"Nike",price:'4399',pic: 'https://i.imgur.com/XrGclx5.jpg?1',type:'Casual'},
+          {text: "Zero-G",company:"Nike",price:'4999',pic: 'https://i.imgur.com/9Zejkpb.jpg',type:'Athletic',color:'red'},
+        {text: "Jumpers",company:"Adidas",price:'3999',pic: 'https://i.imgur.com/61CvihV.jpg',type:'Athletic'},
+        {text: "Runners",company:"Nike",price:'2500',pic: 'https://i.imgur.com/WT9i2VB.jpg',type:'Athletic'},
+        {text: "Sneakers",company:"Adidas",price:'2900',pic: 'https://i.imgur.com/mK8jYFO.jpg',type:'Athletic'},
+        {text: "Slippers",company:"Nike",price:'3599',pic: 'https://i.imgur.com/EpFpqpY.jpg',type:'Casual'},
+        {text: "Ultra",company:"Nike",price:'4399',pic: 'https://i.imgur.com/gndpMnb.jpg',type:'Casual'}
       ],
       
         currentItem:{
@@ -108,7 +106,7 @@ addProduct(e){
               
             
                 <Router>
-               
+             
                 <MDBContainer className='sid p-0 pb-2 mdb-color darken-4 border font-weight-light'>
         <h4 className=' mdb-color darken-4 white-text bby py-2'>
           <MDBIcon icon='eye' className=' px-2 white-text'></MDBIcon>
@@ -184,22 +182,22 @@ addProduct(e){
 
      
         
-          <div className='d-flex align-content-around flex-wrap mt-4 mr-4 storeListBox'>
+          <div className='d-flex align-content-around flex-wrap mt-4 mr-4 storeListBoxW'>
           
           <div className='w-100'>
             
-          <h4 className='font-weight-bold deep-orange-text d-flex justify-content-between titleM2 py-1 mx-5'>
-      <h2 className='py-2 my-n1 deep-orange-text font-weight-light'>
-        <MDBIcon icon='fire' className='p-2 my-n3 deep-orange-text'></MDBIcon>
+          <h4 className='d-flex justify-content-between titleM2W py-1 mx-5'>
+      <h2 className='py-2 my-n1 white-text'>
+        <MDBIcon icon='fire' className='p-2 my-n3'></MDBIcon>
         
-        Walk like a king.</h2>
-       <MDBBtn className='py-1 px-2 m-0 mt-n2 DeptLabel font-weight-bold white' disabled>&nbsp;&nbsp;Mens Shoes</MDBBtn>
+        Life is too short for bad shoes</h2>
+       <MDBBtn className='py-1 px-2 m-0 mt-n2 DeptLabelW font-weight-bold mdb-color darken-3' disabled>&nbsp;&nbsp;Womens Shoes</MDBBtn>
 </h4>
            
             </div>
 
           
-           
+
         
            
             <StoreListItems products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>

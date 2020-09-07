@@ -1,6 +1,6 @@
 import React from 'react';
 import ListItems from './ListItems/ListItems';
-import { MDBBtn, MDBIcon, MDBRow, MDBCol, MDBCard, MDBCardTitle } from "mdbreact";
+import { MDBBtn, MDBIcon, MDBRow, MDBCol, MDBCard, MDBCardTitle, MDBCardImage,MDBCardBody,MDBCardText,MDBCardFooter,MDBTooltip, MDBCarousel,MDBCarouselItem,MDBCarouselInner, MDBBadge } from "mdbreact";
 
 class App extends React.Component {
   constructor(props){
@@ -20,6 +20,7 @@ class App extends React.Component {
         {text: "Runners",price:'2500',pic: 'https://i.imgur.com/R61ZmFW.jpg?1'},
         {text: "Sneakers",price:'2900',pic: 'https://i.imgur.com/aMlSAVq.jpg?1'},
         {text: "Sketchers",price:'4900',pic: 'https://i.imgur.com/q7CzVUK.jpg?1'},
+        {text: "Jumpers",price:'4300',pic: 'https://i.imgur.com/XrGclx5.jpg?1'},
         {text: "Slippers",price:'3599',pic: 'https://i.imgur.com/V97G2Rs.jpg?1'},
       ],
       
@@ -92,10 +93,80 @@ addProduct(e){
  render(){
   return (
     <div className="App w-100">
+
+
       
      <MDBRow className='mx-2 mt-4'>
        
               <MDBCol md='5' className='px-1'> 
+              <div className='px-5 pt-3 mt-2'>
+       <span className='memBanner px-3 py-1 mdb-color mx-3 font-weight-bold'>Become A Member</span> 
+    
+        <MDBBtn disabled className='font-weight-bold mt-1 newB px-0 py-2 pb-2'>
+
+
+            <MDBBtn className='float-left mx-n5 py-2 px-3 mdb-color darken-4 catLabelL font-weight-bold mt-n5'>
+            <MDBBtn className='float-left py-2 px-3  mdb-color darken-2 catLabelL font-weight-bold  z-depth-3 mb-3'>
+            <MDBBtn className='float-left py-2 px-3 ml-n2  mdb-color catLabelL font-weight-bold z-depth-5 mb-3'>
+            <MDBIcon icon='fire' size='2x' className='p-2 pt-3 orange-text'/>
+            </MDBBtn>
+            </MDBBtn>
+            </MDBBtn>
+        
+           
+            <MDBBtn className='float-right mr-n5 py-2 px-3 mdb-color darken-4 catLabelR font-weight-bold mt-n5'>
+            <MDBBtn className='float-right py-2 px-3  mdb-color darken-2 catLabelR font-weight-bold  z-depth-3 mb-3'>
+            <MDBBtn className='float-right py-2 px-3 mr-n2  mdb-color catLabelR font-weight-bold z-depth-5 mb-3'>
+            <MDBIcon icon='fire' size='2x' className='p-2 pt-3 orange-text'/>
+            </MDBBtn>
+            </MDBBtn>
+            </MDBBtn>
+
+
+            <div className='memberCardBox'>
+          <div className='text-center memberCard z-depth-5 mdb-color darken-3 m-n5'>
+            <p className='orange darken-3 font-weight-bold ctop'>Official Shoe Addict</p>
+            <span className='orange-text font-weight-bold clogo'>
+              <MDBIcon icon='fire' size='md' className='orange-text px-2'/>
+              Ember </span>
+            
+            <p id='st2' className='white font-weight-bold mb-1'>- Member -</p>
+            <br/>
+          </div>
+          
+        </div>
+        <MDBRow className='mdb-color darken-4 py-2 mt-n4'>
+          <MDBCol md="3">
+            <MDBIcon icon="truck" size="2x" className="red-text" />
+            <h6 className="font-weight-bold  white-text">Free Shipping</h6>
+           
+          </MDBCol>
+          <MDBCol md="3">
+            <MDBIcon icon="hand-holding-usd" size="2x" className="cyan-text" />
+            <h6 className="font-weight-bold  white-text">Low Monthly Fee</h6>
+           
+          </MDBCol>
+          <MDBCol md="3">
+            <MDBIcon icon="undo-alt" size="2x" className="orange-text" />
+            <h6 className="font-weight-bold  white-text">Free Returns</h6>
+        
+          </MDBCol>
+          <MDBCol md="3">
+            <MDBIcon icon="shoe-prints" size="2x" className="green-text" />
+            <h6 className="font-weight-bold  white-text">Lots of Shoes</h6>
+        
+          </MDBCol>
+        </MDBRow>
+            
+            </MDBBtn>
+            
+
+            <div className=''>
+            <span className='memBannerBottom float-right px-3 py-1 mdb-color mx-3 font-weight-bold mt-n3'>Get The Card!</span> 
+            </div>
+  
+  
+            </div>
               <MDBBtn className=' ml-5 p-0 font-weight-bold dLabel mb-n4'>Find The Perfect Gift!</MDBBtn>
                 <div className='px-4 pb-3 mx-0 z-depth-5 forBox mt-0 pt-1'>
                   <MDBRow className='mt-3 mr-0'>
@@ -133,63 +204,21 @@ addProduct(e){
                     </div>
                   </div>
                 </MDBCard>
+                
               </MDBCol>
             </MDBRow>
           </div>
-        
-
-       <div className='px-5 pt-3 mt-2'>
-       <span className='memBanner px-3 py-1 mdb-color mx-3 font-weight-bold'>Become A Member</span> 
-    
-        <MDBBtn disabled className='font-weight-bold mt-1 newB px-0 py-2 w-100 pb-3'>
-
-
-            <MDBBtn className='float-left mx-n5 py-1 px-3 mdb-color darken-4 catLabelL font-weight-bold mt-n3'>
-            <MDBBtn className='float-left py-2 px-3  mdb-color darken-2 catLabelL font-weight-bold  z-depth-3 mt-n3'>
-            <MDBBtn className='float-left py-3 px-3 ml-n2  mdb-color catLabelL font-weight-bold z-depth-5 mt-n3'>
-            <MDBIcon icon='fire' size='2x' className='p-2 pt-3 orange-text'/>
-            </MDBBtn>
-            </MDBBtn>
-            </MDBBtn>
-        
-           
-            <MDBBtn className='float-right mr-n5 py-1 px-3 mdb-color darken-4 catLabelR font-weight-bold mt-n3'>
-            <MDBBtn className='float-right py-2 px-3  mdb-color darken-2 catLabelR font-weight-bold  z-depth-3 mt-n3'>
-            <MDBBtn className='float-right py-3 px-3 mr-n2  mdb-color catLabelR font-weight-bold z-depth-5 mt-n3'>
-            <MDBIcon icon='fire' size='2x' className='p-2 pt-3 orange-text'/>
-            </MDBBtn>
-            </MDBBtn>
-            </MDBBtn>
-
-
-            <div className='py-n5 px-5'>
-          <div className='text-center memberCard mt-5 z-depth-5 mdb-color darken-3 mx-3'>
-            <p className='orange darken-3 font-weight-bold ctop'>Official Membership Card</p>
-            <span className='orange-text font-weight-bold clogo'>
-              <MDBIcon icon='fire' size='md' className='orange-text px-2'/>
-              Ember </span>
-            
-            <p id='st2' className='white font-weight-bold mb-1'>- Member -</p>
-            <br/>
-          </div>
-        </div>
-            
-            
-            </MDBBtn>
-
-            <span className='memBannerBottom float-right px-3 py-1 mdb-color mx-3 font-weight-bold mt-n3'>Get The Card!</span> 
-    
-  
-  
-            </div>
+     
+      
           
 
       </MDBCol>
       <MDBCol md='7'>
+                   
         <MDBCol id='midCol' md='12' className='p-0 saleBox mt-1'> 
           <div className='d-flex align-content-around flex-wrap mt-n2'>
             <div className='w-100 pl-5 mb-2'>
-              <MDBBtn disabled className='font-weight-bold mt-n4 newA mb-n2 px-3 py-0'>Hot Sales! <MDBBtn className='pt-2 px-3 my-n2 mr-n3 catLabel font-weight-bold'><MDBIcon icon='fire' size='2x' className='orange-text'/></MDBBtn></MDBBtn>
+              <MDBBtn disabled className='font-weight-bold mt-n4 newA mb-n2 px-3 py-0'>Hot Sales! <MDBBtn className=' px-3 my-n2 mr-n3 catLabel font-weight-bold'><MDBIcon icon='fire' size='2x' className='white-text'/></MDBBtn></MDBBtn>
             </div>
             <ListItems products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
           </div>

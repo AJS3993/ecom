@@ -11,7 +11,7 @@ function Cart(props){
   
   const listProducts = products.map(product =>
     {
-    return <div className='my-0 py-1' key={product.text}>
+    return <div className='m-0 p-0 py-1' key={product.text}>
             <span className='ml-1 font-weight-bold'>{product.text}</span>
             <span key={product.text} className='float-right mr-3 font-weight-bold'>{formatPrice(product.price)}</span>
             <hr className='hr-dark m-0'/>

@@ -16,8 +16,8 @@ function ListItems(props){
 
       {/* Card Title */}
       <span className='d-flex flex-row-reverse orange darken-1 cardieTop'>
-        <MDBBtn className='py-0 px-1 catLabel my-0 font-weight-bold mr-0'>&nbsp;&nbsp;{person()}</MDBBtn>
-        <h5 className='mx-auto font-weight-bold mb-0'>{item.text}</h5>
+   <MDBBtn className='py-0 px-1 catLabel my-0 font-weight-bold mr-0'>&nbsp;&nbsp;<MDBIcon icon='fire'></MDBIcon>&nbsp; {item.company}</MDBBtn>
+        <h4 className='mx-auto font-weight-bold mb-0'>{item.text}</h4>
       </span>
       
 

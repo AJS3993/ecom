@@ -1,8 +1,8 @@
 import React from "react";
-import './StorePage.css';
+import './StorePageKids.css';
 import { MDBIcon, MDBCol, MDBSideNavCat, MDBSideNavNav, MDBSideNav, MDBSideNavLink, MDBContainer, MDBRow, MDBBtn,MDBInput } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
-import StoreListItems from '../StoreListItems/StoreListItems';
+import ListItems from '../ListItems/ListItems';
 import Cart from '../Cart/Cart';
 
 
@@ -22,14 +22,12 @@ class StorePage extends React.Component {
       },
       
         items:[
-          {text: "Zero-G",company:"Nike",price:'4999',pic: 'https://i.imgur.com/umRhB0d.jpg?1',type:'Athletic'},
-        {text: "Jumpers",company:"Adidas",price:'3999',pic: 'https://i.imgur.com/i7Qmotr.jpg?1',type:'Athletic'},
-        {text: "Loafers",company:"Adidas",price:'2999',pic: 'https://i.imgur.com/OdHbxd7.jpg?1',type:'Casual'},
-        {text: "Runners",company:"Nike",price:'2500',pic: 'https://i.imgur.com/R61ZmFW.jpg?1',type:'Athletic'},
-        {text: "Sneakers",company:"Adidas",price:'2900',pic: 'https://i.imgur.com/aMlSAVq.jpg?1',type:'Athletic'},
-        {text: "GoodFit",company:"Nike",price:'4900',pic: 'https://i.imgur.com/cVaT6Fz.jpg?1',type:'Casual'},
-        {text: "Slippers",company:"Nike",price:'3599',pic: 'https://i.imgur.com/V97G2Rs.jpg?1',type:'Casual'},
-        {text: "Ultra",company:"Nike",price:'4399',pic: 'https://i.imgur.com/XrGclx5.jpg?1',type:'Casual'},
+          {text: "Zero-G",company:"Nike",price:'4999',pic: 'https://i.imgur.com/jyivLBX.jpg',type:'Athletic'},
+        {text: "Jumpers",company:"Adidas",price:'3999',pic: 'https://i.imgur.com/fTWmTjm.jpg',type:'Athletic'},
+        {text: "Loafers",company:"Adidas",price:'2999',pic: 'https://i.imgur.com/GbCHJPY.jpg',type:'Casual'},
+        {text: "Runners",company:"Nike",price:'2500',pic: 'https://i.imgur.com/P7JkBYO.jpg',type:'Athletic'},
+        {text: "Sneakers",company:"Adidas",price:'2900',pic: 'https://i.imgur.com/vzfFhJh.jpg',type:'Athletic'},
+        {text: "GoodFit",company:"Nike",price:'4900',pic: 'https://i.imgur.com/0lEn7iX.jpg',type:'Casual'}
       ],
       
         currentItem:{
@@ -192,8 +190,8 @@ addProduct(e){
       <h2 className='py-2 my-n1 deep-orange-text font-weight-light'>
         <MDBIcon icon='fire' className='p-2 my-n3 deep-orange-text'></MDBIcon>
         
-        Walk like a king.</h2>
-       <MDBBtn className='py-1 px-2 m-0 mt-n2 DeptLabel font-weight-bold white' disabled>&nbsp;&nbsp;Mens Shoes</MDBBtn>
+        Built for fun</h2>
+       <MDBBtn className='py-1 px-2 m-0 mt-n2 DeptLabel font-weight-bold white' disabled>&nbsp;&nbsp;Kids Shoes</MDBBtn>
 </h4>
            
             </div>
@@ -202,7 +200,7 @@ addProduct(e){
            
         
            
-            <StoreListItems products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
+            <ListItems products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
           </div>
         </MDBCol>
                         

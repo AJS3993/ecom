@@ -1,11 +1,6 @@
-
-
-.cardie{
-  border: solid rgba(28, 44, 63,0.85) 2px;
-}
-
 .cardieTop{
-  border-bottom: solid rgba(28, 44, 63,0.25) 2px;
+  border-top: solid rgb(255, 255, 255) 3px;
+  border-left: solid rgb(255, 255, 255) 3px;
 }
 
 .cardieText{
@@ -20,7 +15,7 @@
 }
 
 .floater{
-  border: solid rgb(28, 44, 63) 3px;
+  border: solid rgb(28, 44, 63) 2px;
   background-color: rgba(237, 145, 33,0.9) !important;
 }
 
@@ -29,10 +24,11 @@
 }
 
 .catLabel{
-  font-size: 14px;
+  font-size: 16px;
     color:rgb(255, 255, 255);
     background-color: rgba(28, 44, 63,1) !important;
-    border: solid rgba(28, 44, 63,1) 2px;
+    border-left: solid rgb(255, 255, 255) 3px;
+    border-right: solid rgba(28, 44, 63,1) 0px;
     border-bottom-left-radius: 50px 50px;
 }
 

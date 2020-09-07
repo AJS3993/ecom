@@ -1,21 +1,28 @@
 .navie{
-    border-bottom: solid rgb(255, 132, 0) 2px; 
+    border-bottom: solid rgb(255, 132, 0) 4px; 
+
+    border-left: double rgba(255, 255, 255,0) 100px;
+    border-right: double rgba(255, 255, 255,0) 100px;
 }
+
+
 
 #st{
     color: rgb(255, 255, 255) !important;
     font-size: 18px;
     text-shadow: none;
     border-bottom: double rgb(255, 255, 255) 7px;
-    border-top: solid rgb(255, 132, 0) 2px; 
+    border-left: double rgba(255, 255, 255,0) 100px;
+    border-right: double rgba(255, 255, 255,0) 100px;
+    border-top: solid rgb(255, 119, 0) 4px; 
 }
 
 .navBut{
-    background-color: rgba(255, 255, 255, 0.2) !important; 
+    background-color: rgba(255, 255, 255, 0) !important; 
 }
 
 .navBut:hover{
-    background-color: rgba(255, 255, 255, 1) !important; 
+text-shadow: 0px 0px 3px #bc9d9d;
     color:orange !important;
 }
 
@@ -63,27 +70,33 @@
 }
 
 .logo{
-    font-size: 50px;
+    font-size: 45px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: oblique;
     text-shadow: 0px 0px 3px #bc9d9d;
+    border-left: ridge rgba(255, 255, 255, 1) 2px;
+    border-top: ridge rgba(255, 255, 255, 1) 9px;
+    border-right: ridge rgba(35, 41, 54,0) 0px;
+    border-bottom: ridge rgba(255, 255, 255, 0) 0px;
+    border-radius: 5px 50px 5px 40px; 
+    background-color:rgb(32, 28, 73);
 }
 
 .logo2{
     font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: oblique;
-    color:rgba(255, 255, 255, 0.9) !important;
-    border-left: double rgb(47, 55, 73) 4px;
-    border-top: double rgba(255, 255, 255, 0.8) 4px;
-    border-bottom: double rgba(255, 255, 255, 0.8) 4px;
-    border-right: solid rgb(47, 55, 73) 4px;
-    outline: solid rgb(73, 63, 47) 2px;
-    box-shadow: 0px 0px 5px #ffffff;
+    color:rgba(39, 37, 82, 1) !important;
+    border-left: groove rgba(255, 255, 255, 0.856) 2px;
+    border-top: groove rgba(255, 68, 0, 0) 2px;
+    border-bottom: groove rgb(255, 255, 255) 3px;
+    border-right: groove #ffffffda 10px;
+    border-radius: 0px 50px 0px 50px; 
+    background-color:rgb(255, 81, 0);
 }
 
 .clogo{
-    font-size: 40px;
+    font-size: 35px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: oblique;
     text-shadow: 0px 0px 10px #FF0000;
@@ -114,9 +127,12 @@
 }
 
 .logofire{
-    box-shadow: 0px 0px 5px #ffffff;
-    font-size: 50px !important;
-    border: solid rgb(255, 255, 255) 1px;
+    font-size: 35px !important;
+    border: solid rgb(255, 255, 255) 3px;
+    border-right: solid rgba(35, 41, 54,0) 7px;
+    border-left: solid rgba(130, 140, 161,0) 7px;
+    outline: solid rgb(79, 66, 43) 3px;
+    outline-offset: -5px;
 }
 
 .accBut{
@@ -129,14 +145,22 @@
 }
 
 #home .view {
-    background: url("https://i.imgur.com/6ow1bpB.jpg") no-repeat center center;
+    background: url("https://i.imgur.com/Hp73nj2.jpg?2") no-repeat center center;
     background-size: cover;
-    height: 25vh;
+    height: 30vh;
+  }
+
+  .memberCardBox{
+      display: flex;
+      justify-content: space-around;
+      margin: 100px;
   }
 
 .memberCard{
     border: solid rgb(255, 255, 255) 4px;
     border-radius: 20px;
+    max-width: 300px;
+    min-width: 280px;
 } 
 
 
