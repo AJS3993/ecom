@@ -6,6 +6,7 @@ import App from '../App';
 import StorePage from '../StorePage/StorePage';
 import StorePageWomen from '../StorePageWomen/StorePageWomen';
 import StorePageKids from '../StorePageKids/StorePageKids';
+import StorePageBoys from '../StorePageBoys/StorePageBoys';
 import './Nav.css'
 
 class DoubleNavigationPage extends React.Component {
@@ -225,7 +226,7 @@ addProduct(e){
               <div id='st' className='rounded font-weight-bold py-1 text-center'>
                 <Link to='/store' className='py-2 px-4 mx-3 z-depth-0 navBut white-text font-weight-light'>MEN</Link>
                 <Link to='/women' className='py-2 px-4 mx-3 z-depth-0 navBut white-text font-weight-light'>WOMEN</Link>
-                <Link to='/kids' className='py-2 px-4 mx-3 z-depth-0 navBut white-text font-weight-light'>BOYS</Link>
+                <Link to='/boys' className='py-2 px-4 mx-3 z-depth-0 navBut white-text font-weight-light'>BOYS</Link>
                 <Link to='/kids' className='py-2 px-4 mx-3 z-depth-0 navBut white-text font-weight-light'>GIRLS</Link>
               </div>
             </div> 
@@ -234,6 +235,7 @@ addProduct(e){
 <section>
           <Switch>
           <Route path='/kids' component={StorePageKids} />
+          <Route path='/boys' component={StorePageBoys} />
 <Route path='/women' component={StorePageWomen} />
 <Route path='/store' component={StorePage} />
 <Route path='/' component={App} />         

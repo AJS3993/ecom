@@ -1,5 +1,5 @@
 import React from "react";
-import './StorePageKids.css';
+import './StorePageBoys.css';
 import { MDBIcon, MDBCol, MDBSideNavCat, MDBSideNavNav, MDBSideNav, MDBSideNavLink, MDBContainer, MDBRow, MDBBtn,MDBInput } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
 import ListItems from '../ListItems/ListItems';
@@ -22,9 +22,9 @@ class StorePage extends React.Component {
       },
       
         items:[
-          {text: "Zero-G",company:"Nike",price:'4999',pic: 'https://i.imgur.com/jyivLBX.jpg',type:'Athletic'},
-        {text: "Sneakers",company:"Adidas",price:'2900',pic: 'https://i.imgur.com/vzfFhJh.jpg',type:'Athletic'},
-        {text: "GoodFit",company:"Nike",price:'4900',pic: 'https://i.imgur.com/0lEn7iX.jpg',type:'Casual'}
+        {text: "Jumpers",company:"Adidas",price:'3999',pic: 'https://i.imgur.com/fTWmTjm.jpg',type:'Athletic'},
+        {text: "Loafers",company:"Adidas",price:'2999',pic: 'https://i.imgur.com/GbCHJPY.jpg',type:'Casual'},
+        {text: "Runners",company:"Nike",price:'2500',pic: 'https://i.imgur.com/P7JkBYO.jpg',type:'Athletic'}
       ],
       
         currentItem:{
@@ -188,7 +188,7 @@ addProduct(e){
         <MDBIcon icon='fire' className='p-2 my-n3 deep-orange-text'></MDBIcon>
         
         Built for fun</h2>
-       <MDBBtn className='py-1 px-2 m-0 mt-n2 DeptLabel font-weight-bold white' disabled>&nbsp;&nbsp;Girls Shoes</MDBBtn>
+       <MDBBtn className='py-1 px-2 m-0 mt-n2 DeptLabel font-weight-bold white' disabled>&nbsp;&nbsp;Boys Shoes</MDBBtn>
 </h4>
            
             </div>

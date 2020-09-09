@@ -1,5 +1,5 @@
 import React from 'react';
-import ListItems from './ListItems/ListItems';
+import StoreListItemsMin from './StoreListItemsMin/StoreListItemsMin';
 import { MDBBtn, MDBIcon, MDBRow, MDBCol, MDBCard, MDBCardTitle, MDBCardImage,MDBCardBody,MDBCardText,MDBCardFooter,MDBTooltip, MDBCarousel,MDBCarouselItem,MDBCarouselInner, MDBBadge } from "mdbreact";
 
 class App extends React.Component {
@@ -15,13 +15,12 @@ class App extends React.Component {
       },
       
         items:[
-          {text: "Nike",price:'4999',pic: 'https://i.imgur.com/umRhB0d.jpg?1'},
-        {text: "Adidas",price:'3999',pic: 'https://i.imgur.com/i7Qmotr.jpg?1'},
-        {text: "Runners",price:'2500',pic: 'https://i.imgur.com/R61ZmFW.jpg?1'},
-        {text: "Sneakers",price:'2900',pic: 'https://i.imgur.com/aMlSAVq.jpg?1'},
-        {text: "Sketchers",price:'4900',pic: 'https://i.imgur.com/q7CzVUK.jpg?1'},
-        {text: "Jumpers",price:'4300',pic: 'https://i.imgur.com/XrGclx5.jpg?1'},
-        {text: "Slippers",price:'3599',pic: 'https://i.imgur.com/V97G2Rs.jpg?1'},
+          {text: "Nike Zero-G",price:'4999',pic: 'https://i.imgur.com/umRhB0d.jpg?1'},
+        {text: "Adidas Loafers",price:'3999',pic: 'https://i.imgur.com/i7Qmotr.jpg?1'},
+        {text: "Nike Runners",price:'2500',pic: 'https://i.imgur.com/R61ZmFW.jpg?1'},
+        {text: "Nike Sneakers",price:'2900',pic: 'https://i.imgur.com/aMlSAVq.jpg?1'},
+        {text: "Nike Zero-G",price:'4999',pic: 'https://i.imgur.com/umRhB0d.jpg?1'},
+        {text: "Adidas Loafers",price:'3999',pic: 'https://i.imgur.com/i7Qmotr.jpg?1'}
       ],
       
         currentItem:{
@@ -94,13 +93,27 @@ addProduct(e){
   return (
     <div className="App w-100">
 
+      <MDBRow className='mt-2'>
 
+      <MDBCol md='1'></MDBCol>
+
+        <MDBCol md='10'>
+
+<div className='d-flex align-content-around flex-wrap mt-4 saleBox mdb-color p-2'>
+            <div className='w-100 pl-5 mb-2'>
+              <MDBBtn disabled className='font-weight-light mt-n4 newA mb-n2 px-2 py-0'>Best Sellers! <MDBBtn className=' px-3 my-n2 mr-n3 catLabel font-weight-bold'><MDBIcon icon='fire' size='lg' className='white-text'/></MDBBtn></MDBBtn>
+            </div>
+            <StoreListItemsMin products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
+          </div>
+          </MDBCol>
+          <MDBCol md='1'></MDBCol>
+          </MDBRow>
       
-     <MDBRow className='mx-2 mt-4'>
+     <MDBRow className=' mt-4'>
        
-              <MDBCol md='5' className='px-1'> 
+              <MDBCol md='3' className='px-1'> 
               <div className='px-5 pt-3 mt-2'>
-       <span className='memBanner px-3 py-1 mdb-color mx-3 font-weight-bold'>Become A Member</span> 
+       {/* <span className='memBanner px-3 py-1 mdb-color mx-3 font-weight-bold'>Become A Member</span>  */}
     
         <MDBBtn disabled className='font-weight-bold mt-1 newB px-0 py-2 pb-2'>
 
@@ -161,13 +174,26 @@ addProduct(e){
             </MDBBtn>
             
 
-            <div className=''>
+            {/* <div className=''>
             <span className='memBannerBottom float-right px-3 py-1 mdb-color mx-3 font-weight-bold mt-n3'>Get The Card!</span> 
             </div>
-  
+   */}
   
             </div>
-              <MDBBtn className=' ml-5 p-0 font-weight-bold dLabel mb-n4'>Find The Perfect Gift!</MDBBtn>
+           
+     
+      
+          
+
+      </MDBCol>
+
+      <MDBCol md='2'></MDBCol>
+      
+      <MDBCol md='5'>
+                   
+        <MDBCol  className='p-2  m-1'> 
+         
+          <MDBBtn className=' ml-5 p-0 font-weight-bold dLabel mb-n4'>Find The Perfect Gift!</MDBBtn>
                 <div className='px-4 pb-3 mx-0 z-depth-5 forBox mt-0 pt-1'>
                   <MDBRow className='mt-3 mr-0'>
                     <MDBCol md='6' className='px-2'>
@@ -207,20 +233,6 @@ addProduct(e){
                 
               </MDBCol>
             </MDBRow>
-          </div>
-     
-      
-          
-
-      </MDBCol>
-      <MDBCol md='7'>
-                   
-        <MDBCol id='midCol' md='12' className='p-0 saleBox mt-1'> 
-          <div className='d-flex align-content-around flex-wrap mt-n2'>
-            <div className='w-100 pl-5 mb-2'>
-              <MDBBtn disabled className='font-weight-bold mt-n4 newA mb-n2 px-3 py-0'>Hot Sales! <MDBBtn className=' px-3 my-n2 mr-n3 catLabel font-weight-bold'><MDBIcon icon='fire' size='2x' className='white-text'/></MDBBtn></MDBBtn>
-            </div>
-            <ListItems products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
           </div>
         </MDBCol>
         </MDBCol>

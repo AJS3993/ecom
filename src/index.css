@@ -7,11 +7,8 @@ body {
 
 
 .saleBox{
-    background-color: rgba(255, 255, 255, 0.2);
-    border: double rgb(28, 44, 63) 10px;
-    outline: solid rgb(237, 145, 33) 4px;
+    outline: groove rgba(255, 255, 255) 4px;
     outline-offset: -7px;
-    color: rgb(28, 44, 63);
 }
 
 .addBut{

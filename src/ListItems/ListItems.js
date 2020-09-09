@@ -9,7 +9,7 @@ function ListItems(props){
   const items = props.items;
   const listItems = items.map(item =>
    {
-  return <MDBCol md='4' className='m-0 '>
+  return <MDBCol md='3' className='m-0 '>
     
     <MDBCard cascade key={item.text} className='z-depth-5 cardie mt-4 mb-3 mx-n1'>
       
@@ -41,21 +41,22 @@ function ListItems(props){
 
 
       {/* Card Footer */}
-      <div className=' mdb-color lighten-3 text-center pt-1'>
+
+      {/* <div className=' mdb-color lighten-3 text-center pt-1'>
         <ul className='list-unstyled list-inline font-small d-flex justify-content-around mb-0 p-1'>
-          
+           */}
 
           {/* Comments */}
-          <li className='list-inline-item pr-2'>
+          {/* <li className='list-inline-item pr-2'>
             <a href='#!' className='comments'>
               <MDBIcon far icon='comments' className='mr-1' />
                   0
             </a>
-          </li>
+          </li> */}
 
 
           {/* Rating */}
-          <li className='list-inline-item mr-n2'>
+          {/* <li className='list-inline-item mr-n2'>
             <a href='#!' className='stars'>
               3.6/5 
               <MDBIcon icon="star" />
@@ -66,7 +67,7 @@ function ListItems(props){
             </a>
           </li>
         </ul>
-      </div>
+      </div> */}
        
     
     </MDBCard>

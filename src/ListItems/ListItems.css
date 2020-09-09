@@ -4,12 +4,13 @@
 }
 
 .cardieText{
+  font-size: 13px !important;
   border-top: solid rgba(28, 44, 63,0.25) 2px;
   border-bottom: solid rgba(28, 44, 63,0.5) 2px;
 }
 
 .pric{
-    font-size: 18px;
+    font-size: 14px;
     color:rgb(28, 44, 63);
     text-shadow: 2px 1px #ffffff;
 }
