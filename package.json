@@ -1,10 +1,11 @@
 {
+  "homepage":"https://ajs3993.github.io/ecom/",
   "name": "your-app",
   "version": "0.1.0",
   "private": true,
   "// If You want to install mdbreact from our GitLab repository, please replace '4.27.0' with gitURL provided here ->": "git+https://oauth2:<YOUR-TOKEN-GOES-HERE>@git.mdbootstrap.com/mdb/react/re-pro.git",
   "dependencies": {
-    "gh-pages": "^3.1.0",
+    "gh-pages-deploy": "^0.5.1",
     "mdbreact": "./mdbreact-4.27.0.tgz",
     "node-sass": "^4.14.1",
     "react": "^16.12.0",
@@ -18,9 +19,12 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "rename": "renamer --find App-clear.js --replace App.js ./src/App-clear.js && renamer --find style.css --replace index.css ./src/style.css ",
-    "remove-demo": "rimraf ./src/assets ./src/components ./src/pages ./src/Routes.js ./src/App.js ./src/index.css && npm run rename"
+    "remove-demo": "rimraf ./src/assets ./src/components ./src/pages ./src/Routes.js ./src/App.js ./src/index.css && npm run rename",
+    "predeploy": "npm run build",
+"deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "renamer": "^1.0.0",
     "rimraf": "^2.6.2"
   },
