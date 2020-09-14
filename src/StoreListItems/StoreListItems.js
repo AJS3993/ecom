@@ -20,7 +20,7 @@ function ListItems(props) {
     if (item.score>0){
       
     return (
-      <MDBCol md="3" className="px-4">
+      <MDBCol md="2" className="px-3 m-1">
           
         <MDBCard
           cascade
@@ -74,11 +74,11 @@ function ListItems(props) {
           
           <h4 className="font-weight-bold mdb-color darken-3 white-text d-flex justify-content-between titleM">
          
-            <h4 className="p-0 pt-1 mr-n1 titleMa">
+            <h4 className="p-0 pt-1 mr-n1 titleMa text-nowrap">
               &nbsp;<b>{item.company}</b>&nbsp;{item.text}
             </h4>
-            <MDBBtn className="py-1 px-1 m-0 mt-n1 catLabelRRR font-weight-bold mdb-color lighten-3">
-              &nbsp;&nbsp;&nbsp;{formatPrice(item.price)}&nbsp;
+            <MDBBtn className="py-1 px-1 m-0 mt-n1 catLabelRRR font-weight-bold mdb-color lighten-3 text-nowrap">
+              &nbsp;{formatPrice(item.price)}
             </MDBBtn>
           </h4>
 
@@ -90,25 +90,26 @@ function ListItems(props) {
           </MDBCardBody>
 
           {/* Card Footer */}
-          <div className=" mdb-color lighten-3 text-center">
+          <div className=" mdb-color lighten-3 text-center cText">
             <ul className="list-unstyled list-inline font-small d-flex justify-content-around mb-0 pl-1">
               {/* Comments */}
               <li className="list-inline-item pr-2">
                 <a href="#!" className="comments">
-                  <MDBIcon far icon="heart" className="mr-1 pt-2" />{item.comments}
+                  <MDBIcon far icon="heart" className="mr-1 pt-2" />
                 </a>
               </li>
 
               {/* Rating */}
               
-              <MDBRating fillColors={[
+              <MDBRating 
+              fillColors={[
     'red-text',
     'orange-text',
     'yellow-text',
     'lime-text',
     'success-text'
   ]}
-  iconSize='sm'/>
+  iconSize='xs'/>
             </ul>
             
           </div>

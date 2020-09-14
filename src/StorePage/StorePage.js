@@ -26,7 +26,7 @@ class StorePage extends React.Component {
       items: [
         {
           text: "Zero-G",
-          company: "Nike",
+          company: "Buckle",
           price: "4999",
           pic: "https://i.imgur.com/umRhB0d.jpg?1",
           type: "Athletic",
@@ -37,7 +37,7 @@ class StorePage extends React.Component {
         },
         {
           text: "Jumpers",
-          company: "Adidas",
+          company: "Solebox",
           price: "3999",
           pic: "https://i.imgur.com/i7Qmotr.jpg?1",
           type: "Athletic",
@@ -48,7 +48,7 @@ class StorePage extends React.Component {
         },
         {
           text: "Loafers",
-          company: "Adidas",
+          company: "Solebox",
           price: "2999",
           pic: "https://i.imgur.com/OdHbxd7.jpg?1",
           type: "Casual",
@@ -58,7 +58,7 @@ class StorePage extends React.Component {
           score: 1
         }, {
           text: "Walkers",
-          company: "Nike",
+          company: "Buckle",
           price: "2999",
           pic: "https://i.imgur.com/uRcgXtJ.jpg?1",
           type: "Sandals",
@@ -69,7 +69,7 @@ class StorePage extends React.Component {
         },
         {
           text: "Runners",
-          company: "Nike",
+          company: "Buckle",
           price: "2500",
           pic: "https://i.imgur.com/R61ZmFW.jpg?1",
           type: "Athletic",
@@ -80,7 +80,7 @@ class StorePage extends React.Component {
         },
         {
           text: "Sneakers",
-          company: "Adidas",
+          company: "Solebox",
           price: "2900",
           pic: "https://i.imgur.com/aMlSAVq.jpg?1",
           type: "Athletic",
@@ -91,7 +91,7 @@ class StorePage extends React.Component {
         },
         {
           text: "Slippies",
-          company: "Nike",
+          company: "Buckle",
           price: "3599",
           pic: "https://i.imgur.com/V97G2Rs.jpg?1",
           type: "Slippers",
@@ -102,7 +102,7 @@ class StorePage extends React.Component {
         },
         {
           text: "Ultra",
-          company: "Nike",
+          company: "Buckle",
           price: "4399",
           pic: "https://i.imgur.com/XrGclx5.jpg?1",
           type: "Casual",
@@ -113,7 +113,7 @@ class StorePage extends React.Component {
         },
         {
           text: "Strappers",
-          company: "Adidas",
+          company: "Solebox",
           price: "2995",
           pic: "https://i.imgur.com/cGWsYaG.jpg?1",
           type: "Sandals",
@@ -124,7 +124,7 @@ class StorePage extends React.Component {
         },
         {
           text: "Slips",
-          company: "Adidas",
+          company: "Solebox",
           price: "1949",
           pic: "https://i.imgur.com/GV5uplu.jpg?1",
           type: "Slippers",
@@ -145,8 +145,8 @@ class StorePage extends React.Component {
       AthleticFilter:true,
       SandalsFilter:true,
       SlippersFilter:true,
-      NikeFilter:false,
-      AdidasFilter:false
+      BuckleFilter:false,
+      SoleboxFilter:false
     };
     this.addItem = this.addItem.bind(this);
     this.addProduct = this.addProduct.bind(this);
@@ -342,52 +342,52 @@ class StorePage extends React.Component {
                   <MDBSideNavNav className="p-2 m-0 sid2">
                     <MDBSideNavCat name="Brand " id="sid2" icon="chevron-right">
                       <MDBInput
-                        label="Nike"
+                        label="Buckle"
                         type="checkbox"
-                        id="Nike"
+                        id="Buckle"
                         onChange={()=> {
                           
-                          if (!this.state.NikeFilter){
+                          if (!this.state.BuckleFilter){
                             this.state.items.map((item)=> {
-                              if (item.company === 'Nike'){item.score++}
-                              console.log(this.state.NikeFilter)
+                              if (item.company === 'Buckle'){item.score++}
+                              console.log(this.state.BuckleFilter)
                             })
-                          this.setState({NikeFilter:true})
+                          this.setState({BuckleFilter:true})
                           }
                         
-                          if (this.state.NikeFilter===true){
+                          if (this.state.BuckleFilter===true){
                            this.state.items.map((item)=> {
-                            if (item.company === 'Nike'){item.score--}
+                            if (item.company === 'Buckle'){item.score--}
                             
                           })
-                          this.setState({NikeFilter: false})
+                          this.setState({BuckleFilter: false})
                           }}
                         }
-                        checked={this.state.NikeFilter}
+                        checked={this.state.BuckleFilter}
                       ></MDBInput>
 
                       <MDBInput
-                        label="Adidas"
+                        label="Solebox"
                         type="checkbox"
-                        id="Adidas"
+                        id="Solebox"
                         onChange={()=> {
                           
-                          if (!this.state.AdidasFilter){
+                          if (!this.state.SoleboxFilter){
                             this.state.items.map((item)=> {
-                              if (item.company === 'Adidas'){item.score++}
+                              if (item.company === 'Solebox'){item.score++}
                             })
-                          this.setState({AdidasFilter:true})
+                          this.setState({SoleboxFilter:true})
                           }
                         
-                          if (this.state.AdidasFilter===true){
+                          if (this.state.SoleboxFilter===true){
                            this.state.items.map((item)=> {
-                            if (item.company === 'Adidas'){item.score--}
+                            if (item.company === 'Solebox'){item.score--}
                             
                           })
-                          this.setState({AdidasFilter: false})
+                          this.setState({SoleboxFilter: false})
                           }}
                         }
-                        checked={this.state.AdidasFilter}
+                        checked={this.state.SoleboxFilter}
                       ></MDBInput>
                     </MDBSideNavCat>
                   </MDBSideNavNav>
@@ -397,7 +397,7 @@ class StorePage extends React.Component {
             </div>
           </MDBCol>
 
-          <MDBCol md="9" className="ml-n5">
+          <MDBCol md="9" className="mx-n5">
             <div className="d-flex align-content-around flex-wrap mt-4 mr-4 storeListBox">
               <div className="w-100">
                 <h4 className="font-weight-bold deep-orange-text d-flex justify-content-between titleM2 py-1 mx-5">
@@ -426,7 +426,8 @@ class StorePage extends React.Component {
             </div>
           </MDBCol>
 
-          <MDBCol md="2" className="mt-4 pr-4 mx-n5">
+          <MDBCol md="2" className="mt-5 mx-n5 px-0">
+           <h1>&nbsp;</h1>
             <Cart
               products={this.state.products}
               items={this.state.items}
