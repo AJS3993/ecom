@@ -1,6 +1,5 @@
 .navie{
     border-bottom: solid rgb(255, 132, 0) 4px; 
-
     border-left: double rgba(255, 255, 255,0) 100px;
     border-right: double rgba(255, 255, 255,0) 100px;
 }
@@ -9,7 +8,7 @@
 
 #st{
     color: rgb(255, 255, 255) !important;
-    font-size: 18px;
+    font-size: 16px;
     text-shadow: none;
     border-bottom: double rgb(255, 255, 255) 7px;
     border-left: double rgba(255, 255, 255,0) 100px;
@@ -96,7 +95,7 @@ text-shadow: 0px 0px 3px #bc9d9d;
 }
 
 .clogo{
-    font-size: 35px;
+    font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: oblique;
     text-shadow: 0px 0px 10px #FF0000;
@@ -147,7 +146,7 @@ text-shadow: 0px 0px 3px #bc9d9d;
 #home .view {
     background: url("https://i.imgur.com/Hp73nj2.jpg?2") no-repeat center center;
     background-size: cover;
-    height: 23vh;
+    min-height: 170px;
   }
 
   .memberCardBox{
@@ -157,12 +156,16 @@ text-shadow: 0px 0px 3px #bc9d9d;
   }
 
 .memberCard{
-    border: solid rgb(255, 255, 255) 4px;
+    border: solid rgb(255, 255, 255) 2px;
     border-radius: 20px;
-    max-width: 300px;
-    min-width: 280px;
+    max-width: 220px;
+    min-width: 200px;
 } 
 
+.footBoi{
+    border-top: solid rgb(255, 132, 0) 4px; 
+    border-left: double rgba(255, 255, 255,0) 100px;
+    border-right: double rgba(255, 255, 255,0) 100px;}
 
 
 

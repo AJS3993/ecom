@@ -1,7 +1,6 @@
 import React from "react";
 import './StorePageKids.css';
-import { MDBIcon, MDBCol, MDBSideNavCat, MDBSideNavNav, MDBSideNav, MDBSideNavLink, MDBContainer, MDBRow, MDBBtn,MDBInput } from 'mdbreact';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { MDBIcon, MDBCol, MDBSideNavCat, MDBSideNavNav, MDBSideNav, MDBSideNavLink, MDBContainer, MDBRow, MDBBtn } from 'mdbreact';
 import ListItems from '../ListItems/ListItems';
 import Cart from '../Cart/Cart';
 
