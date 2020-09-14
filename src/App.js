@@ -1,5 +1,6 @@
 import React from 'react';
 import StoreListItemsMin from './StoreListItemsMin/StoreListItemsMin';
+import ListItems from './ListItems/ListItems';
 import { MDBBtn, MDBIcon, MDBRow, MDBCol, MDBCard, MDBCardTitle, MDBCardImage,MDBCardBody,MDBCardText,MDBCardFooter,MDBTooltip, MDBCarousel,MDBCarouselItem,MDBCarouselInner, MDBBadge } from "mdbreact";
 
 class App extends React.Component {
@@ -13,14 +14,21 @@ class App extends React.Component {
         text:'',
         price:''
       },
+
+      
+      Topitems:[
+        {text: "Zero-G",price:'#1',pic: 'https://i.imgur.com/umRhB0d.jpg?1'},
+      {text: "Loafers",price:'#2',pic: 'https://i.imgur.com/i7Qmotr.jpg?1'},
+      {text: "Runners",price:'#3',pic: 'https://i.imgur.com/R61ZmFW.jpg?1'}
+      ],
       
         items:[
-          {text: "Nike Zero-G",price:'4999',pic: 'https://i.imgur.com/umRhB0d.jpg?1'},
-        {text: "Adidas Loafers",price:'3999',pic: 'https://i.imgur.com/i7Qmotr.jpg?1'},
-        {text: "Nike Runners",price:'2500',pic: 'https://i.imgur.com/R61ZmFW.jpg?1'},
-        {text: "Nike Sneakers",price:'2900',pic: 'https://i.imgur.com/aMlSAVq.jpg?1'},
-        {text: "Nike Zero-G",price:'4999',pic: 'https://i.imgur.com/umRhB0d.jpg?1'},
-        {text: "Adidas Loafers",price:'3999',pic: 'https://i.imgur.com/i7Qmotr.jpg?1'}
+          {text: "Zero-G",price:'4999',pic: 'https://i.imgur.com/umRhB0d.jpg?1',discount:'15%'},
+        {text: "Loafers",price:'3999',pic: 'https://i.imgur.com/i7Qmotr.jpg?1',discount:'20%'},
+        {text: "Runners",price:'2500',pic: 'https://i.imgur.com/R61ZmFW.jpg?1',discount:'50%'},
+        {text: "Sneaks",price:'2900',pic: 'https://i.imgur.com/aMlSAVq.jpg?1',discount:'10%'},
+        {text: "Zero-G",price:'4999',pic: 'https://i.imgur.com/umRhB0d.jpg?1',discount:'25%'},
+        {text: "Loafers",price:'3999',pic: 'https://i.imgur.com/i7Qmotr.jpg?1',discount:'30%'}
       ],
       
         currentItem:{
@@ -91,45 +99,75 @@ addProduct(e){
 
  render(){
   return (
-    <div className="App w-100">
+    <div className="App mdb-color darken-4">
 
-      <MDBRow className='mt-2'>
-
-      <MDBCol md='1'></MDBCol>
-
-        <MDBCol md='10'>
-
-<div className='d-flex align-content-around flex-wrap mt-4 saleBox mdb-color p-2'>
-            <div className='w-100 pl-5 mb-2'>
-              <MDBBtn disabled className='font-weight-light mt-n4 newA mb-n2 px-2 py-0'>Best Sellers! <MDBBtn className=' px-3 my-n2 mr-n3 catLabel font-weight-bold'><MDBIcon icon='fire' size='lg' className='white-text'/></MDBBtn></MDBBtn>
-            </div>
-            <StoreListItemsMin products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
-          </div>
-          </MDBCol>
-          <MDBCol md='1'></MDBCol>
-          </MDBRow>
+     
       
      <MDBRow className=' mt-4'>
+
+     <MDBCol md='2' className='ml-n3'>
+         
+     <MDBBtn className='p-1 font-weight-bold dLabel mb-n4 mt-n3 ml-n2'>Find The Perfect Gift!</MDBBtn>
+               <div className='px-2 pb-2  z-depth-5 forBox mt-0 pt-1 mx-n2'>
+                 <MDBRow className='mt-3 mr-0'>
+                   <MDBCol md='12' className='pr-1 m-0'>
+                     <MDBCard className='card-image forBoxHer m-1' style={{backgroundImage:"url('https://i.imgur.com/mK8jYFO.jpg')"}}>
+                       <div className='text-white text-center d-flex align-items-center rgba-pink-light py-5'>
+                         <div>
+                           <MDBCardTitle className='mb-n5 py-0'>
+                           <MDBBtn className=' pink darken-4 z-depth-5 forBut p-1'>For Her</MDBBtn>
+                           </MDBCardTitle>
+                         </div>
+                       </div>
+                     </MDBCard>
+                   </MDBCol>
+                   <MDBCol md='12' className='pr-1 m-0'>
+                     <MDBCard className='card-image forBoxHim m-1' style={{backgroundImage:"url('https://i.imgur.com/WBVXvg2.jpg')"}}>
+                       <div className='text-white text-center d-flex align-items-center rgba-blue-light py-5'>
+                         <div>
+                           <MDBCardTitle className='mb-n5 py-0'>
+                             <MDBBtn className='blue darken-4  forBut p-1'>For Him</MDBBtn>
+                           </MDBCardTitle>
+                         </div>
+                       </div>
+                     </MDBCard>
+                   </MDBCol>
+            
+             <MDBCol md='12' className='pr-1 m-0'>
+               <MDBCard className='card-image forBoxThem m-1' style={{backgroundImage:"url('https://i.imgur.com/lk7Oq6M.jpg')"}}>
+                 <div className='text-white text-center d-flex align-items-center rgba-orange-light py-5'>
+                   <div>
+                   <MDBCardTitle className='mb-n5 py-0'>
+                             <MDBBtn className='orange darken-4 forBut p-1'>For Them</MDBBtn>
+                           </MDBCardTitle>
+                   </div>
+                 </div>
+               </MDBCard>
+               
+             </MDBCol>
+           </MDBRow>
+         </div>
+     </MDBCol>
        
-              <MDBCol md='3' className='px-1'> 
-              <div className='px-5 pt-3 mt-2'>
+              <MDBCol md='3' className='px-3'> 
+              <div className='pt-3 mt-2 mr-5'>
        {/* <span className='memBanner px-3 py-1 mdb-color mx-3 font-weight-bold'>Become A Member</span>  */}
     
-        <MDBBtn disabled className='font-weight-bold mt-1 newB px-0 py-2 pb-2'>
+        <MDBBtn disabled className='font-weight-bold mt-1 newB px-0 py-1 pb-2'>
 
 
-            <MDBBtn className='float-left mx-n5 py-2 px-3 mdb-color darken-4 catLabelL font-weight-bold mt-n5'>
-            <MDBBtn className='float-left py-2 px-3  mdb-color darken-2 catLabelL font-weight-bold  z-depth-3 mb-3'>
-            <MDBBtn className='float-left py-2 px-3 ml-n2  mdb-color catLabelL font-weight-bold z-depth-5 mb-3'>
+            <MDBBtn className='float-left ml-n5 py-1 px-4 mdb-color  catLabelL mt-n5'>
+            <MDBBtn  className='float-left py-1 px-3  mdb-color darken-4 catLabelL  z-depth-3 mb-n1'>
+            <MDBBtn  className='float-left pb-2 px-3 mr-3 ml-n2  mdb-color lighten-2 catLabelL z-depth-5 mb-n1'>
             <MDBIcon icon='fire' size='2x' className='p-2 pt-3 orange-text'/>
             </MDBBtn>
             </MDBBtn>
             </MDBBtn>
         
            
-            <MDBBtn className='float-right mr-n5 py-2 px-3 mdb-color darken-4 catLabelR font-weight-bold mt-n5'>
-            <MDBBtn className='float-right py-2 px-3  mdb-color darken-2 catLabelR font-weight-bold  z-depth-3 mb-3'>
-            <MDBBtn className='float-right py-2 px-3 mr-n2  mdb-color catLabelR font-weight-bold z-depth-5 mb-3'>
+            <MDBBtn className='float-right mr-n5 py-1 px-4 mdb-color  catLabelR font-weight-bold mt-n5'>
+            <MDBBtn className='float-right py-1 px-3  mdb-color darken-4 catLabelR font-weight-bold  z-depth-3 mb-n1'>
+            <MDBBtn className='float-right pb-2 px-3 mr-n2 ml-3  mdb-color lighten-2 catLabelR font-weight-bold z-depth-5 mb-n1'>
             <MDBIcon icon='fire' size='2x' className='p-2 pt-3 orange-text'/>
             </MDBBtn>
             </MDBBtn>
@@ -148,96 +186,73 @@ addProduct(e){
           </div>
           
         </div>
-        <MDBRow className='mdb-color darken-4 py-2 mt-n4'>
+        <MDBRow className='mdb-color darken-2 pt-2 mt-n5 mb-n3 px-3 cardOfferRow'>
           <MDBCol md="3">
-            <MDBIcon icon="truck" size="2x" className="red-text" />
-            <h6 className="font-weight-bold  white-text">Free Shipping</h6>
+            <MDBIcon icon="truck" size="lg" className="red-text" />
+            <p className="font-weight-light white-text cardOffer mb-n1">Free Shipping</p>
            
           </MDBCol>
           <MDBCol md="3">
-            <MDBIcon icon="hand-holding-usd" size="2x" className="cyan-text" />
-            <h6 className="font-weight-bold  white-text">Low Monthly Fee</h6>
+            <MDBIcon icon="hand-holding-usd" size="lg" className="cyan-text" />
+            <p className="font-weight-light white-text cardOffer">Low Cost</p>
            
           </MDBCol>
           <MDBCol md="3">
-            <MDBIcon icon="undo-alt" size="2x" className="orange-text" />
-            <h6 className="font-weight-bold  white-text">Free Returns</h6>
+            <MDBIcon icon="undo-alt" size="lg" className="orange-text" />
+            <p className="font-weight-light white-text cardOffer">Free Returns</p>
         
           </MDBCol>
           <MDBCol md="3">
-            <MDBIcon icon="shoe-prints" size="2x" className="green-text" />
-            <h6 className="font-weight-bold  white-text">Lots of Shoes</h6>
-        
+            <MDBIcon icon="shoe-prints" size="lg" className="green-text" />
+            <p className="font-weight-light white-text cardOffer">Lots of Shoes</p>
+
+
           </MDBCol>
         </MDBRow>
             
             </MDBBtn>
             
-
-            {/* <div className=''>
-            <span className='memBannerBottom float-right px-3 py-1 mdb-color mx-3 font-weight-bold mt-n3'>Get The Card!</span> 
-            </div>
-   */}
   
             </div>
            
-     
-      
+       
+
           
 
       </MDBCol>
 
-      <MDBCol md='2'></MDBCol>
+     
       
-      <MDBCol md='5'>
-                   
-        <MDBCol  className='p-2  m-1'> 
-         
-          <MDBBtn className=' ml-5 p-0 font-weight-bold dLabel mb-n4'>Find The Perfect Gift!</MDBBtn>
-                <div className='px-4 pb-3 mx-0 z-depth-5 forBox mt-0 pt-1'>
-                  <MDBRow className='mt-3 mr-0'>
-                    <MDBCol md='6' className='px-2'>
-                      <MDBCard className='card-image forBoxHer m-1' style={{backgroundImage:"url('https://i.imgur.com/mK8jYFO.jpg')"}}>
-                        <div className='text-white text-center d-flex align-items-center rgba-pink-light py-5'>
-                          <div className='w-100 text-left'>
-                            <MDBCardTitle className='mt-n5 py-3'>
-                            <MDBBtn className=' pink darken-4 mb-3 mt-2 z-depth-5 w-50 forBut p-1'>For Her</MDBBtn>
-                            </MDBCardTitle>
-                          </div>
-                        </div>
-                      </MDBCard>
-                    </MDBCol>
-                    <MDBCol md='6' className='px-2'>
-                      <MDBCard className='card-image forBoxHim mb-n1 ml-2 mt-1' style={{backgroundImage:"url('https://i.imgur.com/WBVXvg2.jpg')"}}>
-                        <div className='text-white text-center d-flex align-items-center rgba-blue-light py-5'>
-                          <div className='w-100 text-right'>
-                            <MDBCardTitle className='mb-n5 py-0'>
-                              <MDBBtn className='blue darken-4 mt-5 mb-n4 w-50 float-right forBut p-1'>For Him</MDBBtn>
-                            </MDBCardTitle>
-                          </div>
-                        </div>
-                      </MDBCard>
-                    </MDBCol>
-                  </MDBRow>
-                <MDBRow>
-              <MDBCol md='12' className='pl-4 pr-5 mt-2'>
-                <MDBCard className='card-image forBoxThem m-2' style={{backgroundImage:"url('https://i.imgur.com/lk7Oq6M.jpg')"}}>
-                  <div className='text-white text-center d-flex align-items-center rgba-orange-light pt-5 py-5'>
-                    <div className='w-100'>
-                    <MDBCardTitle className='mb-n5 py-0 mx-5'>
-                              <MDBBtn className='orange darken-4 mt-5 mb-3 w-75 forBut p-1 mx-5'>For Them</MDBBtn>
-                            </MDBCardTitle>
-                    </div>
-                  </div>
-                </MDBCard>
-                
-              </MDBCol>
-            </MDBRow>
+      <MDBCol md='5' className='pl-0'>
+
+      <MDBCol id='midCol' md='12' className='p-0 ml-5 saleBox mt-4'> 
+          <div className='d-flex align-content-around flex-wrap mt-n2'>
+            <div className='w-100 pl-5 mb-n1'>
+              <MDBBtn disabled className='font-weight-bold mt-n5 newA mb-n2 px-3 py-0'>Hot Sales! <MDBBtn className='pt-2 px-3 my-n2 mr-n3 catLabel font-weight-bold'><MDBIcon icon='fire' size='2x' className='orange-text'/></MDBBtn></MDBBtn>
+            </div>
+            <ListItems products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
           </div>
         </MDBCol>
+                   
+       
         </MDBCol>
+
+        
+
     
+        <MDBCol md='2' className='pl-5'>   
+        <div>
+              <MDBBtn disabled className=' newA p-0 text-nowrap mt-n4'>Top Sellers! </MDBBtn>
+            </div>
+<div className='d-flex align-content-around flex-wrap  mdb-color darken-4 mt-n5 pt-5 p-2 bestBox'>
+           
+            <StoreListItemsMin products={this.state.products} items={this.state.Topitems} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
+          </div></MDBCol>
+
       </MDBRow>
+      
+
+       
     </div>
   );
  }

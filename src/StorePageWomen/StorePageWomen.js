@@ -22,12 +22,12 @@ class StorePage extends React.Component {
       },
       
         items:[
-          {text: "Zero-G",company:"Nike",price:'4999',pic: 'https://i.imgur.com/9Zejkpb.jpg',type:'Athletic',color:'red'},
-        {text: "Jumpers",company:"Adidas",price:'3999',pic: 'https://i.imgur.com/61CvihV.jpg',type:'Athletic'},
-        {text: "Runners",company:"Nike",price:'2500',pic: 'https://i.imgur.com/WT9i2VB.jpg',type:'Athletic'},
-        {text: "Sneakers",company:"Adidas",price:'2900',pic: 'https://i.imgur.com/mK8jYFO.jpg',type:'Athletic'},
-        {text: "Slippers",company:"Nike",price:'3599',pic: 'https://i.imgur.com/EpFpqpY.jpg',type:'Casual'},
-        {text: "Ultra",company:"Nike",price:'4399',pic: 'https://i.imgur.com/gndpMnb.jpg',type:'Casual'}
+          {text: "Zero-G",company:"Nike",price:'4999',pic: 'https://i.imgur.com/9Zejkpb.jpg',type:'Athletic',score:2, comments:3, rating:3.5},
+        {text: "Jumpers",company:"Adidas",price:'3999',pic: 'https://i.imgur.com/61CvihV.jpg',type:'Athletic',score:2, comments:3, rating:3.5},
+        {text: "Runners",company:"Nike",price:'2500',pic: 'https://i.imgur.com/WT9i2VB.jpg',type:'Athletic',score:2, comments:3, rating:3.5},
+        {text: "Sneakers",company:"Adidas",price:'2900',pic: 'https://i.imgur.com/mK8jYFO.jpg',type:'Athletic',score:2, comments:3, rating:3.5},
+        {text: "Slippers",company:"Nike",price:'3599',pic: 'https://i.imgur.com/EpFpqpY.jpg',type:'Casual',score:2, comments:3, rating:3.5},
+        {text: "Ultra",company:"Nike",price:'4399',pic: 'https://i.imgur.com/gndpMnb.jpg',type:'Casual',score:2, comments:3, rating:3.5}
       ],
       
         currentItem:{

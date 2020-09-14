@@ -1,7 +1,6 @@
 import React from "react";
 import './StorePageBoys.css';
-import { MDBIcon, MDBCol, MDBSideNavCat, MDBSideNavNav, MDBSideNav, MDBSideNavLink, MDBContainer, MDBRow, MDBBtn,MDBInput } from 'mdbreact';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { MDBIcon, MDBCol, MDBRow, MDBBtn } from 'mdbreact';
 import ListItems from '../ListItems/ListItems';
 import Cart from '../Cart/Cart';
 
@@ -95,7 +94,7 @@ addProduct(e){
 
     render() {
         return (
-            <div className='mdb-color'>
+            <div className=''>
                 <MDBRow>
 
                     <MDBCol md='1' className=''>

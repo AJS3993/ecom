@@ -232,7 +232,7 @@ addProduct(e){
             </div> 
           </section>
 
-<section>
+<section> 
           <Switch>
           <Route path='/kids' component={StorePageKids} />
           <Route path='/boys' component={StorePageBoys} />
@@ -240,9 +240,10 @@ addProduct(e){
 <Route path='/store' component={StorePage} />
 <Route path='/' component={App} />         
  </Switch>
+ 
 
  </section>
- <MDBFooter className='pt-4 mt-4 text-center text-md-left rgba-black-strong'>
+ <MDBFooter className='pt-4 mt-4 text-center text-md-left black footBoi'>
           <MDBContainer>
             <MDBRow className='mt-3'>
               <MDBCol

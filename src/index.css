@@ -1,14 +1,15 @@
 
 body {
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     background-size: 100vw;
     background-repeat: no-repeat;
 }
 
 
-.saleBox{
-    outline: groove rgba(255, 255, 255) 4px;
-    outline-offset: -7px;
+
+
+.bestBox{
+    border-left: solid rgb(255, 132, 0) 1px;
 }
 
 .addBut{
@@ -49,12 +50,12 @@ body {
 
 .newB{
     box-shadow: 0px 0px 10px rgb(255, 255, 255);
-    border: double rgb(255, 162, 0)10px;
-    outline: solid rgb(28, 44, 63) 5px;
+    outline: double rgb(255, 132, 0) 4px;
     background-color: rgba(255, 255, 255, 0.8) !important;
   color:rgb(28, 44, 63);
-  outline-offset: -7px;
+  outline-offset: -4px;
   opacity: 1 !important;
+  border: solid rgb(0, 0, 0) 4px;
 }
 
 .checkout{
@@ -70,9 +71,11 @@ h3{
 }
 
 .forBut{
-    font-size: 17px;
+  font-size: 13px!important;
     opacity: 0.9;
     border: double rgba(255, 255, 255,0.8) 7px;
+    min-width: 80px;
+    max-width: 200px;
 }
 
 .forBoxHer{
@@ -93,26 +96,30 @@ h3{
     border: solid rgb(215, 122, 9) 7px;
     outline: double rgba(255, 255, 255,0.8) 7px;
     outline-offset: -7px;
+    
 }
 
 .forBox{
-        outline: solid rgb(28, 44, 63) 4px;
-        border: double rgba(237, 145, 33,1) 8px;
-        outline-offset: -6px;
+        outline: solid rgb(78, 99, 121) 4px;
+        border-bottom: double rgb(255, 140, 0) 7px;
+        border-left: double rgb(78, 99, 121) 30px;
+        border-top: double rgb(255, 140, 0) 7px;
+        border-right: double rgb(255, 140, 0) 7px;
+        outline-offset: 0px;
       background-color: rgb(78, 99, 121) !important;
 }
 
 
 .dLabel{
     color:rgb(255, 255, 255) !important;
-    font-size: 17px;
-        border-bottom: double rgb(255, 255, 255) 7px;
-        border-left: double rgb(32, 51, 73) 7px;
-        border-top: double rgb(255, 255, 255) 7px;
-        border-right: solid rgb(32, 51, 73) 7px;
-        outline: solid rgb(32, 51, 73) 5px;
+    font-size: 14px;
+        border-bottom: double rgb(255, 140, 0) 7px;
+        border-left: double rgb(78, 99, 121) 20px;
+        border-top: double rgb(255, 140, 0) 7px;
+        border-right: double rgb(255, 140, 0) 7px;
+        outline: solid rgb(78, 99, 121) 4px;
         outline-offset: 0px;
-        background-color: rgb(32, 51, 73) !important; 
+        background-color: rgb(78, 99, 121) !important; 
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: oblique;     
 }
@@ -139,6 +146,12 @@ h3{
   box-shadow: 0px 0px 10px rgb(255, 255, 255);
 }
 
+.sideBoi{
+  border: solid rgb(243, 168, 59) 2px;
+  border-radius: 0px 15px 15px 0px; 
+  background-color:rgb(32, 51, 73)!important;
+}
+
 .sid{
   font-size: 18px !important;
 }
@@ -148,21 +161,48 @@ h3{
 }
 
 .sid2{
-  border-top: solid rgb(255, 139, 14) 1px;
+  border-top: solid rgb(243, 168, 59) 2px; 
   color:rgb(255, 255, 255);
 }
 
 .sid3{
-  border-top: solid rgb(255, 139, 14) 1px;
+  border-top: solid rgb(243, 168, 59) 2px; 
   color:rgb(255, 255, 255);
+}
+.sid1:hover{
+  color:rgb(243, 168, 59);
+}
+
+.sid2:hover{
+  color:rgb(243, 168, 59);
+}
+
+.sid3:hover{
+  color:rgb(243, 168, 59);
+}
+
+.showAllBut{
+  border: solid rgb(243, 168, 59) 1px; 
+  background-color: rgba(255, 140, 0,0) !important;
+  border-radius: 5px; 
+}
+
+.showAllBut:hover{
+  border: solid rgb(255, 255, 255) 1px; 
+  background-color: rgba(255, 140, 0,0.4) !important;
+  border-radius: 5px; 
 }
 
 .bby{
-  border-bottom: solid rgb(255, 255, 255) 1px;
+  border-bottom: solid rgb(243, 168, 59) 1px;
 }
 
-.filterBox{
-  border-bottom: solid rgb(255, 255, 255) 1px;
-  border-right: solid rgb(255, 255, 255) 1px;
+.cardOffer{
+  font-size: 10px !important;
 }
+
+.cardOfferRow{
+  border-top: solid rgb(17, 9, 45) 4px;
+}
+
 

@@ -17,7 +17,7 @@ const filteredItemsAdidas = items.filter(item => (item.company == 'Adidas'))
 
   const listItems = items.map(item =>
    {
-  return <MDBCol md='2' className='m-0 '>
+  return <MDBCol md='12' className='m-0 '>
     
     <MDBCard cascade key={item.text}className='z-depth-5 cardie mt-1 mb-2 mx-n2'>
       
@@ -31,7 +31,7 @@ const filteredItemsAdidas = items.filter(item => (item.company == 'Adidas'))
             className='mr-auto m-1 py-1 px-2 deep-orange catLabelLL'
             onClick={() => {props.addProduct(item)}}
       >
-        <span className='pricM font-weight-bold'>{formatPrice(item.price)}</span>
+        <span className='pricM font-weight-bold'>{item.price}</span>
       </MDBBtn>
  
 
