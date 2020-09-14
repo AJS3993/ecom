@@ -22,7 +22,7 @@ class StorePage extends React.Component {
       
         items:[
         {text: "lil Jumpers",company:"Hoppers",price:'3999',pic: 'https://i.imgur.com/fTWmTjm.jpg',type:'Athletic', score:1},
-        {text: "Jr. Loafers",company:"Hoppers",price:'2999',pic: 'https://i.imgur.com/GbCHJPY.jpg',type:'Casual', score:1},
+        {text: "Loafs",company:"Hoppers",price:'2999',pic: 'https://i.imgur.com/GbCHJPY.jpg',type:'Casual', score:1},
         {text: "Run",company:"Hoppers",price:'2500',pic: 'https://i.imgur.com/P7JkBYO.jpg',type:'Athletic', score:1}
       ],
       itemsShowing: [],
