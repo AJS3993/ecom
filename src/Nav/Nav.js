@@ -163,7 +163,6 @@ addProduct(e){
                       <div className="d-none d-md-inline accButt font-weight-light">My Account</div>
                      </MDBDropdownToggle>
                     <MDBDropdownMenu right className='border border-dark'>
-                      <MDBDropdownItem className='font-weight-bold' href="#!">Orders</MDBDropdownItem>
                       <MDBDropdownItem className='font-weight-bold' href="#!">Account Info</MDBDropdownItem>
                       <hr className='hr-dark'/>
                       <MDBDropdownItem className='font-weight-bold' href="#!">Sign out</MDBDropdownItem>

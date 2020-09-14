@@ -11,7 +11,7 @@ function Cart(props){
   
   const listProducts = products.map(product =>
     {
-    return <div className='m-0 p-0 py-1' key={product.text}>
+    return <div className='py-1' key={product.text}>
             <span className='ml-1 font-weight-bold'>{product.text}</span>
             <span key={product.text} className='float-right mr-3 font-weight-bold'>{formatPrice(product.price)}</span>
             <hr className='hr-dark m-0'/>
@@ -23,12 +23,12 @@ function Cart(props){
       <MDBRow>
         <MDBCol>
           <div className=' cartie z-depth-4'>
-            <h5 className='p-1 mdb-color w-100 font-weight-bold cartTitle mt-3'>
+            <h5 className='p-1 mdb-color darken-3 w-100 font-weight-bold cartTitle mt-3'>
               Cart
-              <MDBIcon className='float-right pr-3 mt-1 mdb-color' size='md' icon="shopping-cart" />
+              <MDBIcon className='float-right pr-3 mt-1' size='md' icon="shopping-cart" />
             </h5>
             {listProducts} 
-            <h5 className='mdb-color w-100 cartTitle mt-1 mb-0 pt-1 mb-1 p-2 total'>
+            <h5 className='mdb-color darken-3 w-100 cartTitle mt-1 mb-0 pt-1 mb-1 p-2 total'>
               <span>Total:</span>
               <span className='float-right'>{formatPrice(sum)}</span>
             </h5>
