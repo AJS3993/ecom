@@ -33,7 +33,7 @@ class StorePage extends React.Component {
           comments:1,
           rating:4.1,
           favorite: 'notFav',
-          score: 2
+          score: 1
         },
         {
           text: "Jumpers",
@@ -44,7 +44,7 @@ class StorePage extends React.Component {
           comments:3,
           rating:2.3,
           favorite: 'notFav',
-          score: 2
+          score: 1
         },
         {
           text: "Loafers",
@@ -55,7 +55,17 @@ class StorePage extends React.Component {
           comments:1,
           rating:3.3,
           favorite: 'notFav',
-          score: 2
+          score: 1
+        }, {
+          text: "Walkers",
+          company: "Nike",
+          price: "2999",
+          pic: "https://i.imgur.com/uRcgXtJ.jpg?1",
+          type: "Sandals",
+          comments:0,
+          rating:3.8,
+          favorite: 'notFav',
+          score: 1
         },
         {
           text: "Runners",
@@ -66,7 +76,7 @@ class StorePage extends React.Component {
           comments:0,
           rating:2.8,
           favorite: 'notFav',
-          score: 2
+          score: 1
         },
         {
           text: "Sneakers",
@@ -77,18 +87,18 @@ class StorePage extends React.Component {
           comments:1,
           rating:2.2,
           favorite: 'notFav',
-          score: 2
+          score: 1
         },
         {
-          text: "Slippers",
+          text: "Slippies",
           company: "Nike",
           price: "3599",
           pic: "https://i.imgur.com/V97G2Rs.jpg?1",
-          type: "Casual",
+          type: "Slippers",
           comments:0,
           rating:3.9,
           favorite: 'notFav',
-          score: 2
+          score: 1
         },
         {
           text: "Ultra",
@@ -99,7 +109,29 @@ class StorePage extends React.Component {
           comments:3,
           rating:4.1,
           favorite: 'fav',
-          score: 2
+          score: 1
+        },
+        {
+          text: "Strappers",
+          company: "Adidas",
+          price: "2995",
+          pic: "https://i.imgur.com/cGWsYaG.jpg?1",
+          type: "Sandals",
+          comments:1,
+          rating:2.7,
+          favorite: 'notFav',
+          score: 1
+        },
+        {
+          text: "Slips",
+          company: "Adidas",
+          price: "1949",
+          pic: "https://i.imgur.com/GV5uplu.jpg?1",
+          type: "Slippers",
+          comments:3,
+          rating:4.8,
+          favorite: 'notFav',
+          score: 1
         },
         
       ],
@@ -111,8 +143,10 @@ class StorePage extends React.Component {
       favorites: [],
       CasualFilter:true,
       AthleticFilter:true,
-      NikeFilter:true,
-      AdidasFilter:true
+      SandalsFilter:true,
+      SlippersFilter:true,
+      NikeFilter:false,
+      AdidasFilter:false
     };
     this.addItem = this.addItem.bind(this);
     this.addProduct = this.addProduct.bind(this);
@@ -234,7 +268,7 @@ class StorePage extends React.Component {
                               console.log(this.state.AthleticFilter)
                             })
                           this.setState({AthleticFilter:true})
-                          console.log(this.state.AthleticFilterFilter)
+                          console.log(this.state.AthleticFilter)
                           }
                         
                           if (this.state.AthleticFilter===true){
@@ -246,6 +280,60 @@ class StorePage extends React.Component {
                           }}
                         }
                         checked={this.state.AthleticFilter}
+                
+                      ></MDBInput>
+
+                        <MDBInput
+                        label="Slippers"
+                        type="checkbox"
+                        id="Slippers"
+                        onChange={()=> {
+                          
+                          if (!this.state.SlippersFilter){
+                            this.state.items.map((item)=> {
+                              if (item.type === 'Slippers'){item.score++}
+                              console.log(this.state.SlippersFilter)
+                            })
+                          this.setState({SlippersFilter:true})
+                          console.log(this.state.SlippersFilter)
+                          }
+                        
+                          if (this.state.SlippersFilter===true){
+                           this.state.items.map((item)=> {
+                            if (item.type === 'Slippers'){item.score--}
+                            
+                          })
+                          this.setState({SlippersFilter: false})
+                          }}
+                        }
+                        checked={this.state.SlippersFilter}
+                
+                      ></MDBInput>
+
+                        <MDBInput
+                        label="Sandals"
+                        type="checkbox"
+                        id="Sandals"
+                        onChange={()=> {
+                          
+                          if (!this.state.SandalsFilter){
+                            this.state.items.map((item)=> {
+                              if (item.type === 'Sandals'){item.score++}
+                              console.log(this.state.SandalsFilter)
+                            })
+                          this.setState({SandalsFilter:true})
+                          console.log(this.state.SandalsFilter)
+                          }
+                        
+                          if (this.state.SandalsFilter===true){
+                           this.state.items.map((item)=> {
+                            if (item.type === 'Sandals'){item.score--}
+                            
+                          })
+                          this.setState({SandalsFilter: false})
+                          }}
+                        }
+                        checked={this.state.SandalsFilter}
                 
                       ></MDBInput>
                     </MDBSideNavCat>

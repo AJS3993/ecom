@@ -95,7 +95,7 @@ function ListItems(props) {
               {/* Comments */}
               <li className="list-inline-item pr-2">
                 <a href="#!" className="comments">
-                  <MDBIcon far icon="comments" className="mr-1 pt-2" />{item.comments}
+                  <MDBIcon far icon="heart" className="mr-1 pt-2" />{item.comments}
                 </a>
               </li>
 
