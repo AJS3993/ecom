@@ -221,7 +221,7 @@ h3{
   border-top: groove rgba(255, 166, 0,1) 7px;
   border-right: solid rgba(35, 41, 54,0) 11px;
   border-left: solid rgba(255, 166, 0,0.8) 1px;
-  border-bottom: solid rgba(35, 41, 54,0) 11px;
+  border-bottom: solid rgba(35, 41, 54,0) 10px;
   border-top-left-radius: 25%;
   box-shadow: -15px -15px 15px 0px  rgba(255, 255, 255, 0.1);
 }
