@@ -1,11 +1,8 @@
 
 body {
-    /* background-color: rgb(255, 255, 255); */
     background-size: 100vw;
     background-repeat: no-repeat;
 }
-
-
 
 
 .bestBox{
@@ -35,9 +32,9 @@ body {
 .newA{
     font-size: 22px !important;
     text-shadow: 2px 1px rgb(255, 255, 255);
-    border-bottom: solid rgb(28, 44, 63) 4px;
-    border-top: solid rgb(28, 44, 63) 4px;
-    border-left: solid rgb(28, 44, 63) 2px;
+    border-bottom: solid rgb(255, 255, 255) 4px;
+    border-top: solid rgb(255, 255, 255) 4px;
+    border-left: solid rgb(255, 255, 255) 2px;
     background-color: rgba(237, 145, 33,1) !important;
   color:rgb(28, 44, 63);
   outline-offset: -5px;
@@ -49,7 +46,7 @@ body {
 }
 
 .newB{
-    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255,0.3);
     outline: double rgb(255, 132, 0) 4px;
     background-color: rgba(255, 255, 255, 0.8) !important;
   color:rgb(28, 44, 63);
@@ -72,10 +69,11 @@ h3{
 
 .forBut{
   font-size: 13px!important;
-    opacity: 0.9;
+    opacity: 1 !important;
     border: double rgba(255, 255, 255,0.8) 7px;
     min-width: 80px;
     max-width: 200px;
+    cursor: default !important;
 }
 
 .forBoxHer{
@@ -205,4 +203,34 @@ h3{
   border-top: solid rgb(17, 9, 45) 4px;
 }
 
+.linkPic{
+  opacity: 0.9;
+}
 
+.strip1{
+  border-top: groove rgba(255, 166, 0,0.5) 2px;
+  border-bottom: groove rgba(255, 166, 0,0.5) 2px;
+}
+
+.strip2{
+  border-top: groove rgba(7, 135, 255, 0.5)  2px;
+  border-bottom: groove rgba(7, 135, 255, 0.5)  2px;
+}
+
+.saleBox{
+  border-top: groove rgba(255, 166, 0,1) 7px;
+  border-right: solid rgba(35, 41, 54,0) 11px;
+  border-left: solid rgba(255, 166, 0,0.8) 1px;
+  border-bottom: solid rgba(35, 41, 54,0) 11px;
+  border-top-left-radius: 25%;
+  box-shadow: -15px -15px 15px 0px  rgba(255, 255, 255, 0.1);
+}
+
+.catLabel{
+  font-size: 16px;
+    color:rgb(255, 255, 255);
+    background-color: rgba(28, 44, 63,1) !important;
+    border-left: solid rgb(255, 255, 255) 3px;
+    border-right: solid rgb(255, 255, 255) 2px;
+    border-bottom-left-radius: 50px 50px;
+}

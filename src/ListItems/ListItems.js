@@ -15,8 +15,8 @@ function ListItems(props) {
   const items = props.items;
   const ListItems = items.map((item) => {
     return (
-      <MDBCol sm="6" md="4" lg="4" className="p-2 colo">
-        <MDBCard cascade key={item.text} className="z-depth-5 cardie">
+      <MDBCol md="4" className="p-2 rounded">
+        <MDBCard cascade key={item.text} className="z-depth-5">
           {/* Card Title */}
           <span className="d-flex flex-row-reverse orange darken-1 cardieTop text-nowrap">
             <MDBBtn className="py-0 px-1 catLabel my-0 font-weight-bold mr-0 text-nowrap">

@@ -1,18 +1,18 @@
 .navie{
     border-bottom: solid rgb(255, 132, 0) 4px; 
-    border-left: double rgba(255, 255, 255,0) 100px;
-    border-right: double rgba(255, 255, 255,0) 100px;
+    border-left: double rgba(255, 255, 255,0) 10px;
+    border-right: double rgba(255, 255, 255,0) 10px;
 }
 
 
 
 #st{
     color: rgb(255, 255, 255) !important;
-    font-size: 16px;
+    font-size: 14px;
     text-shadow: none;
     border-bottom: double rgb(255, 255, 255) 7px;
-    border-left: double rgba(255, 255, 255,0) 100px;
-    border-right: double rgba(255, 255, 255,0) 100px;
+    border-left: double rgba(255, 255, 255,0) 10px;
+    border-right: double rgba(255, 255, 255,0) 10px;
     border-top: solid rgb(255, 119, 0) 4px; 
 }
 
@@ -164,8 +164,8 @@ text-shadow: 0px 0px 3px #bc9d9d;
 
 .footBoi{
     border-top: solid rgb(255, 132, 0) 4px; 
-    border-left: double rgba(255, 255, 255,0) 100px;
-    border-right: double rgba(255, 255, 255,0) 100px;}
+    border-left: double rgba(255, 255, 255,0) 10px;
+    border-right: double rgba(255, 255, 255,0) 10px;}
 
 
 

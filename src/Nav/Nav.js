@@ -127,7 +127,7 @@ addProduct(e){
     return (
       <Router>
 
-        <div className="fixed-sn mdb-color darken-4">
+        <div className="fixed-sn mdb-color darken-4 w-100">
           
           
           {/* Navbar Start */}
@@ -143,7 +143,7 @@ addProduct(e){
               
               <MDBNavbarNav right style={specialCaseNavbarStyles}>
                 
-                {/* Account Button */}
+     
                 <MDBNavItem>
                   <MDBDropdown className='p-2'>
                     <MDBDropdownToggle id='tn' className='accBut p-1' nav caret>
@@ -199,9 +199,9 @@ addProduct(e){
               <MDBMask
               className='d-flex justify-content-center align-items-center'
               overlay='blue-light'>
-                <MDBContainer className='w-100 d-flex justify-content-center align-items-center'>
+                <MDBContainer className='d-flex justify-content-center align-items-center'>
                   <MDBRow >
-                    <MDBCol md='12' className='w-100'>
+                    <MDBCol className='w-100'>
                       <div className=' mt-5 p-3 logoBox'>
                       <span className='orange-text font-weight-bold logo p-1 px-3 text-center d-flex justify-content-center align-items-center mb-n3'> 
                         <MDBIcon icon='fire' className='orange-text pr-3 py-2 mb-2'/>
@@ -221,12 +221,12 @@ addProduct(e){
 
 
           <section id='bottomNav'>
-            <div className='w-100 text-center rgba-black-strong'>
-              <div id='st' className='rounded font-weight-bold py-1 text-center'>
-                <Link to='/store' className='py-2 px-4 mx-3 z-depth-0 navBut white-text font-weight-light'>MEN</Link>
-                <Link to='/women' className='py-2 px-4 mx-3 z-depth-0 navBut white-text font-weight-light'>WOMEN</Link>
-                <Link to='/boys' className='py-2 px-4 mx-3 z-depth-0 navBut white-text font-weight-light'>BOYS</Link>
-                <Link to='/kids' className='py-2 px-4 mx-3 z-depth-0 navBut white-text font-weight-light'>GIRLS</Link>
+            <div className='text-center rgba-black-strong'>
+              <div id='st' className='rounded font-weight-bold py-1 text-left d-flex justify-content-around'>
+                <Link to='/store' className=' z-depth-0 navBut white-text font-weight-light'>MEN</Link>
+                <Link to='/women' className=' z-depth-0 navBut white-text font-weight-light'>WOMEN</Link>
+                <Link to='/boys' className=' z-depth-0 navBut white-text font-weight-light'>BOYS</Link>
+                <Link to='/kids' className=' z-depth-0 navBut white-text font-weight-light'>GIRLS</Link>
               </div>
             </div> 
           </section>
