@@ -24,9 +24,8 @@ function ListItems(props) {
         <MDBCard cascade key={item.text} className="z-depth-5 cardie">
           {/* Card Title */}
           <span className="d-flex flex-row-reverse orange darken-1 cardieTop text-nowrap">
-            <MDBBtn className="py-0 px-1 catLabel my-0 font-weight-bold mr-0 text-nowrap">
-              {" "}
-              &nbsp;{item.type}
+            <MDBBtn className="py-0 px-2 catLabel my-0 font-weight-bold mx-0 text-nowrap">
+              *
             </MDBBtn>
            
     <h5 className="mx-auto mb-0"><b>{item.company}</b> {item.text}</h5>

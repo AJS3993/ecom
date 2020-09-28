@@ -28,6 +28,8 @@ const filteredItemsAdidas = items.filter(item => (item.company == 'Adidas'))
        
           {/* Price Button */}
  <MDBBtn tag='a' action rounded
+ disabled
+ style={{opacity: "1"}}
             className='mr-auto m-1 py-1 px-2 deep-orange catLabelLL'
             onClick={() => {props.addProduct(item)}}
       >

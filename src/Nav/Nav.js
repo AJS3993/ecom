@@ -7,13 +7,14 @@ import StorePage from '../StorePage/StorePage';
 import StorePageWomen from '../StorePageWomen/StorePageWomen';
 import StorePageKids from '../StorePageKids/StorePageKids';
 import StorePageBoys from '../StorePageBoys/StorePageBoys';
+import PV2 from '../ProfilePage/v2'
 import './Nav.css'
 
 class DoubleNavigationPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      toggleStateA: false,
+      toggleStateA: true,
       breakWidth: 1300,
       windowWidth: 0,
       products:[],
@@ -110,11 +111,7 @@ addProduct(e){
       windowWidth: window.innerWidth
     })
 
-  handleToggleClickA = () => {
-    this.setState({
-      toggleStateA: !this.state.toggleStateA
-    });
-  };
+ 
 
   render() {
     
@@ -127,7 +124,7 @@ addProduct(e){
     return (
       <Router>
 
-        <div className="fixed-sn mdb-color darken-4 w-100">
+        <div className="fixed-sn w-100">
           
           
           {/* Navbar Start */}
@@ -144,26 +141,28 @@ addProduct(e){
               <MDBNavbarNav right style={specialCaseNavbarStyles}>
                 
      
-                <MDBNavItem>
-                  <MDBDropdown className='p-2'>
-                    <MDBDropdownToggle id='tn' className='accBut p-1' nav caret>
-                      <div className="d-none d-md-inline accButt font-weight-light">Favorites</div>
-                     </MDBDropdownToggle>
-                    <MDBDropdownMenu right className='border border-dark'>
-                      <MDBDropdownItem className='font-weight-bold' href="#!">Orders</MDBDropdownItem>
-                    </MDBDropdownMenu>
-                  </MDBDropdown>
+              <MDBNavItem>
+              <Link className='white-text favLink'>  <MDBIcon icon="heart" className="d-inline-inline pt-3 px-1" />{" "}
+                       <div className="d-none d-md-inline cartButt font-weight-light pr-5">Favorites</div></Link>
+                   
                 </MDBNavItem>
 
 
+               {/* Cart Button */}
+               <MDBNavItem>
+               <Link className='white-text favLink'> <MDBIcon icon="shopping-cart" className="d-inline-inline pt-3 px-1" />{" "}
+                   <div className="d-none d-md-inline cartButt font-weight-light pr-3">Cart</div></Link>   
+                   
+                </MDBNavItem>
+
 
                 <MDBNavItem>
-                  <MDBDropdown className='p-2'>
+                  <MDBDropdown className='p-2 px-4'>
                     <MDBDropdownToggle id='tn' className='accBut p-1' nav caret>
                       <div className="d-none d-md-inline accButt font-weight-light">My Account</div>
                      </MDBDropdownToggle>
                     <MDBDropdownMenu right className='border border-dark'>
-                      <MDBDropdownItem className='font-weight-bold' href="#!">Account Info</MDBDropdownItem>
+                      <Link to='/profile' className='p-0'><MDBDropdownItem className='font-weight-bold'>Account Info</MDBDropdownItem></Link>
                       <hr className='hr-dark'/>
                       <MDBDropdownItem className='font-weight-bold' href="#!">Sign out</MDBDropdownItem>
                     </MDBDropdownMenu>
@@ -171,21 +170,6 @@ addProduct(e){
                 </MDBNavItem>
 
 
-               {/* Cart Button */}
-                <MDBNavItem>
-                  <MDBDropdown className='ml-3 p-2'>
-                    <MDBDropdownToggle id='tn' className='mdb-color accBut p-1' nav caret>
-                      <MDBIcon icon="shopping-cart" className="d-inline-inline" />{" "}
-                      <div className="d-none d-md-inline cartButt font-weight-light">Cart</div>
-                    </MDBDropdownToggle>
-                    <MDBDropdownMenu right className='border border-dark p-0'>
-                      <MDBDropdownItem className='font-weight-bold p-0' href="#!">
-                      <MDBDropdownItem className='font-weight-bold' href="#!">Orders</MDBDropdownItem>
-                      </MDBDropdownItem>
-                   
-                    </MDBDropdownMenu>
-                  </MDBDropdown>
-                </MDBNavItem>
 
 
               </MDBNavbarNav>
@@ -202,14 +186,14 @@ addProduct(e){
                 <MDBContainer className='d-flex justify-content-center align-items-center'>
                   <MDBRow >
                     <MDBCol className='w-100'>
-                      <div className=' mt-5 p-3 logoBox'>
-                      <span className='orange-text font-weight-bold logo p-1 px-3 text-center d-flex justify-content-center align-items-center mb-n3'> 
-                        <MDBIcon icon='fire' className='orange-text pr-3 py-2 mb-2'/>
+                      <div className=' mt-4'>
+                      <span className='white-text font-weight-bold logo p-1 px-3 text-center d-flex justify-content-center align-items-center mb-n3 z-depth-5'> 
+                        <MDBIcon icon='fire' className='white-text pr-3 py-2 mb-2'/>
                         Ember
                       </span>
-                      <span className='font-weight-bold logo2 d-flex flex-row-reverse mt-1 mx-4 orange'>
+                      {/* <span className='font-weight-bold logo2 d-flex flex-row-reverse mt-1 mx-4'>
                         Footwear & More &nbsp;
-                      </span>
+                      </span> */}
                       </div>
                     </MDBCol>
                   </MDBRow>
@@ -233,6 +217,7 @@ addProduct(e){
 
 <section> 
           <Switch>
+          <Route path='/profile' component={PV2} />
           <Route path='/kids' component={StorePageKids} />
           <Route path='/boys' component={StorePageBoys} />
 <Route path='/women' component={StorePageWomen} />
@@ -329,52 +314,7 @@ addProduct(e){
                 </p>
               </MDBCol>
 
-              <div className='col-md-6 col-12'>
-                <div className='social-section'>
-                  <ul className='list-unstyled list-inline d-flex justify-content-end'>
-                    <li className='list-inline-item'>
-                      <MDBBtn
-                        tag='a'
-                        floating
-                        color=''
-                        className='rgba-white-slight'
-                      >
-                        <MDBIcon fab icon='facebook' />
-                      </MDBBtn>
-                    </li>
-                    <li className='list-inline-item'>
-                      <MDBBtn
-                        tag='a'
-                        floating
-                        color=''
-                        className='rgba-white-slight'
-                      >
-                        <MDBIcon fab icon='twitter' />
-                      </MDBBtn>
-                    </li>
-                    <li className='list-inline-item'>
-                      <MDBBtn
-                        tag='a'
-                        floating
-                        color=''
-                        className='rgba-white-slight'
-                      >
-                        <MDBIcon fab icon='google-plus' />
-                      </MDBBtn>
-                    </li>
-                    <li className='list-inline-item'>
-                      <MDBBtn
-                        tag='a'
-                        floating
-                        color=''
-                        className='rgba-white-slight'
-                      >
-                        <MDBIcon fab icon='linkedin' />
-                      </MDBBtn>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+             
             </MDBRow>
           </MDBContainer>
         </MDBFooter>

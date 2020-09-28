@@ -1,5 +1,6 @@
 
 body {
+  background-color: rgb(41, 70, 105) !important;
     background-size: 100vw;
     background-repeat: no-repeat;
 }
@@ -159,7 +160,7 @@ h3{
 }
 
 .sid2{
-  border-top: solid rgb(243, 168, 59) 2px; 
+  border-top: solid rgb(255, 255, 255) 1px; 
   color:rgb(255, 255, 255);
 }
 
@@ -204,7 +205,8 @@ h3{
 }
 
 .linkPic{
-  opacity: 0.9;
+  opacity: 0.8;
+  background-color: rgba(255, 140, 0) !important;
 }
 
 .strip1{
@@ -218,7 +220,7 @@ h3{
 }
 
 .saleBox{
-  border-top: groove rgba(255, 166, 0,1) 7px;
+  border-top: groove rgb(168, 109, 0) 5px;
   border-right: solid rgba(35, 41, 54,0) 11px;
   border-left: solid rgba(255, 166, 0,0.8) 1px;
   border-bottom: solid rgba(35, 41, 54,0) 10px;

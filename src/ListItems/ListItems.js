@@ -15,11 +15,11 @@ function ListItems(props) {
   const items = props.items;
   const ListItems = items.map((item) => {
     return (
-      <MDBCol md="4" className="p-2 rounded">
+      <MDBCol md="6" className="p-2 rounded">
         <MDBCard cascade key={item.text} className="z-depth-5">
           {/* Card Title */}
           <span className="d-flex flex-row-reverse orange darken-1 cardieTop text-nowrap">
-            <MDBBtn className="py-0 px-1 catLabel my-0 font-weight-bold mr-0 text-nowrap">
+            <MDBBtn disabled style={{opacity: "1"}} className="py-0 px-1 catLabel my-0 font-weight-bold mr-0 text-nowrap">
               {" "}
               &nbsp;{item.discount}
             </MDBBtn>
@@ -33,9 +33,11 @@ function ListItems(props) {
             <MDBMask>
               {/* Price Button */}
               <MDBBtn
+              disabled
                 tag="a"
                 action
                 rounded
+                style={{opacity: "1"}}
                 className="mr-auto mb-n5 mt-n1 py-1 px-2 floater z-depth-5"
                 onClick={() => {
                   props.addProduct(item);

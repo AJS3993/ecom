@@ -92,7 +92,7 @@ class StorePage extends React.Component {
 
     render() {
         return (
-            <div className='mdb-color'>
+            <div>
                 <MDBRow>
 
                 <MDBCol md="2">
@@ -111,6 +111,7 @@ class StorePage extends React.Component {
                         label="Casual"
                         type="checkbox"
                         id="Casual"
+                        
                         onChange={()=> {
                           
                           if (!this.state.CasualFilter){

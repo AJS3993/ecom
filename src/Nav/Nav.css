@@ -18,6 +18,7 @@
 
 .navBut{
     background-color: rgba(255, 255, 255, 0) !important; 
+    font-size: 18px;
 }
 
 .navBut:hover{
@@ -69,29 +70,28 @@ text-shadow: 0px 0px 3px #bc9d9d;
 }
 
 .logo{
-    font-size: 45px;
+    font-size: 40px;
+    font-weight:lighter !important;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: oblique;
-    text-shadow: 0px 0px 3px #bc9d9d;
-    border-left: ridge rgba(255, 255, 255, 1) 2px;
-    border-top: ridge rgba(255, 255, 255, 1) 9px;
+    border-left: ridge rgba(255, 255, 255, 1) 1px;
+    border-top: ridge rgba(255, 255, 255, 1) 2px;
     border-right: ridge rgba(35, 41, 54,0) 0px;
     border-bottom: ridge rgba(255, 255, 255, 0) 0px;
     border-radius: 5px 50px 5px 40px; 
-    background-color:rgb(32, 28, 73);
 }
+
 
 .logo2{
     font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: oblique;
     color:rgba(39, 37, 82, 1) !important;
-    border-left: groove rgba(255, 255, 255, 0.856) 2px;
-    border-top: groove rgba(255, 68, 0, 0) 2px;
-    border-bottom: groove rgb(255, 255, 255) 3px;
-    border-right: groove #ffffffda 10px;
+    border-left: groove rgba(255, 255, 255, 0.856) 0px;
+    border-top: groove rgba(255, 68, 0, 0) 0px;
+    border-bottom: groove rgb(255, 255, 255) 2px;
+    border-right: groove #ffffffda 1px;
     border-radius: 0px 50px 0px 50px; 
-    background-color:rgb(255, 81, 0);
 }
 
 .clogo{
@@ -144,7 +144,6 @@ text-shadow: 0px 0px 3px #bc9d9d;
 }
 
 #home .view {
-    background: url("https://i.imgur.com/Hp73nj2.jpg?2") no-repeat center center;
     background-size: cover;
     min-height: 170px;
   }
@@ -168,4 +167,11 @@ text-shadow: 0px 0px 3px #bc9d9d;
     border-right: double rgba(255, 255, 255,0) 10px;}
 
 
+.favLink:hover{
+color: rgb(255, 140, 0) !important;
+}
 
+.centerIt{
+    margin-right: 80%;
+    background-color: rgba(130, 140, 161,0)!important;
+}

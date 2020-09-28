@@ -20,12 +20,13 @@ function ListItems(props) {
     if (item.score>0){
       
     return (
-      <MDBCol md="2" className="px-3 m-1">
+      <MDBCol md="2" className="mx-2">
           
         <MDBCard
           cascade
           key={item.text}
           className="z-depth-5 cardie mt-4 mb-3 mx-n3"
+          
         >
          
           {/* <MDBBtn color='red' className='px-2 py-0 m-1 rounded' onClick={() => {props.deleteItem(item.text)}}>
@@ -36,7 +37,7 @@ function ListItems(props) {
         
 <div className='d-flex justify-content-between w-100'>
 
-
+<span className='teeny'>{item.score}</span>
           <MDBBtn
             tag="a"
             action
@@ -54,6 +55,8 @@ function ListItems(props) {
               ></MDBIcon> Add
             </span>
           </MDBBtn>
+          <MDBIcon size='2x' fab icon={item.icon} className={item.iconColor} />&nbsp;&nbsp;&nbsp;
+
 
          {/* <MDBBtn className='favBut m-0 py-0 px-2'
           onClick={() => {
@@ -77,6 +80,7 @@ function ListItems(props) {
             <h4 className="p-0 pt-1 mr-n1 titleMa text-nowrap">
               &nbsp;<b>{item.company}</b>&nbsp;{item.text}
             </h4>
+            
             <MDBBtn className="py-1 px-1 m-0 mt-n1 catLabelRRR font-weight-bold mdb-color lighten-3 text-nowrap">
               &nbsp;{formatPrice(item.price)}
             </MDBBtn>
@@ -85,7 +89,7 @@ function ListItems(props) {
           {/* Card Text */}
           <MDBCardBody cascade className="p-0">
             <MDBCardText className="p-2 font-weight-bold black-text mdb-color lighten-5 mt-n2 cText">
-              Type: {item.type} <hr className="my-1" /> {item.company} <hr className="my-1" />
+              <span className='font-weight-light'>Type: </span>{item.type} <hr className="my-1" /><span className='font-weight-light'>Brand: </span> {item.company} <hr className="my-1" /><span className='font-weight-light'>Color: </span>{item.color}
             </MDBCardText>
           </MDBCardBody>
 
@@ -95,13 +99,14 @@ function ListItems(props) {
               {/* Comments */}
               <li className="list-inline-item pr-2">
                 <a href="#!" className="comments">
-                  <MDBIcon far icon="heart" className="mr-1 pt-2" />
+                  <MDBIcon far icon="heart" className="mr-1 pt-2 dark-grey-text" />
                 </a>
               </li>
 
               {/* Rating */}
               
               <MDBRating 
+              initialRating={2}
               fillColors={[
     'red-text',
     'orange-text',
@@ -110,6 +115,7 @@ function ListItems(props) {
     'success-text'
   ]}
   iconSize='xs'/>
+  
             </ul>
             
           </div>

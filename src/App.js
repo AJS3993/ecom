@@ -1,7 +1,7 @@
 import React from 'react';
 import StoreListItemsMin from './StoreListItemsMin/StoreListItemsMin';
 import ListItems from './ListItems/ListItems';
-import { MDBBtn, MDBIcon, MDBRow, MDBCol, MDBCard, MDBCardTitle} from "mdbreact";
+import { MDBBtn,MDBView,MDBMask, MDBIcon, MDBRow, MDBCol, MDBCard, MDBCardTitle} from "mdbreact";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class App extends React.Component {
@@ -28,9 +28,7 @@ class App extends React.Component {
         {text: "Loafers",price:'3999',pic: 'https://i.imgur.com/i7Qmotr.jpg?1',discount:'20%'},
         {text: "Runners",price:'2500',pic: 'https://i.imgur.com/R61ZmFW.jpg?1',discount:'50%'},
         {text: "Sneaks",price:'2900',pic: 'https://i.imgur.com/aMlSAVq.jpg?1',discount:'10%'},
-        {text: "Zero-G",price:'4999',pic: 'https://i.imgur.com/umRhB0d.jpg?1',discount:'25%'},
-        {text: "Loafers",price:'3999',pic: 'https://i.imgur.com/i7Qmotr.jpg?1',discount:'30%'}
-      ],
+         ],
       
         currentItem:{
         text:'',
@@ -100,17 +98,19 @@ addProduct(e){
 
  render(){
   return (
-    <div className="App mdb-color darken-4">
+    <div className="App mdb-color darken-2">
 
      
       
-     <MDBRow className=' mt-4'>
+     <MDBRow className=' pt-4 mb-n4'>
 
       <MDBCol md='2' className='pt-5'>
          
      <MDBBtn className='p-1 font-weight-bold dLabel mb-n4 mt-n3 ml-n2'>Find The Perfect Gift!</MDBBtn>
                <div className='px-2 pb-2  z-depth-5 forBox mt-0 pt-1'>
+                 
                  <MDBRow className='mt-3 mr-0'>
+                 <h6 className='font-italic orange-text mt-2 font-weight-bold'>Ember Gift Guide!</h6>
                    <MDBCol md='12' className='pr-1 m-0'>
                      <MDBCard className='card-image forBoxHer m-1' style={{backgroundImage:"url('https://i.imgur.com/mK8jYFO.jpg')"}}>
                        <div className='text-white text-center d-flex align-items-center rgba-pink-light py-5'>
@@ -151,15 +151,20 @@ addProduct(e){
      </MDBCol>
        
      <MDBCol md='8' className='mt-4 px-5 py-3'>
-        <MDBRow className='mt-n5'>
+        <MDBRow className='mt-n4 mb-5'>
           <MDBCol lg="3" md="6" className="mb-lg-0 mb-4 mdb-color lighten-2">
-            <MDBCard collection className="z-depth-5 linkPic mx-n3">
+            <MDBCard collection className="z-depth-5 mx-n3 mt-3">
               <div className="view zoom">
-                <img
+               <MDBView>
+               <img
                    src="https://i.imgur.com/eBcAaPM.jpg?2"
-                  className="img-fluid"
+                  className="img-fluid linkPic"
                   alt=""
                 />
+                  <MDBMask overlay="blue-light" className="flex-center"/>
+
+               </MDBView>
+                
                 <div className="stripe dark mb-2 py-2 strip1">
                   <Link to='/store'>
                     <p className='orange-text'>
@@ -171,14 +176,19 @@ addProduct(e){
             </MDBCard>
           </MDBCol>
           <MDBCol lg="3" md="6" className="mb-lg-0 mb-4 orange">
-            <MDBCard collection className="z-depth-5 linkPic mx-n3">
+            <MDBCard collection className="z-depth-5 mx-n3 mb-3">
               <div className="view zoom">
+                <MDBView>
                 <img
                  
                   src="https://i.imgur.com/yQuvC4a.jpg?2"
-                  className="img-fluid"
+                  className="img-fluid linkPic2"
                   alt=""
                 />
+                <MDBMask overlay="orange-light" className="flex-center"/>
+
+</MDBView>
+ 
                 <div className="stripe dark py-2 mb-5 strip2">
                   <Link to="/women">
                   <p className='light-blue-text'>
@@ -190,13 +200,18 @@ addProduct(e){
             </MDBCard>
           </MDBCol>
           <MDBCol lg="3" md="6" className="mb-lg-0 mb-4 mdb-color lighten-2">
-            <MDBCard collection className="z-depth-5 linkPic mx-n3">
+            <MDBCard collection className="z-depth-5 mx-n3 mt-3">
               <div className="view zoom">
+                <MDBView>
                 <img
                   src="https://i.imgur.com/Jznkx3A.jpg?2"
-                  className="img-fluid"
+                  className="img-fluid linkPic"
                   alt=""
                 />
+                   <MDBMask overlay="blue-light" className="flex-center"/>
+
+</MDBView>
+ 
                 <div className="stripe dark mb-2 py-2 strip1">
                   <Link to="/boys">
                   <p className='orange-text'>
@@ -208,13 +223,18 @@ addProduct(e){
             </MDBCard>
           </MDBCol>
           <MDBCol lg="3" md="6" className="mb-lg-0 mb-4 orange">
-            <MDBCard collection className="z-depth-5 linkPic mx-n3">
+            <MDBCard collection className="z-depth-5 mx-n3 mb-3">
               <div className="view zoom">
+               <MDBView>
                 <img
                   src="https://i.imgur.com/T5j5wlf.jpg?2"
-                  className="img-fluid"
+                  className="img-fluid linkPic2"
                   alt=""
                 />
+                   <MDBMask overlay="orange-light" className="flex-center"/>
+
+</MDBView>
+ 
                 <div className="stripe dark py-2 mb-5 strip2">
                   <Link to="/kids">
                   <p className='light-blue-text'>
@@ -301,13 +321,13 @@ addProduct(e){
           
 
       </MDBCol>
-      <MDBCol md='2'></MDBCol>
-      <MDBCol md='7' className='pl-0 mt-4'>
+      <MDBCol md='3'></MDBCol>
+      <MDBCol md='6' className='pl-0 mt-4'>
 
 <MDBCol id='midCol' md='12' className='p-0 mx-5 mt-4'> 
-    <div className='d-flex align-content-around flex-wrap mt-n2 saleBox'>
+    <div className='d-flex align-content-around flex-wrap mt-n2 saleBox mr-4'>
       <div>
-        <MDBBtn disabled className='font-weight-bold mt-n5 newA mb-n2 px-3 py-0'>Hot Sales! <MDBBtn className='pt-2 px-3 my-n2 mr-n3 catLabel font-weight-bold'><MDBIcon icon='fire' size='2x' className='orange-text'/></MDBBtn></MDBBtn>
+        <MDBBtn disabled className='font-weight-bold mt-n5 newA mb-n2 ml-5 px-2 py-0'>Hot Sales! <MDBBtn className='pt-2 px-3 my-n2 mr-n3 catLabel font-weight-bold'><MDBIcon icon='fire' size='2x' className='orange-text'/></MDBBtn></MDBBtn>
       </div>
       <MDBRow className='ml-3 mt-3 rounded'>
         <ListItems products={this.state.products} items={this.state.items} deleteItem={this.deleteItem} addProduct={this.addProduct}/>
@@ -320,16 +340,12 @@ addProduct(e){
         </MDBRow>
 </MDBCol>
 
-     
-      
-     
-
-        
+       
 
     
         <MDBCol md='2' className=''>   
         <div>
-              <MDBBtn disabled className=' newA p-0 text-nowrap mt-n4'>Top Sellers! </MDBBtn>
+              <MDBBtn style={{opacity: "1"}} disabled className='deep-orange py-1 px-4 text-nowrap mt-n4 w-100 text-center'>Trending </MDBBtn>
             </div>
 <div className='d-flex align-content-around flex-wrap  mdb-color darken-4 mt-n5 pt-5 p-2 bestBox'>
            
